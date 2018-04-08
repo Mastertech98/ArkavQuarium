@@ -22,7 +22,7 @@ int main( int argc, char* args[] )
     std::string egg_text = "Egg: 0";
 
     // Initialize Game
-    Aquarium aquarium = Aquarium(640, 480);
+    Aquarium aquarium = Aquarium(get_screen_width(), get_screen_height() - 192);
     bool running = true;
     bool paused = false;
     bool win;
@@ -51,21 +51,42 @@ int main( int argc, char* args[] )
 
         for (auto key : get_tapped_keys()) {
             switch (key) {
-            case SDLK_g:
-                aquarium.add(Guppy(aquarium));
-                break;
-            case SDLK_p:
-                aquarium.add(Piranha(aquarium));
-                break;
-            case SDLK_f:
-                aquarium.add(Food(aquarium, 400));
-                break;
             case SDLK_ESCAPE:
                 running = false;
                 break;
             case SDLK_SPACE:
                 paused = !paused;
                 break;
+            }
+        }
+
+        if (get_mouse_button_tapped()) {
+            int x, y;
+            SDL_GetMouseState(&x, &y);
+
+            int money = aquarium.getMoney();
+            if (y > 128) {
+                if (money > Food::price) {
+                    aquarium.add(Food(aquarium, x));
+                    aquarium.setMoney(money - Food::price);
+                }
+            } else {
+                if (x < 128) {
+                    if (money > Guppy::price) {
+                        aquarium.add(Guppy(aquarium));
+                        aquarium.setMoney(money - Guppy::price);
+                    }
+                } else if (x < 256) {
+                    if (money > Piranha::price) {
+                        aquarium.add(Piranha(aquarium));
+                        aquarium.setMoney(money - Piranha::price);
+                    }
+                } else if (x < 384) {
+                    if (money > aquarium.getEggPrice()) {
+                        aquarium.setEgg(aquarium.getEgg() + 1);
+                        aquarium.setMoney(money - aquarium.getEggPrice());
+                    }
+                }
             }
         }
 
@@ -82,41 +103,47 @@ int main( int argc, char* args[] )
 
         // Draw
         clear_screen();
-        draw_text("G: Guppy, P: Piranha, F: Food, Esc: Quit, Space: Pause", 18, 10, 10, 0, 0, 0);
-        draw_text("Money: " + std::to_string(aquarium.getMoney()), 18, 10, 60, 0, 0, 0);
-        draw_text("Egg: " + std::to_string(aquarium.getEgg()), 18, 10, 90, 0, 0, 0);
-        draw_text(fps_text, 18, 10, 30, 0, 0, 0);
+
+        draw_image("Buy_Guppy.png", 64, 64);
+        draw_image("Buy_Piranha.png", 192, 64);
+        draw_image("Buy_Egg.png", 320, 64);
+
+        draw_text("Esc: Quit, Space: Pause", 18, get_screen_width() - 256, 8, 0, 0, 0);
+        draw_text("Money: " + std::to_string(aquarium.getMoney()), 18, get_screen_width() - 256, 40, 0, 0, 0);
+        draw_text("Egg: " + std::to_string(aquarium.getEgg()), 18, get_screen_width() - 256, 72, 0, 0, 0);
+        draw_text(fps_text, 18, 0, get_screen_height(), 0, 0, 0);
+
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
             if (o->data.getIsMovingRight()) {
-                draw_image("Guppy_Normal_R.png", (int)position.x, (int)position.y);
+                draw_image("Guppy_Normal_R.png", (int)position.x, (int)position.y + 128);
             } else {
-                draw_image("Guppy_Normal_L.png", (int)position.x, (int)position.y);
+                draw_image("Guppy_Normal_L.png", (int)position.x, (int)position.y + 128);
             }
         }
         for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
             if (o->data.getIsMovingRight()) {
-                draw_image("Piranha_Normal_R.png", (int)position.x, (int)position.y);
+                draw_image("Piranha_Normal_R.png", (int)position.x, (int)position.y + 128);
             } else {
-                draw_image("Piranha_Normal_L.png", (int)position.x, (int)position.y);
+                draw_image("Piranha_Normal_L.png", (int)position.x, (int)position.y + 128);
             }
         }
         for (ElementList<Snail>* o = aquarium.getSnails().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
             if (o->data.getIsMovingRight()) {
-                draw_image("Snail_R.png", (int)position.x, (int)position.y);
+                draw_image("Snail_R.png", (int)position.x, (int)position.y + 128);
             } else {
-                draw_image("Snail_L.png", (int)position.x, (int)position.y);
+                draw_image("Snail_L.png", (int)position.x, (int)position.y + 128);
             }
         }
         for (ElementList<Food>* o = aquarium.getFoods().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("Food.png", (int)position.x, (int)position.y);
+            draw_image("Food.png", (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Coin>* o = aquarium.getCoins().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("Coin.png", (int)position.x, (int)position.y);
+            draw_image("Coin.png", (int)position.x, (int)position.y + 128);
         }
         update_screen();
 

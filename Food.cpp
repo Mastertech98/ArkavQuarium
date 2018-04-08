@@ -1,6 +1,8 @@
 #include "Food.hpp"
 #include "Aquarium.hpp"
 
+const int Food::price = 5;
+
 Food::Food(Aquarium& _aquarium, float x) : AquariumObject(_aquarium, 2, Vector2(x, 0)) {
     
 }

@@ -13,6 +13,8 @@ class Food : public AquariumObject, public IDestructible {
         void move();
 
         void destruct();
+
+        static const int price;
 };
 
 #endif

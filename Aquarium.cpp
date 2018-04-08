@@ -5,6 +5,7 @@ Aquarium::Aquarium(int _sizeX, int _sizeY) : sizeX(_sizeX), sizeY(_sizeY) {
     add(Snail(*this));
     setMoney(25);
     setEgg(0);
+    setEggPrice(50);
 }
 
 int Aquarium::getSizeX() const {
@@ -37,6 +38,9 @@ int Aquarium::getMoney() const {
 int Aquarium::getEgg() const {
     return egg;
 }
+int Aquarium::getEggPrice() const {
+    return eggPrice;
+}
 
 void Aquarium::setGameTime(int _gameTime) {
     gameTime = _gameTime;
@@ -46,6 +50,9 @@ void Aquarium::setMoney(int _money) {
 }
 void Aquarium::setEgg(int _egg) {
     egg = _egg;
+}
+void Aquarium::setEggPrice(int _eggPrice) {
+    eggPrice = _eggPrice;
 }
 
 void Aquarium::add(const Guppy& guppy) {

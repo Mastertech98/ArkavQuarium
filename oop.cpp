@@ -21,6 +21,8 @@ std::map<std::string, SDL_Surface*> loadedSurfaces;
 std::map<int, TTF_Font*> loadedFontSizes;
 SDL_Surface* gScreenSurface = NULL;
 
+SDL_DisplayMode current;
+
 bool init()
 {
     bool success = true;
@@ -32,12 +34,19 @@ bool init()
     }
     else
     {
+        for (int i = 0; i < SDL_GetNumVideoDisplays(); i++) {
+            int should_be_zero = SDL_GetCurrentDisplayMode(i, &current);
 
+            if (should_be_zero != 0) {
+                printf("Could not get display mode for video display #%d: %s", i, SDL_GetError());
+                success = false;
+            }
+        }
         if(TTF_Init() == -1) {
             printf("TTF_Init: %s\n", TTF_GetError());
             success = false;
         }
-        sdlWindow = SDL_CreateWindow( "ArkavQuarium", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+        sdlWindow = SDL_CreateWindow( "ArkavQuarium", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, get_screen_width(), get_screen_height(), SDL_WINDOW_FULLSCREEN_DESKTOP );
         if( sdlWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -123,10 +132,12 @@ void update_screen() {
 bool quit = false;
 std::set<SDL_Keycode> pressedKeys;
 std::set<SDL_Keycode> tappedKeys;
+bool mouseButtonTapped;
 
 void handle_input() {
     SDL_Event e;
     if (!tappedKeys.empty()) tappedKeys.clear();
+    mouseButtonTapped = false;
     while( SDL_PollEvent( &e ) != 0 )
         {
             if ( e.type == SDL_QUIT ) {
@@ -136,6 +147,8 @@ void handle_input() {
                 tappedKeys.insert(e.key.keysym.sym);
             } else if (e.type == SDL_KEYUP) {
                 pressedKeys.erase(e.key.keysym.sym);
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                mouseButtonTapped = true;
             }
         }
 }
@@ -150,4 +163,16 @@ const std::set<SDL_Keycode>& get_pressed_keys() {
 
 const std::set<SDL_Keycode>& get_tapped_keys() {
     return tappedKeys;
+}
+
+bool get_mouse_button_tapped() {
+    return mouseButtonTapped;
+}
+
+int get_screen_width() {
+    return current.w;
+}
+
+int get_screen_height() {
+    return current.h;
 }

@@ -22,10 +22,12 @@ class Aquarium {
         LinkedList<Coin>& getCoins();
         int getMoney() const;
         int getEgg() const;
+        int getEggPrice() const;
 
         void setGameTime(int _gameTime);
         void setMoney(int _money);
         void setEgg(int _egg);
+        void setEggPrice(int _eggPrice);
         
         void add(const Guppy& guppy);
         void add(const Piranha& piranha);
@@ -52,6 +54,7 @@ class Aquarium {
 
         int money;
         int egg;
+        int eggPrice;
 };
 
 #endif

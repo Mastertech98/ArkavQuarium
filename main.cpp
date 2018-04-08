@@ -16,8 +16,9 @@ int main( int argc, char* args[] )
     double fpc_start = time_since_start();
     std::string fps_text = "FPS: 0";
 
-    // Posisi ikan
+    // Inisialisasi Aquarium
     Aquarium aquarium = Aquarium(640, 480);
+    aquarium.add(Snail(aquarium));
 
     bool running = true;
 
@@ -91,27 +92,39 @@ int main( int argc, char* args[] )
 
         // Gambar ikan di posisi yang tepat.
         clear_screen();
-        draw_text("G: Guppy, P: Piranha, F: Food, Esc: Quit, P: Pause", 18, 10, 10, 0, 0, 0);
+        draw_text("G: Guppy, P: Piranha, F: Food, Esc: Quit, Space: Pause", 18, 10, 10, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("guppy.png", (int)position.x, (int)position.y);
+            if (o->data.getIsMovingRight()) {
+                draw_image("Guppy_Normal_R.png", (int)position.x, (int)position.y);
+            } else {
+                draw_image("Guppy_Normal_L.png", (int)position.x, (int)position.y);
+            }
         }
         for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("piranha.png", (int)position.x, (int)position.y);
+            if (o->data.getIsMovingRight()) {
+                draw_image("Piranha_Normal_R.png", (int)position.x, (int)position.y);
+            } else {
+                draw_image("Piranha_Normal_L.png", (int)position.x, (int)position.y);
+            }
         }
         for (ElementList<Snail>* o = aquarium.getSnails().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("snail.png", (int)position.x, (int)position.y);
+            if (o->data.getIsMovingRight()) {
+                draw_image("Snail_R.png", (int)position.x, (int)position.y);
+            } else {
+                draw_image("Snail_L.png", (int)position.x, (int)position.y);
+            }
         }
         for (ElementList<Food>* o = aquarium.getFoods().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("food.png", (int)position.x, (int)position.y);
+            draw_image("Food.png", (int)position.x, (int)position.y);
         }
         for (ElementList<Coin>* o = aquarium.getCoins().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("coin.png", (int)position.x, (int)position.y);
+            draw_image("Coin.png", (int)position.x, (int)position.y);
         }
         update_screen();
     }

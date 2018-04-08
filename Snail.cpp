@@ -12,8 +12,8 @@ bool Snail::operator==(const Snail& other) const {
 void Snail::move() {
     Vector2 coinPosition = eat();
     if (coinPosition != Vector2::null) {
-        double fX = coinPosition.x;
-        double sX = getPosition().x;
+        int fX = coinPosition.x;
+        int sX = getPosition().x;
         Vector2 direction = Vector2(fX == sX ? 0 : fX > sX ? 1 : -1, 0);
         setPosition(getPosition() + direction * getSpeed());
         setIsMovingRight(direction.x >= 0);
@@ -42,16 +42,49 @@ Coin* Snail::findCoin() const {
     if (coins.isEmpty()) {
         return 0;
     } else {
+        struct Priority {
+            bool onFloor;
+            double distance;
+        };
         double aquariumSizeY = getAquarium().getSizeY();
         ElementList<Coin>* coin = coins.getFirst();
-        double coinDistance = aquariumSizeY - coin->data.getPosition().y;
+        Vector2 coinPosition = coin->data.getPosition();
+        
+        Priority coinPriority;
+        if (coinPosition.y == aquariumSizeY) {
+            coinPriority.onFloor = true;
+            coinPriority.distance = fabs(coinPosition.x - getPosition().x);
+        } else {
+            coinPriority.onFloor = false;
+            coinPriority.distance = aquariumSizeY - coinPosition.y;
+        }
+
         for (ElementList<Coin>* e = coin->next; e != 0; e = e->next) {
-            double eDistance = aquariumSizeY - coin->data.getPosition().y;
-            if (eDistance < coinDistance) {
-                coin = e;
-                coinDistance = eDistance;
+            Vector2 ePosition = e->data.getPosition();
+
+            if (coinPriority.onFloor) {
+                if (ePosition.y == aquariumSizeY) {
+                    double eDistance = fabs(ePosition.x - getPosition().x);
+                    if (eDistance < coinPriority.distance) {
+                        coin = e;
+                        coinPriority.distance = eDistance;
+                    }
+                }
+            } else {
+                if (ePosition.y == aquariumSizeY) {
+                    coin = e;
+                    coinPriority.onFloor = true;
+                    coinPriority.distance = fabs(ePosition.x - getPosition().x);
+                } else {
+                    double eDistance = aquariumSizeY - ePosition.y;
+                    if (eDistance < coinPriority.distance) {
+                        coin = e;
+                        coinPriority.distance = eDistance;
+                    }
+                }
             }
         }
+
         return &coin->data;
     }
 }

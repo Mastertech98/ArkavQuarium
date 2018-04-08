@@ -1,7 +1,7 @@
 #include "Fish.hpp"
 #include "Aquarium.hpp"
 
-Fish::Fish(Aquarium& _aquarium, float _speed, float _eatRadius) : Creature(_aquarium, _speed, Vector2::randomPosition(_aquarium.getSizeX(), _aquarium.getSizeY()), _eatRadius), fullTime(100), hungryTime(100), moveTime(50) {
+Fish::Fish(Aquarium& _aquarium, float _speed, float _eatRadius) : Creature(_aquarium, _speed, Vector2::randomPosition(_aquarium.getSizeX(), _aquarium.getSizeY()), _eatRadius), fullTime(500), hungryTime(500), moveTime(50) {
     int gameTime = _aquarium.getGameTime();
     setLastMealTime(gameTime);
     setLastMoveTime(gameTime);
@@ -68,7 +68,6 @@ void Fish::dropCoin(int value) {
 
 void Fish::moveRandomly() {
     if (getAquarium().getGameTime() >= getLastMoveTime() + getMoveTime()) {
-        std::cout << "Random direction" << std::endl;
         direction = Vector2::randomDirection();
         setLastMoveTime(getAquarium().getGameTime());
     }

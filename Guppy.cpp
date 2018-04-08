@@ -3,7 +3,7 @@
 
 const int Guppy::price = 10;
 
-Guppy::Guppy(Aquarium& _aquarium) : Fish(_aquarium, 5, 50), coinDropPeriod(10) {
+Guppy::Guppy(Aquarium& _aquarium) : Fish(_aquarium, 5, 50), coinDropPeriod(100) {
     eatenFood = 0;
     lastCoinDrop = _aquarium.getGameTime();
 }

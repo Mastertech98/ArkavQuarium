@@ -66,7 +66,16 @@ int main( int argc, char* args[] )
 
             int money = aquarium.getMoney();
             if (y > 128) {
-                if (money > Food::price) {
+                y -= 128;
+                Vector2 mousePosition = Vector2(x, y);
+                bool coinClick = false;
+                for (ElementList<Coin>* o = aquarium.getCoins().getFirst(); o != 0 && !coinClick; o = o->next) {
+                    if (mousePosition.distance(o->data.getPosition()) <= 16) {
+                        o->data.take();
+                        coinClick = true;
+                    }
+                }
+                if (money > Food::price && !coinClick) {
                     aquarium.add(Food(aquarium, x));
                     aquarium.setMoney(money - Food::price);
                 }

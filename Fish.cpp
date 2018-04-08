@@ -43,20 +43,6 @@ void Fish::move() {
     } else {
         moveRandomly();
     }
-
-    int sizeX = getAquarium().getSizeX();
-    int sizeY = getAquarium().getSizeY();
-    int positionX = getPosition().x;
-    int positionY = getPosition().y;
-
-    if (positionX < 0 || positionX > sizeX) {
-        direction = Vector2(direction.x * -1, direction.y);
-        setLastMoveTime(gameTime);
-    }
-    if (positionY < 0 || positionY > sizeY) {
-        direction = Vector2(direction.x, direction.y * -1);
-        setLastMoveTime(gameTime);
-    }
     
     setPosition(getPosition() + direction * getSpeed());
     setIsMovingRight(direction.x >= 0);
@@ -70,5 +56,21 @@ void Fish::moveRandomly() {
     if (getAquarium().getGameTime() >= getLastMoveTime() + getMoveTime()) {
         direction = Vector2::randomDirection();
         setLastMoveTime(getAquarium().getGameTime());
+    }
+
+    int sizeX = getAquarium().getSizeX();
+    int sizeY = getAquarium().getSizeY();
+    int positionX = getPosition().x;
+    int positionY = getPosition().y;
+
+    int gameTime = getAquarium().getGameTime();
+
+    if (positionX < 0 || positionX > sizeX) {
+        direction = Vector2(direction.x * -1, direction.y);
+        setLastMoveTime(gameTime);
+    }
+    if (positionY < 0 || positionY > sizeY) {
+        direction = Vector2(direction.x, direction.y * -1);
+        setLastMoveTime(gameTime);
     }
 }

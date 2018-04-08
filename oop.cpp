@@ -90,6 +90,28 @@ SDL_Surface* loadSurface( std::string path )
     return loadedSurface;
 }
 
+void draw_background(std::string filename) {
+    if (loadedSurfaces.count(filename) < 1) {
+        loadedSurfaces[filename] = loadSurface(filename);
+    }
+
+    SDL_Surface* s = loadedSurfaces[filename];
+
+    int imgWidth = s->w;
+    int imgHeight = s->h;
+
+    double wRatio = (double) get_screen_width() / imgWidth;
+    double hRatio = (double) get_screen_height() / imgHeight;
+    double multiplier = wRatio > hRatio ? wRatio : hRatio;
+
+    SDL_Rect dest;
+    dest.w = imgWidth * multiplier;
+    dest.h = imgHeight * multiplier;
+    dest.x = (get_screen_width() - dest.w) / 2;
+    dest.y = (get_screen_height() - dest.h) / 2;
+    SDL_BlitScaled(s, NULL, gScreenSurface, &dest);
+}
+
 void draw_image(std::string filename, int x, int y) {
     if (loadedSurfaces.count(filename) < 1) {
         loadedSurfaces[filename] = loadSurface(filename);

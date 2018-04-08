@@ -24,6 +24,10 @@ void close();
 
 // ------------------------------ PENGGAMBARAN -------------------------------
 
+// Menggambar suatu gambar png, jpg, bmp sehingga gambar mengisi layar
+// Perubahan di layar baru muncul ketika update_screen() dipanggil.
+void draw_background(std::string filename);
+
 // Menggambar suatu gambar png, jpg, bmp sehingga tengah gambar berada di
 // titik (x, y).
 // Perubahan di layar baru muncul ketika update_screen() dipanggil.

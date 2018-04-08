@@ -22,11 +22,11 @@ int Guppy::getLastCoinDrop() const {
     return lastCoinDrop;
 }
 int Guppy::getGrowthStage() const {
-    if (eatenFood > 10) {
+    if (eatenFood > 4) {
         return 3;
     }
 
-    if (eatenFood > 5) {
+    if (eatenFood > 1) {
         return 2;
     }
 

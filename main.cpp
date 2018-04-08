@@ -104,46 +104,40 @@ int main( int argc, char* args[] )
         // Draw
         clear_screen();
 
-        draw_image("Buy_Guppy.png", 64, 64);
-        draw_image("Buy_Piranha.png", 192, 64);
-        draw_image("Buy_Egg.png", 320, 64);
+        draw_background("background");
+
+        draw_image("buyguppy", 64, 64);
+        draw_image("buypiranha", 192, 64);
+        draw_image("buyegg", 320, 64);
 
         draw_text("Esc: Quit, Space: Pause", 18, get_screen_width() - 256, 8, 0, 0, 0);
         draw_text("Money: " + std::to_string(aquarium.getMoney()), 18, get_screen_width() - 256, 40, 0, 0, 0);
         draw_text("Egg: " + std::to_string(aquarium.getEgg()), 18, get_screen_width() - 256, 72, 0, 0, 0);
-        draw_text(fps_text, 18, 0, get_screen_height(), 0, 0, 0);
+        draw_text(fps_text, 18, 0, get_screen_height() - 24, 0, 0, 0);
 
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
-            Vector2 position = o->data.getPosition();
-            if (o->data.getIsMovingRight()) {
-                draw_image("Guppy_Normal_R.png", (int)position.x, (int)position.y + 128);
-            } else {
-                draw_image("Guppy_Normal_L.png", (int)position.x, (int)position.y + 128);
-            }
+            Guppy guppy = o->data;
+            Vector2 position = guppy.getPosition();
+            draw_image(
+                "guppy" + std::to_string(guppy.getGrowthStage()) + std::to_string(guppy.getIsMovingRight()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
-            Vector2 position = o->data.getPosition();
-            if (o->data.getIsMovingRight()) {
-                draw_image("Piranha_Normal_R.png", (int)position.x, (int)position.y + 128);
-            } else {
-                draw_image("Piranha_Normal_L.png", (int)position.x, (int)position.y + 128);
-            }
+            Piranha piranha = o->data;
+            Vector2 position = piranha.getPosition();
+            draw_image("piranha" + std::to_string(piranha.getIsMovingRight()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Snail>* o = aquarium.getSnails().getFirst(); o != 0; o = o->next) {
-            Vector2 position = o->data.getPosition();
-            if (o->data.getIsMovingRight()) {
-                draw_image("Snail_R.png", (int)position.x, (int)position.y + 128);
-            } else {
-                draw_image("Snail_L.png", (int)position.x, (int)position.y + 128);
-            }
+            Snail snail = o->data;
+            Vector2 position = snail.getPosition();
+            draw_image("snail" + std::to_string(snail.getIsMovingRight()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Food>* o = aquarium.getFoods().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("Food.png", (int)position.x, (int)position.y + 128);
+            draw_image("food", (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Coin>* o = aquarium.getCoins().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
-            draw_image("Coin.png", (int)position.x, (int)position.y + 128);
+            draw_image("coin", (int)position.x, (int)position.y + 128);
         }
         update_screen();
 

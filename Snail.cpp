@@ -26,7 +26,7 @@ Vector2 Snail::eat() {
         Vector2 coinPosition = coin->getPosition();
         for (ElementList<Coin>* e = getAquarium().getCoins().getFirst(); e != 0; e = e->next) {
             if (getPosition().distance(e->data.getPosition()) <= getEatRadius()) {
-                coin->take();
+                e->data.take();
             }
         }
 

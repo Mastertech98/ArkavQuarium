@@ -16,6 +16,8 @@ class Coin : public AquariumObject, public IDestructible {
 
         void destruct();
 
+        void take();
+
     private:
         const int value;
 };

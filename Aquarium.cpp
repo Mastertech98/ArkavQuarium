@@ -2,6 +2,9 @@
 
 Aquarium::Aquarium(int _sizeX, int _sizeY) : sizeX(_sizeX), sizeY(_sizeY) {
     setGameTime(0);
+    add(Snail(*this));
+    setMoney(25);
+    setEgg(0);
 }
 
 int Aquarium::getSizeX() const {
@@ -78,5 +81,21 @@ void Aquarium::remove(const Coin& coin) {
 }
 
 void Aquarium::tick() {
-    
+    setGameTime(getGameTime() + 1);
+
+    for (ElementList<Guppy>* o = getGuppies().getFirst(); o != 0; o = o->next) {
+        o->data.tick();
+    }
+    for (ElementList<Piranha>* o = getPiranhas().getFirst(); o != 0; o = o->next) {
+        o->data.tick();
+    }
+    for (ElementList<Snail>* o = getSnails().getFirst(); o != 0; o = o->next) {
+        o->data.tick();
+    }
+    for (ElementList<Food>* o = getFoods().getFirst(); o != 0; o = o->next) {
+        o->data.tick();
+    }
+    for (ElementList<Coin>* o = getCoins().getFirst(); o != 0; o = o->next) {
+        o->data.tick();
+    }
 }

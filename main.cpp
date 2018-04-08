@@ -5,49 +5,39 @@
 
 #include "Aquarium.hpp"
 
-const double speed = 50; // pixels per second
+const double speed = 1;
+const double tps = 20;
 
 int main( int argc, char* args[] )
 {
     init();
 
-    // Menghitung FPS
+    // FPS Counter
     int frames_passed = 0;
     double fpc_start = time_since_start();
+
+    // Text String
     std::string fps_text = "FPS: 0";
+    std::string money_text = "Money: 0";
+    std::string egg_text = "Egg: 0";
 
-    // Inisialisasi Aquarium
+    // Initialize Game
     Aquarium aquarium = Aquarium(640, 480);
-    aquarium.add(Snail(aquarium));
-
     bool running = true;
+    bool paused = false;
+    bool win;
 
     double prevtime = time_since_start();
 
-    bool paused = false;
-
     while (running) {
+        // Game Tick
         double now = time_since_start();
-        if (now - prevtime >= 0.05 && !paused) {
-            aquarium.setGameTime(aquarium.getGameTime() + 1);
+        if (now - prevtime > speed / tps && !paused) {
+            aquarium.tick();
             prevtime = now;
-            for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
-                o->data.tick();
-            }
-            for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
-                o->data.tick();
-            }
-            for (ElementList<Snail>* o = aquarium.getSnails().getFirst(); o != 0; o = o->next) {
-                o->data.tick();
-            }
-            for (ElementList<Food>* o = aquarium.getFoods().getFirst(); o != 0; o = o->next) {
-                o->data.tick();
-            }
-            for (ElementList<Coin>* o = aquarium.getCoins().getFirst(); o != 0; o = o->next) {
-                o->data.tick();
-            }
         }
 
+        // Input Handler
         handle_input();
         if (quit_pressed()) {
             running = false;
@@ -79,7 +69,7 @@ int main( int argc, char* args[] )
             }
         }
 
-        // Update FPS setiap detik
+        // Update FPS every second
         frames_passed++;
         if (now - fpc_start > 1) {
             std::ostringstream strs;
@@ -90,9 +80,11 @@ int main( int argc, char* args[] )
             frames_passed = 0;
         }
 
-        // Gambar ikan di posisi yang tepat.
+        // Draw
         clear_screen();
         draw_text("G: Guppy, P: Piranha, F: Food, Esc: Quit, Space: Pause", 18, 10, 10, 0, 0, 0);
+        draw_text("Money: " + std::to_string(aquarium.getMoney()), 18, 10, 60, 0, 0, 0);
+        draw_text("Egg: " + std::to_string(aquarium.getEgg()), 18, 10, 90, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
             Vector2 position = o->data.getPosition();
@@ -127,6 +119,20 @@ int main( int argc, char* args[] )
             draw_image("Coin.png", (int)position.x, (int)position.y);
         }
         update_screen();
+
+        // Win/Lose Condition
+        if (aquarium.getEgg() >= 3) {
+            win = true;
+            running = false;
+        } else {
+            if (aquarium.getGuppies().isEmpty() && aquarium.getPiranhas().isEmpty()) {
+                int money = aquarium.getMoney();
+                if (money < Guppy::price && money < Piranha::price) {
+                    win = false;
+                    running = false;
+                }
+            }
+        }
     }
 
     close();

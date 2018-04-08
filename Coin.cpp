@@ -26,3 +26,8 @@ void Coin::move() {
 void Coin::destruct() {
     getAquarium().remove(*this);
 }
+
+void Coin::take() {
+    getAquarium().setMoney(getAquarium().getMoney() + getValue());
+    destruct();
+}

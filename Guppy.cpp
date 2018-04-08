@@ -62,7 +62,6 @@ Vector2 Guppy::eat() {
 }
 
 void Guppy::destruct() {
-    std::cout << "Guppy Dead" << std::endl;
     getAquarium().remove(*this);
 }
 

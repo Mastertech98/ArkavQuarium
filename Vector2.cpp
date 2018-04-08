@@ -1,7 +1,6 @@
 #include "Vector2.hpp"
 #include <cstdlib>
 #include <cmath>
-#include <iostream>
 #include <ctime>
 
 Vector2::Vector2() {

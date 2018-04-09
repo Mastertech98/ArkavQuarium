@@ -22,7 +22,7 @@ int main( int argc, char* args[] )
     std::string egg_text = "Egg: 0";
 
     // Initialize Game
-    Aquarium aquarium = Aquarium(get_screen_width(), get_screen_height() - 192);
+    Aquarium aquarium = Aquarium(get_screen_width(), get_screen_height() - 192, 25, 20);
     bool running = true;
     bool paused = false;
     bool win;
@@ -127,8 +127,7 @@ int main( int argc, char* args[] )
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
             Guppy guppy = o->data;
             Vector2 position = guppy.getPosition();
-            draw_image(
-                "guppy" + std::to_string(guppy.getGrowthStage()) + std::to_string(guppy.getIsMovingRight()), (int)position.x, (int)position.y + 128);
+            draw_image("guppy" + std::to_string(guppy.getGrowthStage()) + std::to_string(guppy.getIsMovingRight()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
             Piranha piranha = o->data;

@@ -1,11 +1,11 @@
 #include "Aquarium.hpp"
 
-Aquarium::Aquarium(int _sizeX, int _sizeY) : sizeX(_sizeX), sizeY(_sizeY) {
+Aquarium::Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice) : sizeX(_sizeX), sizeY(_sizeY) {
     setGameTime(0);
     add(Snail(*this));
-    setMoney(25);
+    setMoney(_money);
     setEgg(0);
-    setEggPrice(50);
+    setEggPrice(_eggPrice);
 }
 
 int Aquarium::getSizeX() const {

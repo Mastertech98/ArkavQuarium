@@ -10,7 +10,7 @@
 
 class Aquarium {
     public:
-        Aquarium(int _sizeX, int _sizeY);
+        Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice);
 
         int getSizeX() const;
         int getSizeY() const;

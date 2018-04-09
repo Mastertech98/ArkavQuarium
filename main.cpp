@@ -12,6 +12,24 @@ int main( int argc, char* args[] )
 {
     init();
 
+    // Main Menu
+    clear_screen();
+    draw_image("play", get_screen_width() / 2, get_screen_height() / 2);
+    update_screen();
+    bool mainMenu = true;
+    while (mainMenu) {
+        // Input Handler
+        handle_input();
+        if (get_mouse_button_tapped()) {
+            int x, y;
+            SDL_GetMouseState(&x, &y);
+
+            if (x > get_screen_width()/2 - 128 && x < get_screen_width()/2 + 128 && y > get_screen_height()/2 - 32 && y < get_screen_height()/2 + 32) {
+                mainMenu = false;
+            }
+        }
+    }
+
     // FPS Counter
     int frames_passed = 0;
     double fpc_start = time_since_start();

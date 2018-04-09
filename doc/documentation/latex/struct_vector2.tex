@@ -1,0 +1,211 @@
+\hypertarget{struct_vector2}{}\section{Vector2 Struct Reference}
+\label{struct_vector2}\index{Vector2@{Vector2}}
+
+
+{\ttfamily \#include $<$Vector2.\+hpp$>$}
+
+
+
+Collaboration diagram for Vector2\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_vector2_a22104d1809be26a419ef1f959e3761bf}{Vector2}} ()
+\item 
+\mbox{\hyperlink{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}{Vector2}} (double \+\_\+x, double \+\_\+y)
+\item 
+\mbox{\hyperlink{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}{Vector2}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other)
+\item 
+bool \mbox{\hyperlink{struct_vector2_af3b049c981a79bd60495b6362aa6392b}{operator!=}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}{operator+}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}{operator-\/}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}{normalized}} () const
+\item 
+double \mbox{\hyperlink{struct_vector2_a75a29091c7c6f2f38e987ed2c62283c8}{distance}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
+\item 
+std\+::string \mbox{\hyperlink{struct_vector2_abcf7d729573613553822f965c3b9a3d2}{to\+String}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a13b12c4d8b92bbc3de6fca42cb7a2749}{random\+Position}} (double \mbox{\hyperlink{struct_vector2_a61d73d9036ccbb3257fbe595c014a1d0}{x}}, double \mbox{\hyperlink{struct_vector2_a4df9b2a8e79e6e30a7a3b34722d8b8b8}{y}})
+\item 
+static \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a4ae4f36c515bda9939cfe36e58b25f45}{random\+Direction}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{struct_vector2_a61d73d9036ccbb3257fbe595c014a1d0}{x}}
+\item 
+double \mbox{\hyperlink{struct_vector2_a4df9b2a8e79e6e30a7a3b34722d8b8b8}{y}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a2c6e0149051082f87c4f63f97e07c7ae}{null}} = \mbox{\hyperlink{struct_vector2}{Vector2}}(-\/1, -\/1)
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a28849e17f54c1c995f035544b5fd0a5f}{zero}} = \mbox{\hyperlink{struct_vector2}{Vector2}}()
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_aa9712253176cedb918592990df5ea611}{right}} = \mbox{\hyperlink{struct_vector2}{Vector2}}(1, 0)
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a0de964f9acb5cc8669d0b3b9f5b9d4eb}{up}} = \mbox{\hyperlink{struct_vector2}{Vector2}}(0, -\/1)
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_aaad26bbee0364de1e6a8676215886a2f}{left}} = \mbox{\hyperlink{struct_vector2}{Vector2}}(-\/1, 0)
+\item 
+static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a64cb9ddeb42abbcfa527c3e2660ffef9}{down}} = \mbox{\hyperlink{struct_vector2}{Vector2}}(0, 1)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a489f5283f5f1dc905c57d0a40d98c1af}{operator$\ast$}} (\mbox{\hyperlink{struct_vector2}{Vector2}} vector2, double k)
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}{operator$\ast$}} (double k, \mbox{\hyperlink{struct_vector2}{Vector2}} vector2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_vector2_a22104d1809be26a419ef1f959e3761bf}\label{struct_vector2_a22104d1809be26a419ef1f959e3761bf}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}\label{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x,  }\item[{double}]{\+\_\+y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}\label{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_vector2_a75a29091c7c6f2f38e987ed2c62283c8}\label{struct_vector2_a75a29091c7c6f2f38e987ed2c62283c8}} 
+\index{Vector2@{Vector2}!distance@{distance}}
+\index{distance@{distance}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double Vector2\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}\label{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}} 
+\index{Vector2@{Vector2}!normalized@{normalized}}
+\index{normalized@{normalized}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{normalized()}{normalized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_vector2_af3b049c981a79bd60495b6362aa6392b}\label{struct_vector2_af3b049c981a79bd60495b6362aa6392b}} 
+\index{Vector2@{Vector2}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Vector2\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}\label{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}} 
+\index{Vector2@{Vector2}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}\label{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}} 
+\index{Vector2@{Vector2}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_vector2_a4ae4f36c515bda9939cfe36e58b25f45}\label{struct_vector2_a4ae4f36c515bda9939cfe36e58b25f45}} 
+\index{Vector2@{Vector2}!random\+Direction@{random\+Direction}}
+\index{random\+Direction@{random\+Direction}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Direction()}{randomDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::random\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_a13b12c4d8b92bbc3de6fca42cb7a2749}\label{struct_vector2_a13b12c4d8b92bbc3de6fca42cb7a2749}} 
+\index{Vector2@{Vector2}!random\+Position@{random\+Position}}
+\index{random\+Position@{random\+Position}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Position()}{randomPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::random\+Position (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_abcf7d729573613553822f965c3b9a3d2}\label{struct_vector2_abcf7d729573613553822f965c3b9a3d2}} 
+\index{Vector2@{Vector2}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily std\+::string Vector2\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{struct_vector2_a489f5283f5f1dc905c57d0a40d98c1af}\label{struct_vector2_a489f5283f5f1dc905c57d0a40d98c1af}} 
+\index{Vector2@{Vector2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{vector2,  }\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}\label{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}} 
+\index{Vector2@{Vector2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_vector2_a64cb9ddeb42abbcfa527c3e2660ffef9}\label{struct_vector2_a64cb9ddeb42abbcfa527c3e2660ffef9}} 
+\index{Vector2@{Vector2}!down@{down}}
+\index{down@{down}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{down}{down}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::down = \mbox{\hyperlink{struct_vector2}{Vector2}}(0, 1)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_aaad26bbee0364de1e6a8676215886a2f}\label{struct_vector2_aaad26bbee0364de1e6a8676215886a2f}} 
+\index{Vector2@{Vector2}!left@{left}}
+\index{left@{left}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::left = \mbox{\hyperlink{struct_vector2}{Vector2}}(-\/1, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_a2c6e0149051082f87c4f63f97e07c7ae}\label{struct_vector2_a2c6e0149051082f87c4f63f97e07c7ae}} 
+\index{Vector2@{Vector2}!null@{null}}
+\index{null@{null}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{null}{null}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::null = \mbox{\hyperlink{struct_vector2}{Vector2}}(-\/1, -\/1)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_aa9712253176cedb918592990df5ea611}\label{struct_vector2_aa9712253176cedb918592990df5ea611}} 
+\index{Vector2@{Vector2}!right@{right}}
+\index{right@{right}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::right = \mbox{\hyperlink{struct_vector2}{Vector2}}(1, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_a0de964f9acb5cc8669d0b3b9f5b9d4eb}\label{struct_vector2_a0de964f9acb5cc8669d0b3b9f5b9d4eb}} 
+\index{Vector2@{Vector2}!up@{up}}
+\index{up@{up}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::up = \mbox{\hyperlink{struct_vector2}{Vector2}}(0, -\/1)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_vector2_a61d73d9036ccbb3257fbe595c014a1d0}\label{struct_vector2_a61d73d9036ccbb3257fbe595c014a1d0}} 
+\index{Vector2@{Vector2}!x@{x}}
+\index{x@{x}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double Vector2\+::x}
+
+\mbox{\Hypertarget{struct_vector2_a4df9b2a8e79e6e30a7a3b34722d8b8b8}\label{struct_vector2_a4df9b2a8e79e6e30a7a3b34722d8b8b8}} 
+\index{Vector2@{Vector2}!y@{y}}
+\index{y@{y}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double Vector2\+::y}
+
+\mbox{\Hypertarget{struct_vector2_a28849e17f54c1c995f035544b5fd0a5f}\label{struct_vector2_a28849e17f54c1c995f035544b5fd0a5f}} 
+\index{Vector2@{Vector2}!zero@{zero}}
+\index{zero@{zero}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::zero = \mbox{\hyperlink{struct_vector2}{Vector2}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector2_8hpp}{Vector2.\+hpp}}\item 
+\mbox{\hyperlink{_vector2_8cpp}{Vector2.\+cpp}}\end{DoxyCompactItemize}

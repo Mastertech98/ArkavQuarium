@@ -1,0 +1,14 @@
+digraph "Piranha"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node5 [label="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node6 [label="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fish.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node7 [label="{Creature\n||+ Creature()\l+ getEatRadius()\l+ getIsMovingRight()\l+ setIsMovingRight()\l+ eat()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_creature.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node8 [label="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_aquarium_object.html"];
+  Node9 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 [label="{IDestructible\n||+ destruct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_destructible.html"];
+}

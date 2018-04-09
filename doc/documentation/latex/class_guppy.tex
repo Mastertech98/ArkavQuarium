@@ -1,0 +1,143 @@
+\hypertarget{class_guppy}{}\section{Guppy Class Reference}
+\label{class_guppy}\index{Guppy@{Guppy}}
+
+
+{\ttfamily \#include $<$Guppy.\+hpp$>$}
+
+
+
+Inheritance diagram for Guppy\+:
+% FIG 0
+
+
+Collaboration diagram for Guppy\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guppy_a6759d8e672846fcabdfee3df44e06275}{Guppy}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium)
+\item 
+bool \mbox{\hyperlink{class_guppy_a048b328073ca8bec199c50b41cbc4108}{operator==}} (const \mbox{\hyperlink{class_guppy}{Guppy}} \&other) const
+\item 
+int \mbox{\hyperlink{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}{get\+Coin\+Drop\+Period}} () const
+\item 
+int \mbox{\hyperlink{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}{get\+Eaten\+Food}} () const
+\item 
+int \mbox{\hyperlink{class_guppy_aeb89955aa47fafc160580a6d09363826}{get\+Last\+Coin\+Drop}} () const
+\item 
+int \mbox{\hyperlink{class_guppy_a786cdeea3d03f342cedaedf85339ba20}{get\+Growth\+Stage}} () const
+\item 
+void \mbox{\hyperlink{class_guppy_a718281abaf31796884adfe861ca8b491}{set\+Eaten\+Food}} (int \+\_\+eaten\+Food)
+\item 
+void \mbox{\hyperlink{class_guppy_a39d8082e478435982f05baa6e64b0901}{set\+Last\+Coin\+Drop}} (int \+\_\+last\+Coin\+Drop)
+\item 
+\mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}{eat}} ()
+\item 
+void \mbox{\hyperlink{class_guppy_a26bc11223497fef2ae795283a5682407}{destruct}} ()
+\item 
+void \mbox{\hyperlink{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}{tick}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_guppy_ab0e5429cdfa8dfaafd56422fe35de0c7}{price}} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guppy_a6759d8e672846fcabdfee3df44e06275}\label{class_guppy_a6759d8e672846fcabdfee3df44e06275}} 
+\index{Guppy@{Guppy}!Guppy@{Guppy}}
+\index{Guppy@{Guppy}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{Guppy()}{Guppy()}}
+{\footnotesize\ttfamily Guppy\+::\+Guppy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}} \&}]{\+\_\+aquarium }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guppy_a26bc11223497fef2ae795283a5682407}\label{class_guppy_a26bc11223497fef2ae795283a5682407}} 
+\index{Guppy@{Guppy}!destruct@{destruct}}
+\index{destruct@{destruct}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily void Guppy\+::destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_destructible_a63016d1bb4daa0a726fc8add9a0be62d}{I\+Destructible}}.
+
+\mbox{\Hypertarget{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}\label{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}} 
+\index{Guppy@{Guppy}!eat@{eat}}
+\index{eat@{eat}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{eat()}{eat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Guppy\+::eat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Creature}}.
+
+\mbox{\Hypertarget{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}\label{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}} 
+\index{Guppy@{Guppy}!get\+Coin\+Drop\+Period@{get\+Coin\+Drop\+Period}}
+\index{get\+Coin\+Drop\+Period@{get\+Coin\+Drop\+Period}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{get\+Coin\+Drop\+Period()}{getCoinDropPeriod()}}
+{\footnotesize\ttfamily int Guppy\+::get\+Coin\+Drop\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}\label{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}} 
+\index{Guppy@{Guppy}!get\+Eaten\+Food@{get\+Eaten\+Food}}
+\index{get\+Eaten\+Food@{get\+Eaten\+Food}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{get\+Eaten\+Food()}{getEatenFood()}}
+{\footnotesize\ttfamily int Guppy\+::get\+Eaten\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_guppy_a786cdeea3d03f342cedaedf85339ba20}\label{class_guppy_a786cdeea3d03f342cedaedf85339ba20}} 
+\index{Guppy@{Guppy}!get\+Growth\+Stage@{get\+Growth\+Stage}}
+\index{get\+Growth\+Stage@{get\+Growth\+Stage}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{get\+Growth\+Stage()}{getGrowthStage()}}
+{\footnotesize\ttfamily int Guppy\+::get\+Growth\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_guppy_aeb89955aa47fafc160580a6d09363826}\label{class_guppy_aeb89955aa47fafc160580a6d09363826}} 
+\index{Guppy@{Guppy}!get\+Last\+Coin\+Drop@{get\+Last\+Coin\+Drop}}
+\index{get\+Last\+Coin\+Drop@{get\+Last\+Coin\+Drop}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{get\+Last\+Coin\+Drop()}{getLastCoinDrop()}}
+{\footnotesize\ttfamily int Guppy\+::get\+Last\+Coin\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_guppy_a048b328073ca8bec199c50b41cbc4108}\label{class_guppy_a048b328073ca8bec199c50b41cbc4108}} 
+\index{Guppy@{Guppy}!operator==@{operator==}}
+\index{operator==@{operator==}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Guppy\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_guppy}{Guppy}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_guppy_a718281abaf31796884adfe861ca8b491}\label{class_guppy_a718281abaf31796884adfe861ca8b491}} 
+\index{Guppy@{Guppy}!set\+Eaten\+Food@{set\+Eaten\+Food}}
+\index{set\+Eaten\+Food@{set\+Eaten\+Food}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{set\+Eaten\+Food()}{setEatenFood()}}
+{\footnotesize\ttfamily void Guppy\+::set\+Eaten\+Food (\begin{DoxyParamCaption}\item[{int}]{\+\_\+eaten\+Food }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_guppy_a39d8082e478435982f05baa6e64b0901}\label{class_guppy_a39d8082e478435982f05baa6e64b0901}} 
+\index{Guppy@{Guppy}!set\+Last\+Coin\+Drop@{set\+Last\+Coin\+Drop}}
+\index{set\+Last\+Coin\+Drop@{set\+Last\+Coin\+Drop}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{set\+Last\+Coin\+Drop()}{setLastCoinDrop()}}
+{\footnotesize\ttfamily void Guppy\+::set\+Last\+Coin\+Drop (\begin{DoxyParamCaption}\item[{int}]{\+\_\+last\+Coin\+Drop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}\label{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}} 
+\index{Guppy@{Guppy}!tick@{tick}}
+\index{tick@{tick}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Guppy\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_aquarium_object_a3a8269dfe29631656916cce254e77059}{Aquarium\+Object}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_guppy_ab0e5429cdfa8dfaafd56422fe35de0c7}\label{class_guppy_ab0e5429cdfa8dfaafd56422fe35de0c7}} 
+\index{Guppy@{Guppy}!price@{price}}
+\index{price@{price}!Guppy@{Guppy}}
+\subsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily const int Guppy\+::price = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_guppy_8hpp}{Guppy.\+hpp}}\item 
+\mbox{\hyperlink{_guppy_8cpp}{Guppy.\+cpp}}\end{DoxyCompactItemize}

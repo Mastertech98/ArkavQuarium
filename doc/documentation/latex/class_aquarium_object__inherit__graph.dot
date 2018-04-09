@@ -1,0 +1,20 @@
+digraph "AquariumObject"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node1 [label="{Coin\n||+ Coin()\l+ operator==()\l+ getValue()\l+ move()\l+ destruct()\l+ take()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_coin.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{Creature\n||+ Creature()\l+ getEatRadius()\l+ getIsMovingRight()\l+ setIsMovingRight()\l+ eat()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_creature.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fish.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node4 [label="{Guppy\n|+ price\l|+ Guppy()\l+ operator==()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_guppy.html"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node5 [label="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_piranha.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node6 [label="{Snail\n||+ Snail()\l+ operator==()\l+ move()\l+ eat()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_snail.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node7 [label="{Food\n|+ price\l|+ Food()\l+ operator==()\l+ move()\l+ destruct()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_food.html"];
+}

@@ -1,0 +1,7 @@
+<map id="Creature" name="Creature">
+<area shape="rect" id="node3" href="$class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l}" alt="" coords="85,403,228,612"/>
+<area shape="rect" id="node6" href="$class_snail.html" title="{Snail\n||+ Snail()\l+ operator==()\l+ move()\l+ eat()\l}" alt="" coords="252,447,357,568"/>
+<area shape="rect" id="node2" href="$class_aquarium_object.html" title="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}" alt="" coords="163,5,297,171"/>
+<area shape="rect" id="node4" href="$class_guppy.html" title="{Guppy\n|+ price\l|+ Guppy()\l+ operator==()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}" alt="" coords="5,660,156,884"/>
+<area shape="rect" id="node5" href="$class_piranha.html" title="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}" alt="" coords="180,711,285,833"/>
+</map>

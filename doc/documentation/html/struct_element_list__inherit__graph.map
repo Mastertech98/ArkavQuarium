@@ -1,0 +1,7 @@
+<map id="ElementList&lt; T &gt;" name="ElementList&lt; T &gt;">
+<area shape="rect" id="node2" href="$struct_element_list.html" title="{ElementList\&lt; Piranha \&gt;\n|+ data\l+ next\l|+ ElementList()\l}" alt="" coords="5,160,164,252"/>
+<area shape="rect" id="node3" href="$struct_element_list.html" title="{ElementList\&lt; Guppy \&gt;\n|+ data\l+ next\l|+ ElementList()\l}" alt="" coords="188,160,341,252"/>
+<area shape="rect" id="node4" href="$struct_element_list.html" title="{ElementList\&lt; Coin \&gt;\n|+ data\l+ next\l|+ ElementList()\l}" alt="" coords="366,160,507,252"/>
+<area shape="rect" id="node5" href="$struct_element_list.html" title="{ElementList\&lt; Snail \&gt;\n|+ data\l+ next\l|+ ElementList()\l}" alt="" coords="531,160,675,252"/>
+<area shape="rect" id="node6" href="$struct_element_list.html" title="{ElementList\&lt; Food \&gt;\n|+ data\l+ next\l|+ ElementList()\l}" alt="" coords="699,160,843,252"/>
+</map>

@@ -74,3 +74,11 @@ void Fish::moveRandomly() {
         setLastMoveTime(gameTime);
     }
 }
+
+void Fish::tick() {
+    AquariumObject::tick();
+
+    if (getAquarium().getGameTime() >= getLastMealTime() + getFullTime() + getHungryTime()) {
+        destruct();
+    }
+}

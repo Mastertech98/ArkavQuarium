@@ -3,6 +3,7 @@
 
 class IDestructible {
     public:
+        // Abstract function of destruct
         void virtual destruct() = 0;
 };
 

@@ -73,10 +73,6 @@ void Guppy::tick() {
         dropCoin(2 * getGrowthStage());
         setLastCoinDrop(gameTime);
     }
-
-    if (gameTime >= getLastMealTime() + getFullTime() + getHungryTime()) {
-        destruct();
-    }
 }
 
 Food* Guppy::findFood() {

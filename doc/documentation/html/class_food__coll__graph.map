@@ -1,0 +1,4 @@
+<map id="Food" name="Food">
+<area shape="rect" id="node2" href="$class_aquarium_object.html" title="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}" alt="" coords="5,5,140,171"/>
+<area shape="rect" id="node3" href="$class_i_destructible.html" title="{IDestructible\n||+ destruct()\l}" alt="" coords="164,49,259,127"/>
+</map>

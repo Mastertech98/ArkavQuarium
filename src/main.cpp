@@ -14,13 +14,13 @@ int main( int argc, char* args[] )
 
     bool running;
 
-    // Main Menu
+    /// Main Menu
     clear_screen();
     draw_image("play", get_screen_width() / 2, get_screen_height() / 2);
     update_screen();
     running = true;
     while (running) {
-        // Input Handler
+        /// Input Handler
         handle_input();
         if (get_mouse_button_tapped()) {
             int x, y;
@@ -32,16 +32,16 @@ int main( int argc, char* args[] )
         }
     }
 
-    // FPS Counter
+    /// FPS Counter
     int frames_passed = 0;
     double fpc_start = time_since_start();
 
-    // Text String
+    /// Text String
     std::string fps_text = "FPS: 0";
     std::string money_text = "Money: 0";
     std::string egg_text = "Egg: 0";
 
-    // Initialize Game
+    /// Initialize Game
     Aquarium aquarium = Aquarium(get_screen_width(), get_screen_height() - 192, 25, 20);
     running = true;
     bool paused = false;
@@ -50,14 +50,14 @@ int main( int argc, char* args[] )
     double prevtime = time_since_start();
 
     while (running) {
-        // Game Tick
+        /// Game Tick
         double now = time_since_start();
         if (now - prevtime > speed / tps && !paused) {
             aquarium.tick();
             prevtime = now;
         }
 
-        // Input Handler
+        /// Input Handler
         handle_input();
         if (quit_pressed()) {
             running = false;
@@ -119,7 +119,7 @@ int main( int argc, char* args[] )
             }
         }
 
-        // Update FPS every second
+        /// Update FPS every second
         frames_passed++;
         if (now - fpc_start > 1) {
             std::ostringstream strs;
@@ -130,7 +130,7 @@ int main( int argc, char* args[] )
             frames_passed = 0;
         }
 
-        // Draw
+        /// Draw
         clear_screen();
 
         draw_background("background");
@@ -184,7 +184,7 @@ int main( int argc, char* args[] )
         }
     }
 
-    // End Game
+    /// End Game
     clear_screen();
     if (win) {
         draw_text("Win", 25, 0, 0, 0, 0, 0);
@@ -194,7 +194,7 @@ int main( int argc, char* args[] )
     update_screen();
     running = true;
     while (running) {
-        // Input Handler
+        /// Input Handler
         handle_input();
         if (!get_tapped_keys().empty()) {
             running = false;

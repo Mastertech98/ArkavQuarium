@@ -1,5 +1,5 @@
 <map id="Piranha" name="Piranha">
-<area shape="rect" id="node2" href="$class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l}" alt="" coords="75,403,217,612"/>
+<area shape="rect" id="node2" href="$class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l+ tick()\l}" alt="" coords="75,403,217,627"/>
 <area shape="rect" id="node3" href="$class_creature.html" title="{Creature\n||+ Creature()\l+ getEatRadius()\l+ getIsMovingRight()\l+ setIsMovingRight()\l+ eat()\l}" alt="" coords="5,219,145,355"/>
 <area shape="rect" id="node4" href="$class_aquarium_object.html" title="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}" alt="" coords="8,5,143,171"/>
 <area shape="rect" id="node5" href="$class_i_destructible.html" title="{IDestructible\n||+ destruct()\l}" alt="" coords="169,248,264,325"/>

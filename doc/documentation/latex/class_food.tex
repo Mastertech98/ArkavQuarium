@@ -6,23 +6,33 @@
 
 
 
-Inheritance diagram for Food\+:
-% FIG 0
+Inheritance diagram for Food\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_food__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Food\+:
-% FIG 1
+Collaboration diagram for Food\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_food__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_food_ad36b16582fc56aa938f50870f5ec6b52}{Food}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium, float x)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: instantiate food on top of aquarium. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_food_a7199d2bd48ecae8ffbbf1be8a39c5311}{operator==}} (const \mbox{\hyperlink{class_food}{Food}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Reference comparison. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_food_afb37f87b673df87697665ae82b6da0da}{move}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Move this food to the bottom and destruct itself on touching aquariums\textquotesingle{} floor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_food_a5e1bfe34f8a4f4ce60accc57212c95c8}{destruct}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Remove this food from aquarium. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,12 +49,20 @@ static const int \mbox{\hyperlink{class_food_af54f2090e84e95fcdc95f5c2d93386df}{
 
 
 
+Constructor\+: instantiate food on top of aquarium. 
+
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_food_a5e1bfe34f8a4f4ce60accc57212c95c8}\label{class_food_a5e1bfe34f8a4f4ce60accc57212c95c8}} 
 \index{Food@{Food}!destruct@{destruct}}
 \index{destruct@{destruct}!Food@{Food}}
 \subsubsection{\texorpdfstring{destruct()}{destruct()}}
 {\footnotesize\ttfamily void Food\+::destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove this food from aquarium. 
 
 
 
@@ -58,6 +76,10 @@ Implements \mbox{\hyperlink{class_i_destructible_a63016d1bb4daa0a726fc8add9a0be6
 
 
 
+Move this food to the bottom and destruct itself on touching aquariums\textquotesingle{} floor. 
+
+
+
 Implements \mbox{\hyperlink{class_aquarium_object_a42c4de640f89ac8aebc26b7618578575}{Aquarium\+Object}}.
 
 \mbox{\Hypertarget{class_food_a7199d2bd48ecae8ffbbf1be8a39c5311}\label{class_food_a7199d2bd48ecae8ffbbf1be8a39c5311}} 
@@ -65,6 +87,10 @@ Implements \mbox{\hyperlink{class_aquarium_object_a42c4de640f89ac8aebc26b7618578
 \index{operator==@{operator==}!Food@{Food}}
 \subsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Food\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_food}{Food}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Reference comparison. 
 
 
 

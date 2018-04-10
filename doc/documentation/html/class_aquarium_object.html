@@ -74,30 +74,44 @@ $(function() {
 Inheritance diagram for AquariumObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_aquarium_object__inherit__graph.png" border="0" usemap="#_aquarium_object_inherit__map" alt="Inheritance graph"/></div>
-<!-- MAP 0 -->
+<map name="_aquarium_object_inherit__map" id="_aquarium_object_inherit__map">
+<area shape="rect" id="node2" href="class_coin.html" title="{Coin\n||+ Coin()\l+ operator==()\l+ getValue()\l+ move()\l+ destruct()\l+ take()\l}" alt="" coords="32,219,137,369"/>
+<area shape="rect" id="node3" href="class_creature.html" title="{Creature\n||+ Creature()\l+ getEatRadius()\l+ getIsMovingRight()\l+ setIsMovingRight()\l+ eat()\l}" alt="" coords="161,226,301,362"/>
+<area shape="rect" id="node8" href="class_food.html" title="{Food\n|+ price\l|+ Food()\l+ operator==()\l+ move()\l+ destruct()\l}" alt="" coords="325,233,431,355"/>
+<area shape="rect" id="node4" href="class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l+ tick()\l}" alt="" coords="85,417,228,641"/>
+<area shape="rect" id="node7" href="class_snail.html" title="{Snail\n||+ Snail()\l+ operator==()\l+ move()\l+ eat()\l}" alt="" coords="252,469,357,590"/>
+<area shape="rect" id="node5" href="class_guppy.html" title="{Guppy\n|+ price\l|+ Guppy()\l+ operator==()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}" alt="" coords="5,689,156,913"/>
+<area shape="rect" id="node6" href="class_piranha.html" title="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}" alt="" coords="180,741,285,862"/>
+</map>
 </div>
 <div class="dynheader">
 Collaboration diagram for AquariumObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_aquarium_object__coll__graph.png" border="0" usemap="#_aquarium_object_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 1 -->
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aebe6958a63cab1a4277006d335d3c968"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#aebe6958a63cab1a4277006d335d3c968">AquariumObject</a> (<a class="el" href="class_aquarium.html">Aquarium</a> &amp;_aquarium, float _speed, <a class="el" href="struct_vector2.html">Vector2</a> _position)</td></tr>
+<tr class="memdesc:aebe6958a63cab1a4277006d335d3c968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aebe6958a63cab1a4277006d335d3c968">More...</a><br /></td></tr>
 <tr class="separator:aebe6958a63cab1a4277006d335d3c968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229f2c41d3aa352bcbd7b994dd540f97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aquarium.html">Aquarium</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#a229f2c41d3aa352bcbd7b994dd540f97">getAquarium</a> () const</td></tr>
+<tr class="memdesc:a229f2c41d3aa352bcbd7b994dd540f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to aquarium of this <a class="el" href="class_aquarium_object.html">AquariumObject</a>.  <a href="#a229f2c41d3aa352bcbd7b994dd540f97">More...</a><br /></td></tr>
 <tr class="separator:a229f2c41d3aa352bcbd7b994dd540f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e554167f04a77e452d5714d31fadada"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#a0e554167f04a77e452d5714d31fadada">getSpeed</a> () const</td></tr>
+<tr class="memdesc:a0e554167f04a77e452d5714d31fadada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return speed.  <a href="#a0e554167f04a77e452d5714d31fadada">More...</a><br /></td></tr>
 <tr class="separator:a0e554167f04a77e452d5714d31fadada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4986687e54beb0ce780a9cafbda990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#aed4986687e54beb0ce780a9cafbda990">getPosition</a> () const</td></tr>
+<tr class="memdesc:aed4986687e54beb0ce780a9cafbda990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return position.  <a href="#aed4986687e54beb0ce780a9cafbda990">More...</a><br /></td></tr>
 <tr class="separator:aed4986687e54beb0ce780a9cafbda990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ec88f59595aec6ad788b90e9896b9b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#a2ec88f59595aec6ad788b90e9896b9b9">setPosition</a> (<a class="el" href="struct_vector2.html">Vector2</a> _position)</td></tr>
+<tr class="memdesc:a2ec88f59595aec6ad788b90e9896b9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set position.  <a href="#a2ec88f59595aec6ad788b90e9896b9b9">More...</a><br /></td></tr>
 <tr class="separator:a2ec88f59595aec6ad788b90e9896b9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c4de640f89ac8aebc26b7618578575"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#a42c4de640f89ac8aebc26b7618578575">move</a> ()=0</td></tr>
+<tr class="memdesc:a42c4de640f89ac8aebc26b7618578575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract function of move.  <a href="#a42c4de640f89ac8aebc26b7618578575">More...</a><br /></td></tr>
 <tr class="separator:a42c4de640f89ac8aebc26b7618578575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8269dfe29631656916cce254e77059"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aquarium_object.html#a3a8269dfe29631656916cce254e77059">tick</a> ()</td></tr>
+<tr class="memdesc:a3a8269dfe29631656916cce254e77059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do one game time unit: moves.  <a href="#a3a8269dfe29631656916cce254e77059">More...</a><br /></td></tr>
 <tr class="separator:a3a8269dfe29631656916cce254e77059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -133,6 +147,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -151,6 +167,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return reference to aquarium of this <a class="el" href="class_aquarium_object.html">AquariumObject</a>. </p>
+
 </div>
 </div>
 <a id="aed4986687e54beb0ce780a9cafbda990"></a>
@@ -168,6 +186,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return position. </p>
+
 </div>
 </div>
 <a id="a0e554167f04a77e452d5714d31fadada"></a>
@@ -184,6 +204,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return speed. </p>
 
 </div>
 </div>
@@ -210,6 +232,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Abstract function of move. </p>
+
 <p>Implemented in <a class="el" href="class_fish.html#a1a18368573aab3b14a83aaf2424630ec">Fish</a>, <a class="el" href="class_coin.html#ab62bca5834489b9b483deaa3ca3470e9">Coin</a>, <a class="el" href="class_food.html#afb37f87b673df87697665ae82b6da0da">Food</a>, and <a class="el" href="class_snail.html#af5892ec122d9199480c813b74488256b">Snail</a>.</p>
 
 </div>
@@ -229,6 +253,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set position. </p>
 
 </div>
 </div>
@@ -255,7 +281,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_guppy.html#ab2f219fa29b0d22ee9702a55fede519b">Guppy</a>.</p>
+<p>Do one game time unit: moves. </p>
+
+<p>Reimplemented in <a class="el" href="class_guppy.html#ab2f219fa29b0d22ee9702a55fede519b">Guppy</a>, and <a class="el" href="class_fish.html#aa49a70677a400c471b1e3db5d8f1881e">Fish</a>.</p>
 
 </div>
 </div>

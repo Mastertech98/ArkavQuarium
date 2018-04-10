@@ -6,16 +6,16 @@
 
 class Piranha : public Fish {
     public:
-        // Constructor: instantiate piranha at speed of 7 and eatRadius of 75
+        /// Constructor: instantiate piranha at speed of 7 and eatRadius of 75
         Piranha(Aquarium& _aquarium);
 
-        // Reference comparison
+        /// Reference comparison
         bool operator==(const Piranha& other) const;
 
-        // Find guppies in the aquarium
+        /// Find guppies in the aquarium
         Vector2 eat();
 
-        // Remove this piranha from aquarium
+        /// Remove this piranha from aquarium
         void destruct();
 
         static const int price;

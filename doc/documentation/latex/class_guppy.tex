@@ -6,37 +6,47 @@
 
 
 
-Inheritance diagram for Guppy\+:
-% FIG 0
+Inheritance diagram for Guppy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_guppy__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Guppy\+:
-% FIG 1
+Collaboration diagram for Guppy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_guppy__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_guppy_a6759d8e672846fcabdfee3df44e06275}{Guppy}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: instantiate guppy at speed of 5 and eat\+Radius of 50. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_guppy_a048b328073ca8bec199c50b41cbc4108}{operator==}} (const \mbox{\hyperlink{class_guppy}{Guppy}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Reference comparison. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}{get\+Coin\+Drop\+Period}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return coin drop period. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}{get\+Eaten\+Food}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return the number of this guppy\textquotesingle{}s eaten food. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_guppy_aeb89955aa47fafc160580a6d09363826}{get\+Last\+Coin\+Drop}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return the last time this guppy drops coin. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_guppy_a786cdeea3d03f342cedaedf85339ba20}{get\+Growth\+Stage}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return the growth stage of this guppy based on this guppy\textquotesingle{}s eaten food. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_guppy_a718281abaf31796884adfe861ca8b491}{set\+Eaten\+Food}} (int \+\_\+eaten\+Food)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the number of this guppy\textquotesingle{}s eaten food. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_guppy_a39d8082e478435982f05baa6e64b0901}{set\+Last\+Coin\+Drop}} (int \+\_\+last\+Coin\+Drop)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the last time this guppy drops coin. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}{eat}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Find food in the aquarium. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_guppy_a26bc11223497fef2ae795283a5682407}{destruct}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove this guppy from aquarium. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}{tick}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Do one game time unit\+: drops coin on coin drop period. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,12 +63,20 @@ static const int \mbox{\hyperlink{class_guppy_ab0e5429cdfa8dfaafd56422fe35de0c7}
 
 
 
+Constructor\+: instantiate guppy at speed of 5 and eat\+Radius of 50. 
+
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_guppy_a26bc11223497fef2ae795283a5682407}\label{class_guppy_a26bc11223497fef2ae795283a5682407}} 
 \index{Guppy@{Guppy}!destruct@{destruct}}
 \index{destruct@{destruct}!Guppy@{Guppy}}
 \subsubsection{\texorpdfstring{destruct()}{destruct()}}
 {\footnotesize\ttfamily void Guppy\+::destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove this guppy from aquarium. 
 
 
 
@@ -72,6 +90,10 @@ Implements \mbox{\hyperlink{class_i_destructible_a63016d1bb4daa0a726fc8add9a0be6
 
 
 
+Find food in the aquarium. 
+
+
+
 Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Creature}}.
 
 \mbox{\Hypertarget{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}\label{class_guppy_a30d6fd06e3960eb1ea078bccdd23e12e}} 
@@ -80,11 +102,19 @@ Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Cr
 \subsubsection{\texorpdfstring{get\+Coin\+Drop\+Period()}{getCoinDropPeriod()}}
 {\footnotesize\ttfamily int Guppy\+::get\+Coin\+Drop\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Return coin drop period. 
+
 \mbox{\Hypertarget{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}\label{class_guppy_a0a57ee7e3bee04fb9dfe261e7f0f551e}} 
 \index{Guppy@{Guppy}!get\+Eaten\+Food@{get\+Eaten\+Food}}
 \index{get\+Eaten\+Food@{get\+Eaten\+Food}!Guppy@{Guppy}}
 \subsubsection{\texorpdfstring{get\+Eaten\+Food()}{getEatenFood()}}
 {\footnotesize\ttfamily int Guppy\+::get\+Eaten\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the number of this guppy\textquotesingle{}s eaten food. 
 
 \mbox{\Hypertarget{class_guppy_a786cdeea3d03f342cedaedf85339ba20}\label{class_guppy_a786cdeea3d03f342cedaedf85339ba20}} 
 \index{Guppy@{Guppy}!get\+Growth\+Stage@{get\+Growth\+Stage}}
@@ -92,11 +122,19 @@ Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Cr
 \subsubsection{\texorpdfstring{get\+Growth\+Stage()}{getGrowthStage()}}
 {\footnotesize\ttfamily int Guppy\+::get\+Growth\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Return the growth stage of this guppy based on this guppy\textquotesingle{}s eaten food. 
+
 \mbox{\Hypertarget{class_guppy_aeb89955aa47fafc160580a6d09363826}\label{class_guppy_aeb89955aa47fafc160580a6d09363826}} 
 \index{Guppy@{Guppy}!get\+Last\+Coin\+Drop@{get\+Last\+Coin\+Drop}}
 \index{get\+Last\+Coin\+Drop@{get\+Last\+Coin\+Drop}!Guppy@{Guppy}}
 \subsubsection{\texorpdfstring{get\+Last\+Coin\+Drop()}{getLastCoinDrop()}}
 {\footnotesize\ttfamily int Guppy\+::get\+Last\+Coin\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the last time this guppy drops coin. 
 
 \mbox{\Hypertarget{class_guppy_a048b328073ca8bec199c50b41cbc4108}\label{class_guppy_a048b328073ca8bec199c50b41cbc4108}} 
 \index{Guppy@{Guppy}!operator==@{operator==}}
@@ -104,17 +142,29 @@ Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Cr
 \subsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Guppy\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_guppy}{Guppy}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Reference comparison. 
+
 \mbox{\Hypertarget{class_guppy_a718281abaf31796884adfe861ca8b491}\label{class_guppy_a718281abaf31796884adfe861ca8b491}} 
 \index{Guppy@{Guppy}!set\+Eaten\+Food@{set\+Eaten\+Food}}
 \index{set\+Eaten\+Food@{set\+Eaten\+Food}!Guppy@{Guppy}}
 \subsubsection{\texorpdfstring{set\+Eaten\+Food()}{setEatenFood()}}
 {\footnotesize\ttfamily void Guppy\+::set\+Eaten\+Food (\begin{DoxyParamCaption}\item[{int}]{\+\_\+eaten\+Food }\end{DoxyParamCaption})}
 
+
+
+Set the number of this guppy\textquotesingle{}s eaten food. 
+
 \mbox{\Hypertarget{class_guppy_a39d8082e478435982f05baa6e64b0901}\label{class_guppy_a39d8082e478435982f05baa6e64b0901}} 
 \index{Guppy@{Guppy}!set\+Last\+Coin\+Drop@{set\+Last\+Coin\+Drop}}
 \index{set\+Last\+Coin\+Drop@{set\+Last\+Coin\+Drop}!Guppy@{Guppy}}
 \subsubsection{\texorpdfstring{set\+Last\+Coin\+Drop()}{setLastCoinDrop()}}
 {\footnotesize\ttfamily void Guppy\+::set\+Last\+Coin\+Drop (\begin{DoxyParamCaption}\item[{int}]{\+\_\+last\+Coin\+Drop }\end{DoxyParamCaption})}
+
+
+
+Set the last time this guppy drops coin. 
 
 \mbox{\Hypertarget{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}\label{class_guppy_ab2f219fa29b0d22ee9702a55fede519b}} 
 \index{Guppy@{Guppy}!tick@{tick}}
@@ -124,7 +174,11 @@ Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Cr
 
 
 
-Reimplemented from \mbox{\hyperlink{class_aquarium_object_a3a8269dfe29631656916cce254e77059}{Aquarium\+Object}}.
+Do one game time unit\+: drops coin on coin drop period. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_fish_aa49a70677a400c471b1e3db5d8f1881e}{Fish}}.
 
 
 

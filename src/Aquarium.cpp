@@ -90,19 +90,24 @@ void Aquarium::remove(const Coin& coin) {
 void Aquarium::tick() {
     setGameTime(getGameTime() + 1);
 
-    for (ElementList<Guppy>* o = getGuppies().getFirst(); o != 0; o = o->next) {
+    for (ElementList<Guppy>* o = getGuppies().getFirst(),* next = 0; o != 0; o = next) {
+        next = o->next;
         o->data.tick();
     }
-    for (ElementList<Piranha>* o = getPiranhas().getFirst(); o != 0; o = o->next) {
+    for (ElementList<Piranha>* o = getPiranhas().getFirst(),* next = 0; o != 0; o = next) {
+        next = o->next;
         o->data.tick();
     }
-    for (ElementList<Snail>* o = getSnails().getFirst(); o != 0; o = o->next) {
+    for (ElementList<Snail>* o = getSnails().getFirst(),* next = 0; o != 0; o = next) {
+        next = o->next;
         o->data.tick();
     }
-    for (ElementList<Food>* o = getFoods().getFirst(); o != 0; o = o->next) {
+    for (ElementList<Food>* o = getFoods().getFirst(),* next = 0; o != 0; o = next) {
+        next = o->next;
         o->data.tick();
     }
-    for (ElementList<Coin>* o = getCoins().getFirst(); o != 0; o = o->next) {
+    for (ElementList<Coin>* o = getCoins().getFirst(),* next = 0; o != 0; o = next) {
+        next = o->next;
         o->data.tick();
     }
 }

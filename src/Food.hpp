@@ -12,7 +12,7 @@ class Food : public AquariumObject, public IDestructible {
         /// Reference comparison
         bool operator==(const Food& other) const;
 
-        /// Move this food to the bottom and destruct itself on touching aquariums' floor
+        /// Move this food to the bottom and destruct itself on touching aquarium's floor
         void move();
 
         /// Remove this food from aquarium

@@ -45,4 +45,4 @@ struct Vector2 {
     std::string toString();
 };
 
-#endifs
+#endif

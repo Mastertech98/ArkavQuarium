@@ -13,7 +13,7 @@ class Aquarium {
         /// Constuctor: set gameTime to 0, set egg to 0, add snail to game
         Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice);
 
-        /// \brief Return aquarium x size
+        /// Return aquarium x size
         int getSizeX() const;
         /// Return aquarium y size
         int getSizeY() const;

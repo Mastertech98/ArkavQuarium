@@ -8,7 +8,7 @@ class Creature : public AquariumObject {
         /// Constructor
         Creature(Aquarium& _aquarium, float _speed, Vector2 _position, float _eatRadius);
 
-        /// Return eat rediu
+        /// Return eat radius
         float getEatRadius() const;
         /// Return x movement direction
         bool getIsMovingRight() const;

@@ -15,6 +15,8 @@ struct Vector2 {
     /// Copy Constructor
     Vector2(const Vector2& other);
 
+    /// Equality operator
+    bool operator==(const Vector2& other) const;
     /// Inequality operator
     bool operator!=(const Vector2& other) const;
 

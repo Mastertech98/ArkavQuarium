@@ -60,6 +60,7 @@ class LinkedList {
                         prec->next = e->next;
                     }
                     delete e;
+                    break;
                 }
             }
         }

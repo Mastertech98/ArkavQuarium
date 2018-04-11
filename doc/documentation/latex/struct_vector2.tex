@@ -6,27 +6,32 @@
 
 
 
-Collaboration diagram for Vector2\+:
-% FIG 0
+Collaboration diagram for Vector2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_vector2__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_vector2_a22104d1809be26a419ef1f959e3761bf}{Vector2}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}{Vector2}} (double \+\_\+x, double \+\_\+y)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: x = \+\_\+x, y = \+\_\+y. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}{Vector2}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{struct_vector2_af3b049c981a79bd60495b6362aa6392b}{operator!=}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Inequality operator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}{operator+}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Addition. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}{operator-\/}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Substraction. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}{normalized}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return this vector2 with magnitude of 1. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{struct_vector2_a75a29091c7c6f2f38e987ed2c62283c8}{distance}} (const \mbox{\hyperlink{struct_vector2}{Vector2}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Return this vector2 distance to other vector2. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{struct_vector2_abcf7d729573613553822f965c3b9a3d2}{to\+String}} ()
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
@@ -62,9 +67,9 @@ static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a489f5283f5f1dc905c57d0a40d98c1af}{operator$\ast$}} (\mbox{\hyperlink{struct_vector2}{Vector2}} vector2, double k)
-\item 
+\begin{DoxyCompactList}\small\item\em Friend\+: \mbox{\hyperlink{struct_vector2}{Vector2}} times Double. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}{operator$\ast$}} (double k, \mbox{\hyperlink{struct_vector2}{Vector2}} vector2)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Friend\+: Double times \mbox{\hyperlink{struct_vector2}{Vector2}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -74,17 +79,29 @@ static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_
 \subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Default constructor. 
+
 \mbox{\Hypertarget{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}\label{struct_vector2_a861062b13bd0e92d50b3ffd90c9edd77}} 
 \index{Vector2@{Vector2}!Vector2@{Vector2}}
 \index{Vector2@{Vector2}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x,  }\item[{double}]{\+\_\+y }\end{DoxyParamCaption})}
 
+
+
+Constructor\+: x = \+\_\+x, y = \+\_\+y. 
+
 \mbox{\Hypertarget{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}\label{struct_vector2_ac0c70e89b089fb619dae62c32ccde4ec}} 
 \index{Vector2@{Vector2}!Vector2@{Vector2}}
 \index{Vector2@{Vector2}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
 
 
 
@@ -95,11 +112,19 @@ static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_
 \subsubsection{\texorpdfstring{distance()}{distance()}}
 {\footnotesize\ttfamily double Vector2\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Return this vector2 distance to other vector2. 
+
 \mbox{\Hypertarget{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}\label{struct_vector2_a1e0be0f2d578e8b5d0b8f95a9f8b6626}} 
 \index{Vector2@{Vector2}!normalized@{normalized}}
 \index{normalized@{normalized}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{normalized()}{normalized()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return this vector2 with magnitude of 1. 
 
 \mbox{\Hypertarget{struct_vector2_af3b049c981a79bd60495b6362aa6392b}\label{struct_vector2_af3b049c981a79bd60495b6362aa6392b}} 
 \index{Vector2@{Vector2}!operator"!=@{operator"!=}}
@@ -107,17 +132,29 @@ static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_
 \subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
 {\footnotesize\ttfamily bool Vector2\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Inequality operator. 
+
 \mbox{\Hypertarget{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}\label{struct_vector2_a53bdaa4ea8e1504f8a78ac78e6f151bf}} 
 \index{Vector2@{Vector2}!operator+@{operator+}}
 \index{operator+@{operator+}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Addition. 
+
 \mbox{\Hypertarget{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}\label{struct_vector2_a9f6650ee1529209532c14fc0e4e97a6a}} 
 \index{Vector2@{Vector2}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Vector2\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector2}{Vector2}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Substraction. 
 
 \mbox{\Hypertarget{struct_vector2_a4ae4f36c515bda9939cfe36e58b25f45}\label{struct_vector2_a4ae4f36c515bda9939cfe36e58b25f45}} 
 \index{Vector2@{Vector2}!random\+Direction@{random\+Direction}}
@@ -146,11 +183,19 @@ static const \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{struct_
 \subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{vector2,  }\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+
+
+Friend\+: \mbox{\hyperlink{struct_vector2}{Vector2}} times Double. 
+
 \mbox{\Hypertarget{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}\label{struct_vector2_a6ac6360b23e2a1457b794f0aefc18f3a}} 
 \index{Vector2@{Vector2}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Vector2@{Vector2}}
 \subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Friend\+: Double times \mbox{\hyperlink{struct_vector2}{Vector2}}. 
 
 
 

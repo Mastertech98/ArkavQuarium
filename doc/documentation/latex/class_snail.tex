@@ -6,23 +6,33 @@
 
 
 
-Inheritance diagram for Snail\+:
-% FIG 0
+Inheritance diagram for Snail\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_snail__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Snail\+:
-% FIG 1
+Collaboration diagram for Snail\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_snail__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_snail_acda391321646989553f4547dd793fa9c}{Snail}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor\+: instantiate snail on the bottom middle of the aquarium, speed of 3, and eat\+Radius of 50. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_snail_ab01308256de08e789ca752e1608120f7}{operator==}} (const \mbox{\hyperlink{class_snail}{Snail}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Reference comparison. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_snail_af5892ec122d9199480c813b74488256b}{move}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Move horizontally. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_snail_a0905a469c6333970b8246abca37795f1}{eat}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find coin in the aquarium. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -34,12 +44,20 @@ void \mbox{\hyperlink{class_snail_af5892ec122d9199480c813b74488256b}{move}} ()
 
 
 
+Constructor\+: instantiate snail on the bottom middle of the aquarium, speed of 3, and eat\+Radius of 50. 
+
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_snail_a0905a469c6333970b8246abca37795f1}\label{class_snail_a0905a469c6333970b8246abca37795f1}} 
 \index{Snail@{Snail}!eat@{eat}}
 \index{eat@{eat}!Snail@{Snail}}
 \subsubsection{\texorpdfstring{eat()}{eat()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_vector2}{Vector2}} Snail\+::eat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Find coin in the aquarium. 
 
 
 
@@ -53,6 +71,10 @@ Implements \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{Cr
 
 
 
+Move horizontally. 
+
+
+
 Implements \mbox{\hyperlink{class_aquarium_object_a42c4de640f89ac8aebc26b7618578575}{Aquarium\+Object}}.
 
 \mbox{\Hypertarget{class_snail_ab01308256de08e789ca752e1608120f7}\label{class_snail_ab01308256de08e789ca752e1608120f7}} 
@@ -60,6 +82,10 @@ Implements \mbox{\hyperlink{class_aquarium_object_a42c4de640f89ac8aebc26b7618578
 \index{operator==@{operator==}!Snail@{Snail}}
 \subsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Snail\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_snail}{Snail}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Reference comparison. 
 
 
 

@@ -6,20 +6,20 @@
 
 class Coin : public AquariumObject, public IDestructible {
     public:
-        // Constructor
+        /// Constructor
         Coin(Aquarium& _aquarium, Vector2 _position, int _value);
 
-        // Reference comparison
+        /// Reference comparison
         bool operator==(const Coin& other) const;
         
-        // Return coin's value
+        /// Return coin's value
         int getValue() const;
 
-        // Move this coin to the bottom
+        /// Move this coin to the bottom
         void move();
-        // Remove this coin from aquarium
+        /// Remove this coin from aquarium
         void destruct();
-        // Increase money by value
+        /// Increase money by value
         void take();
 
     private:

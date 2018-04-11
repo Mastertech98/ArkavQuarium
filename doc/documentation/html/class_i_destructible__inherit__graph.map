@@ -1,7 +1,7 @@
 <map id="IDestructible" name="IDestructible">
-<area shape="rect" id="node2" href="$class_coin.html" title="{Coin\n||+ Coin()\l+ operator==()\l+ getValue()\l+ move()\l+ destruct()\l+ take()\l}" alt="" coords="5,160,111,311"/>
-<area shape="rect" id="node3" href="$class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l}" alt="" coords="135,131,277,340"/>
-<area shape="rect" id="node6" href="$class_food.html" title="{Food\n|+ price\l|+ Food()\l+ operator==()\l+ move()\l+ destruct()\l}" alt="" coords="301,175,407,296"/>
-<area shape="rect" id="node4" href="$class_guppy.html" title="{Guppy\n|+ price\l|+ Guppy()\l+ operator==()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}" alt="" coords="55,388,205,612"/>
-<area shape="rect" id="node5" href="$class_piranha.html" title="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}" alt="" coords="229,439,335,561"/>
+<area shape="rect" id="node2" href="$class_coin.html" title="{Coin\n||+ Coin()\l+ operator==()\l+ getValue()\l+ move()\l+ destruct()\l+ take()\l}" alt="" coords="5,167,111,318"/>
+<area shape="rect" id="node3" href="$class_fish.html" title="{Fish\n||+ Fish()\l+ getFullTime()\l+ getHungryTime()\l+ getMoveTime()\l+ getLastMealTime()\l+ getLastMoveTime()\l+ setLastMealTime()\l+ setLastMoveTime()\l+ move()\l+ dropCoin()\l+ tick()\l}" alt="" coords="135,131,277,355"/>
+<area shape="rect" id="node6" href="$class_food.html" title="{Food\n|+ price\l|+ Food()\l+ operator==()\l+ move()\l+ destruct()\l}" alt="" coords="301,182,407,303"/>
+<area shape="rect" id="node4" href="$class_guppy.html" title="{Guppy\n|+ price\l|+ Guppy()\l+ operator==()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}" alt="" coords="55,403,205,627"/>
+<area shape="rect" id="node5" href="$class_piranha.html" title="{Piranha\n|+ price\l|+ Piranha()\l+ operator==()\l+ eat()\l+ destruct()\l}" alt="" coords="229,454,335,575"/>
 </map>

@@ -6,25 +6,35 @@
 
 
 
-Inheritance diagram for Creature\+:
-% FIG 0
+Inheritance diagram for Creature\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_creature__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Creature\+:
-% FIG 1
+Collaboration diagram for Creature\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_creature__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_creature_ab12ad708dcef6c9cd0509f6769a6329a}{Creature}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium, float \+\_\+speed, \mbox{\hyperlink{struct_vector2}{Vector2}} \+\_\+position, float \+\_\+eat\+Radius)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_creature_a24e52cedddd872269f83671c9a6f6925}{get\+Eat\+Radius}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return eat rediu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_creature_a63abd829cfac5d57425452b39f2a21b7}{get\+Is\+Moving\+Right}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return x movement direction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_creature_a7b222797d42b668ebf2a02eef51feaf8}{set\+Is\+Moving\+Right}} (bool \+\_\+is\+Moving\+Right)
-\item 
+\begin{DoxyCompactList}\small\item\em Set x movement direction. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_creature_a0d531a4c04c1021833ddb0e48864dbf4}{eat}} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abstract function of eat. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -33,6 +43,10 @@ virtual \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_creatu
 \index{Creature@{Creature}!Creature@{Creature}}
 \subsubsection{\texorpdfstring{Creature()}{Creature()}}
 {\footnotesize\ttfamily Creature\+::\+Creature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}} \&}]{\+\_\+aquarium,  }\item[{float}]{\+\_\+speed,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{\+\_\+position,  }\item[{float}]{\+\_\+eat\+Radius }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
 
 
 
@@ -45,6 +59,10 @@ virtual \mbox{\hyperlink{struct_vector2}{Vector2}} \mbox{\hyperlink{class_creatu
 
 
 
+Abstract function of eat. 
+
+
+
 Implemented in \mbox{\hyperlink{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}{Guppy}}, \mbox{\hyperlink{class_snail_a0905a469c6333970b8246abca37795f1}{Snail}}, and \mbox{\hyperlink{class_piranha_a125847235bdbd0e8c676dcada0d86c14}{Piranha}}.
 
 \mbox{\Hypertarget{class_creature_a24e52cedddd872269f83671c9a6f6925}\label{class_creature_a24e52cedddd872269f83671c9a6f6925}} 
@@ -53,17 +71,29 @@ Implemented in \mbox{\hyperlink{class_guppy_aaeab888b423fd0ea3cc911b974b04f48}{G
 \subsubsection{\texorpdfstring{get\+Eat\+Radius()}{getEatRadius()}}
 {\footnotesize\ttfamily float Creature\+::get\+Eat\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Return eat rediu. 
+
 \mbox{\Hypertarget{class_creature_a63abd829cfac5d57425452b39f2a21b7}\label{class_creature_a63abd829cfac5d57425452b39f2a21b7}} 
 \index{Creature@{Creature}!get\+Is\+Moving\+Right@{get\+Is\+Moving\+Right}}
 \index{get\+Is\+Moving\+Right@{get\+Is\+Moving\+Right}!Creature@{Creature}}
 \subsubsection{\texorpdfstring{get\+Is\+Moving\+Right()}{getIsMovingRight()}}
 {\footnotesize\ttfamily bool Creature\+::get\+Is\+Moving\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Return x movement direction. 
+
 \mbox{\Hypertarget{class_creature_a7b222797d42b668ebf2a02eef51feaf8}\label{class_creature_a7b222797d42b668ebf2a02eef51feaf8}} 
 \index{Creature@{Creature}!set\+Is\+Moving\+Right@{set\+Is\+Moving\+Right}}
 \index{set\+Is\+Moving\+Right@{set\+Is\+Moving\+Right}!Creature@{Creature}}
 \subsubsection{\texorpdfstring{set\+Is\+Moving\+Right()}{setIsMovingRight()}}
 {\footnotesize\ttfamily void Creature\+::set\+Is\+Moving\+Right (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+is\+Moving\+Right }\end{DoxyParamCaption})}
+
+
+
+Set x movement direction. 
 
 
 

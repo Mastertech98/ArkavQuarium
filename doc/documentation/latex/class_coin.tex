@@ -6,27 +6,37 @@
 
 
 
-Inheritance diagram for Coin\+:
-% FIG 0
+Inheritance diagram for Coin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_coin__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Coin\+:
-% FIG 1
+Collaboration diagram for Coin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_coin__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_coin_a5aa05323e2dab5f755e283d66ef1aae8}{Coin}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} \&\+\_\+aquarium, \mbox{\hyperlink{struct_vector2}{Vector2}} \+\_\+position, int \+\_\+value)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_coin_a803072934a3da4010352955208e14c4e}{operator==}} (const \mbox{\hyperlink{class_coin}{Coin}} \&other) const
-\item 
+\begin{DoxyCompactList}\small\item\em Reference comparison. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_coin_a53c8bf65afdde1422cfda51d753d74b7}{get\+Value}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return coin\textquotesingle{}s value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_coin_ab62bca5834489b9b483deaa3ca3470e9}{move}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Move this coin to the bottom. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_coin_a16c42ef0d21f50bb08d4099d82b4ed57}{destruct}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove this coin from aquarium. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_coin_abdc8520a89656c688cc70cffa14265ca}{take}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Increase money by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -35,6 +45,10 @@ void \mbox{\hyperlink{class_coin_abdc8520a89656c688cc70cffa14265ca}{take}} ()
 \index{Coin@{Coin}!Coin@{Coin}}
 \subsubsection{\texorpdfstring{Coin()}{Coin()}}
 {\footnotesize\ttfamily Coin\+::\+Coin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}} \&}]{\+\_\+aquarium,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{\+\_\+position,  }\item[{int}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
 
 
 
@@ -47,6 +61,10 @@ void \mbox{\hyperlink{class_coin_abdc8520a89656c688cc70cffa14265ca}{take}} ()
 
 
 
+Remove this coin from aquarium. 
+
+
+
 Implements \mbox{\hyperlink{class_i_destructible_a63016d1bb4daa0a726fc8add9a0be62d}{I\+Destructible}}.
 
 \mbox{\Hypertarget{class_coin_a53c8bf65afdde1422cfda51d753d74b7}\label{class_coin_a53c8bf65afdde1422cfda51d753d74b7}} 
@@ -55,11 +73,19 @@ Implements \mbox{\hyperlink{class_i_destructible_a63016d1bb4daa0a726fc8add9a0be6
 \subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
 {\footnotesize\ttfamily int Coin\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Return coin\textquotesingle{}s value. 
+
 \mbox{\Hypertarget{class_coin_ab62bca5834489b9b483deaa3ca3470e9}\label{class_coin_ab62bca5834489b9b483deaa3ca3470e9}} 
 \index{Coin@{Coin}!move@{move}}
 \index{move@{move}!Coin@{Coin}}
 \subsubsection{\texorpdfstring{move()}{move()}}
 {\footnotesize\ttfamily void Coin\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move this coin to the bottom. 
 
 
 
@@ -71,11 +97,19 @@ Implements \mbox{\hyperlink{class_aquarium_object_a42c4de640f89ac8aebc26b7618578
 \subsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Coin\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_coin}{Coin}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Reference comparison. 
+
 \mbox{\Hypertarget{class_coin_abdc8520a89656c688cc70cffa14265ca}\label{class_coin_abdc8520a89656c688cc70cffa14265ca}} 
 \index{Coin@{Coin}!take@{take}}
 \index{take@{take}!Coin@{Coin}}
 \subsubsection{\texorpdfstring{take()}{take()}}
 {\footnotesize\ttfamily void Coin\+::take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increase money by value. 
 
 
 

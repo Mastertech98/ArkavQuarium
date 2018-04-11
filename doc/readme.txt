@@ -27,14 +27,22 @@ Untuk menjalankan program, dibutuhkan file gambar berikut:
  - buypiranha
  - coin
  - food
- - guppy10
- - guppy11
- - guppy20
- - guppy21
- - guppy30
- - guppy31
- - piranha0
- - piranha1
+ - guppy100
+ - guppy101
+ - guppy110
+ - guppy111
+ - guppy200
+ - guppy201
+ - guppy210
+ - guppy211
+ - guppy300
+ - guppy301
+ - guppy310
+ - guppy311
+ - piranha00
+ - piranha01
+ - piranha10
+ - piranha11
  - play
  - snail0
  - snail1

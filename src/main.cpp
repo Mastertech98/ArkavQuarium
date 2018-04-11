@@ -144,15 +144,17 @@ int main( int argc, char* args[] )
         draw_text("Egg: " + std::to_string(aquarium.getEgg()), 18, get_screen_width() - 256, 72, 0, 0, 0);
         draw_text(fps_text, 18, 0, get_screen_height() - 24, 0, 0, 0);
 
+        int gameTime = aquarium.getGameTime();
+
         for (ElementList<Guppy>* o = aquarium.getGuppies().getFirst(); o != 0; o = o->next) {
             Guppy guppy = o->data;
             Vector2 position = guppy.getPosition();
-            draw_image("guppy" + std::to_string(guppy.getGrowthStage()) + std::to_string(guppy.getIsMovingRight()), (int)position.x, (int)position.y + 128);
+            draw_image("guppy" + std::to_string(guppy.getGrowthStage()) + std::to_string(guppy.getIsMovingRight()) + std::to_string(gameTime >= guppy.getLastMealTime() + guppy.getFullTime()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Piranha>* o = aquarium.getPiranhas().getFirst(); o != 0; o = o->next) {
             Piranha piranha = o->data;
             Vector2 position = piranha.getPosition();
-            draw_image("piranha" + std::to_string(piranha.getIsMovingRight()), (int)position.x, (int)position.y + 128);
+            draw_image("piranha" + std::to_string(piranha.getIsMovingRight()) + std::to_string(gameTime >= piranha.getLastMealTime() + piranha.getFullTime()), (int)position.x, (int)position.y + 128);
         }
         for (ElementList<Snail>* o = aquarium.getSnails().getFirst(); o != 0; o = o->next) {
             Snail snail = o->data;

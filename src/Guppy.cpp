@@ -66,13 +66,14 @@ void Guppy::destruct() {
 }
 
 void Guppy::tick() {
-    Fish::tick();
     int gameTime = getAquarium().getGameTime();
 
     if (gameTime >= getLastCoinDrop() + getCoinDropPeriod()) {
         dropCoin(2 * getGrowthStage());
         setLastCoinDrop(gameTime);
     }
+    
+    Fish::tick();
 }
 
 Food* Guppy::findFood() {

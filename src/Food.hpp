@@ -17,6 +17,9 @@ class Food : public AquariumObject, public IDestructible {
 
         /// Remove this food from aquarium
         void destruct();
+    
+        /// Do one game time unit: destruct upon touching aquarium floor
+        void tick();
 
         static const int price;
 };

@@ -13,11 +13,15 @@ bool Food::operator==(const Food& other) const {
 
 void Food::move() {
     setPosition(getPosition() + Vector2::down * getSpeed());
-    if (getPosition().y >= getAquarium().getSizeY()) {
-        destruct();
-    }
 }
 
 void Food::destruct() {
     getAquarium().remove(*this);
+}
+
+void Food::tick() {
+    move();
+    if (getPosition().y >= getAquarium().getSizeY()) {
+        destruct();
+    }
 }

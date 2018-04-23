@@ -1,9 +1,9 @@
-public class Aquarium{
-    //Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice) : sizeX(_sizeX), sizeY(_sizeY) {
-
+public class Aquarium {
     private final int sizeX;
     private final int sizeY;
+
     private int gameTime;
+
     private LinkedList<Guppy> guppies;
     private LinkedList<Piranha> piranhas;
     private LinkedList<Snail> snails;
@@ -15,14 +15,14 @@ public class Aquarium{
     private int eggPrice;
     
     public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice){
-        
+        sizeX = _sizeX;
+        sizeY = _sizeY;
+
         setGameTime(0);
         add(Snail(this));
         setMoney(_money);
         setEgg(0);
         setEggPrice(_eggPrice);
-        sizeX = _sizeX;
-        sizeY = _sizeY;
     }
 
     public int getSizeX(){
@@ -88,19 +88,15 @@ public class Aquarium{
     public void add(Guppy guppy){
         guppies.add(guppy);
     }
-
     public void add(Piranha piranha){
         piranhas.add(piranha);
     }
-
     public void add(Snail snail){
         snails.add(snail);
     }
-
     public void add(Food food){
         foods.add(food);
     }
-
     public void add(Coin coin){
         coins.add(coin);
     }
@@ -108,10 +104,10 @@ public class Aquarium{
     public void remove(Guppy guppy) {
         guppies.remove(guppy);
     }
-    public void remove(Pirana piranha) {
+    public void remove(Piranha piranha) {
         piranhas.remove(piranha);
     }
-    public void remove(Snail  snail) {
+    public void remove(Snail snail) {
         snails.remove(snail);
     }
     public void remove(Food food) {
@@ -119,29 +115,30 @@ public class Aquarium{
     }
     public void remove(Coin coin) {
         coins.remove(coin);
-    } 
+    }
+    
     public void tick() {
         setGameTime(getGameTime() + 1);
     
         for (ElementList<Guppy> o = getGuppies().getFirst(),next = 0; o != 0; o = next) {
-            next = o.next;
-            o.data.tick();
+            next = o.getData();
+            o.getData().tick();
         }
         for (ElementList<Piranha> o = getPiranhas().getFirst(),next = 0; o != 0; o = next) {
-            next = o.next;
-            o.data.tick();
+            next = o.getData();
+            o.getData().tick();
         }
         for (ElementList<Snail> o = getSnails().getFirst(),next = 0; o != 0; o = next) {
-            next = o.next;
-            o.data.tick();
+            next = o.getData();
+            o.getData().tick();
         }
         for (ElementList<Food> o = getFoods().getFirst(), next = 0; o != 0; o = next) {
-            next = o.next;
-            o.data.tick();
+            next = o.getData();
+            o.getData().tick();
         }
         for (ElementList<Coin> o = getCoins().getFirst(), next = 0; o != 0; o = next) {
-            next = o.next;
-            o.data.tick();
+            next = o.getData();
+            o.getData().tick();
         }
     }
 }

@@ -24,9 +24,18 @@ public class Vector2 {
         return Math.sqrt(dx * dx + dy * dy);
     }
 
+    public static Vector2 randomPosition(double x, double y) {
+        return new Vector2(Math.random() * x, Math.random() * y);
+    }
+
     public static Vector2 randomPosition(Vector2 min, Vector2 max) {
         Vector2 d = max.subtract(min);
         return new Vector2(Math.random() * d.x + min.x, Math.random() * d.y + min.y);
+    }
+
+    public static Vector2 randomDirection() {
+        double r = Math.random() * 2 * Math.PI;
+        return new Vector2(Math.cos(r), Math.sin((r)));
     }
 
     public static Vector2 randomDirection(double min, double max) {

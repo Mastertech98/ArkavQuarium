@@ -1,7 +1,7 @@
 #include "AquariumObject.hpp"
 
 AquariumObject::AquariumObject(Aquarium& _aquarium, float _speed, Vector2 _position) : aquarium(_aquarium), speed(_speed) {
-    position = _position;
+    setPosition(_position);
 }
 
 Aquarium& AquariumObject::getAquarium() const {

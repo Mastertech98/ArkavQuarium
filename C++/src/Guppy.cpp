@@ -4,8 +4,8 @@
 const int Guppy::price = 10;
 
 Guppy::Guppy(Aquarium& _aquarium) : Fish(_aquarium, 5, 50), coinDropPeriod(100) {
-    eatenFood = 0;
-    lastCoinDrop = _aquarium.getGameTime();
+    setEatenFood(0);
+    setLastCoinDrop(_aquarium.getGameTime());
 }
 
 bool Guppy::operator==(const Guppy& other) const {
@@ -22,11 +22,11 @@ int Guppy::getLastCoinDrop() const {
     return lastCoinDrop;
 }
 int Guppy::getGrowthStage() const {
-    if (eatenFood > 4) {
+    if (getEatenFood() > 4) {
         return 3;
     }
 
-    if (eatenFood > 1) {
+    if (getEatenFood() > 1) {
         return 2;
     }
 
@@ -45,7 +45,7 @@ Vector2 Guppy::eat() {
     if (food) {
         Vector2 foodPosition = food->getPosition();
         if (getPosition().distance(foodPosition) <= getEatRadius()) {
-            ++eatenFood;
+            setEatenFood(getEatenFood() + 1);
             food->destruct();
 
             int gameTime = getAquarium().getGameTime();

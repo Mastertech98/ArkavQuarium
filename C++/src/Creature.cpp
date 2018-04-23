@@ -1,7 +1,7 @@
 #include "Creature.hpp"
 
 Creature::Creature(Aquarium& _aquarium, float _speed, Vector2 _position, float _eatRadius) : AquariumObject(_aquarium, _speed, _position), eatRadius(_eatRadius) {
-    isMovingRight = true;
+    setIsMovingRight(true);
 }
 
 float Creature::getEatRadius() const {

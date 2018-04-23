@@ -2,7 +2,7 @@ public class Coin extends AquariumObject implements IDestrutible {
 
 	private final int value;
         /// Constructor
-        public Coin(Aquarium& _aquarium, Vector2 _position, int _value){
+        public Coin(Aquarium _aquarium, Vector2 _position, int _value){
         	super(_aquarium, 1, _position);
         	value = _value;
         }

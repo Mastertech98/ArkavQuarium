@@ -6,7 +6,7 @@ public class Piranha extends Fish {
     public Vector2 eat() {
         Guppy guppy = findGuppy();
         if (guppy != null) {
-            Vector2 guppyPosition = guppy->getPosition();
+            Vector2 guppyPosition = guppy.getPosition();
             if (getPosition().distance(guppyPosition) <= getEatRadius()) {
                 dropCoin(Guppy.price * (guppy.getGrowthStage() + 1));
                 guppy.destruct();
@@ -31,12 +31,12 @@ public class Piranha extends Fish {
     private Guppy findGuppy() {
         LinkedList<Guppy> guppies = getAquarium().getGuppies();
         if (guppies.isEmpty()) {
-            return 0;
+            return null;
         } else {
             Vector2 piranhaPosition = getPosition();
             ElementList<Guppy> guppy = guppies.getFirst();
             double guppyDistance = piranhaPosition.distance(guppy.getData().getPosition());
-            for (ElementList<Guppy> e = guppy.getNext(); e != 0; e = e.getNext()) {
+            for (ElementList<Guppy> e = guppy.getNext(); e != null; e = e.getNext()) {
                 double eDistance = piranhaPosition.distance(e.getData().getPosition());
                 if (eDistance < guppyDistance) {
                     guppy = e;

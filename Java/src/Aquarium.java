@@ -15,11 +15,17 @@ public class Aquarium {
     private int eggPrice;
     
     public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice){
+        guppies = new LinkedList<Guppy>();
+        piranhas = new LinkedList<Piranha>();
+        snails = new LinkedList<Snail>();
+        foods = new LinkedList<Food>();
+        coins = new LinkedList<Coin>();
+
         sizeX = _sizeX;
         sizeY = _sizeY;
 
         setGameTime(0);
-        add(Snail(this));
+        add(new Snail(this));
         setMoney(_money);
         setEgg(0);
         setEggPrice(_eggPrice);
@@ -120,24 +126,24 @@ public class Aquarium {
     public void tick() {
         setGameTime(getGameTime() + 1);
     
-        for (ElementList<Guppy> o = getGuppies().getFirst(),next = 0; o != 0; o = next) {
-            next = o.getData();
+        for (ElementList<Guppy> o = getGuppies().getFirst(), next; o != null; o = next) {
+            next = o.getNext();
             o.getData().tick();
         }
-        for (ElementList<Piranha> o = getPiranhas().getFirst(),next = 0; o != 0; o = next) {
-            next = o.getData();
+        for (ElementList<Piranha> o = getPiranhas().getFirst(), next; o != null; o = next) {
+            next = o.getNext();
             o.getData().tick();
         }
-        for (ElementList<Snail> o = getSnails().getFirst(),next = 0; o != 0; o = next) {
-            next = o.getData();
+        for (ElementList<Snail> o = getSnails().getFirst(), next; o != null; o = next) {
+            next = o.getNext();
             o.getData().tick();
         }
-        for (ElementList<Food> o = getFoods().getFirst(), next = 0; o != 0; o = next) {
-            next = o.getData();
+        for (ElementList<Food> o = getFoods().getFirst(), next; o != null; o = next) {
+            next = o.getNext();
             o.getData().tick();
         }
-        for (ElementList<Coin> o = getCoins().getFirst(), next = 0; o != 0; o = next) {
-            next = o.getData();
+        for (ElementList<Coin> o = getCoins().getFirst(), next; o != null; o = next) {
+            next = o.getNext();
             o.getData().tick();
         }
     }

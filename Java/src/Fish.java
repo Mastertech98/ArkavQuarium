@@ -1,4 +1,4 @@
-public class Fish extends Creature implements IDestructible {
+public abstract class Fish extends Creature implements IDestructible {
     private final int fullTime;
     private final int hungryTime;
     private final int moveTime;
@@ -15,6 +15,12 @@ public class Fish extends Creature implements IDestructible {
             Vector2.randomPosition(_aquarium.getSizeX(), _aquarium.getSizeY()), 
             _eatRadius
         );
+
+        fullTime = 500;
+        hungryTime = 500;
+        moveTime = 50;
+
+        int gameTime = getAquarium().getGameTime();
         setLastMealTime(gameTime);
         setLastMoveTime(gameTime);
         direction = Vector2.randomDirection();
@@ -35,7 +41,7 @@ public class Fish extends Creature implements IDestructible {
     public int getLastMoveTime() {
         return lastMoveTime;
     }
-    public int getDirection() {
+    public Vector2 getDirection() {
         return direction;
     }
 
@@ -83,17 +89,17 @@ public class Fish extends Creature implements IDestructible {
     
         int sizeX = getAquarium().getSizeX();
         int sizeY = getAquarium().getSizeY();
-        int positionX = getPosition().x;
-        int positionY = getPosition().y;
+        double positionX = getPosition().x;
+        double positionY = getPosition().y;
     
         int gameTime = getAquarium().getGameTime();
     
         if (positionX < 0 || positionX > sizeX) {
-            direction = Vector2(direction.x * -1, direction.y);
+            direction = new Vector2(direction.x * -1, direction.y);
             setLastMoveTime(gameTime);
         }
         if (positionY < 0 || positionY > sizeY) {
-            direction = Vector2(direction.x, direction.y * -1);
+            direction = new Vector2(direction.x, direction.y * -1);
             setLastMoveTime(gameTime);
         }
     }

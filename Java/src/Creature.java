@@ -1,4 +1,4 @@
-public class Creature extends AquariumObject{
+public abstract class Creature extends AquariumObject {
 	private final float eatRadius;
 	private boolean isMovingRight;
 	
@@ -20,5 +20,5 @@ public class Creature extends AquariumObject{
 		isMovingRight = _isMovingRight;
 	}
 
-	
+	public abstract Vector2 eat();
 }

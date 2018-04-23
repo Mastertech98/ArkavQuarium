@@ -1,4 +1,4 @@
-public class Coin extends AquariumObject implements IDestrutible {
+public class Coin extends AquariumObject implements IDestructible {
 
 	private final int value;
         /// Constructor
@@ -21,10 +21,10 @@ public class Coin extends AquariumObject implements IDestrutible {
        	public void move(){
        		if(getPosition().y < getAquarium().getSizeY()){
        			if (getPosition().y + getSpeed() < getAquarium().getSizeY()) {
-       				setPosition(getPosition() + Vector2::down * getSpeed());
+       				setPosition(getPosition().add(Vector2.down.multiply(getSpeed())));
        			}
        			else{
-       				setPosition(Vector2(getPosition().x, getAquarium().getSizeY()));
+       				setPosition(new Vector2(getPosition().x, getAquarium().getSizeY()));
        			}
 
        		}

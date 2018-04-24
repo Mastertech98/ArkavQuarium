@@ -1,26 +1,57 @@
-public class Aquarium {
+import javafx.scene.input.KeyCode;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+public class Aquarium extends JPanel implements MouseListener {
     private final int sizeX;
     private final int sizeY;
 
     private int gameTime;
 
-    private LinkedList<Guppy> guppies;
-    private LinkedList<Piranha> piranhas;
-    private LinkedList<Snail> snails;
-    private LinkedList<Food> foods;
-    private LinkedList<Coin> coins;
+    private LinkedList<Guppy> guppies = new LinkedList<>();
+    private LinkedList<Piranha> piranhas = new LinkedList<>();
+    private LinkedList<Snail> snails = new LinkedList<>();
+    private LinkedList<Food> foods = new LinkedList<>();
+    private LinkedList<Coin> coins = new LinkedList<>();
 
     private int money;
     private int egg;
     private int eggPrice;
-    
-    public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice){
-        guppies = new LinkedList<Guppy>();
-        piranhas = new LinkedList<Piranha>();
-        snails = new LinkedList<Snail>();
-        foods = new LinkedList<Food>();
-        coins = new LinkedList<Coin>();
 
+    private BufferedImage background;
+
+    public void mouseClicked(MouseEvent e) {
+        boolean coinClick = false;
+        for (ElementList<Coin> o = getCoins().getFirst(); o != null && !coinClick; o = o.getNext()) {
+            if (new Vector2(e.getX(), e.getY()).distance(o.getData().getPosition()) <= 16) {
+                o.getData().take();
+                coinClick = true;
+            }
+        }
+        if (getMoney() > Food.price && !coinClick) {
+            add(new Food(this, e.getX()));
+            setMoney(getMoney() - Food.price);
+        }
+    }
+    public void mouseEntered(MouseEvent e) {
+
+    }
+    public void mouseExited(MouseEvent e) {
+
+    }
+    public void mousePressed(MouseEvent e) {
+
+    }
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice) {
         sizeX = _sizeX;
         sizeY = _sizeY;
 
@@ -29,6 +60,14 @@ public class Aquarium {
         setMoney(_money);
         setEgg(0);
         setEggPrice(_eggPrice);
+
+        try {
+            background = ImageIO.read(new File("C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\background.png"));
+        } catch (IOException e) {
+            System.out.print("Background image file not found!");
+        }
+
+        addMouseListener(this);
     }
 
     public int getSizeX(){
@@ -146,5 +185,49 @@ public class Aquarium {
             next = o.getNext();
             o.getData().tick();
         }
+    }
+
+    public Dimension getPreferredSize() {
+        return new Dimension(sizeX, sizeY);
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(background, 0, 0, sizeX, sizeY, null);
+
+        int gameTime = getGameTime();
+
+        for (ElementList<Guppy> e = getGuppies().getFirst(); e != null; e = e.getNext()) {
+            Guppy guppy = e.getData();
+            Vector2 position = guppy.getPosition();
+            int idx = (guppy.getGrowthStage() - 1) * 4 + (guppy.getIsMovingRight() ? 1 : 0) * 2 + (gameTime >= guppy.getLastMealTime() + guppy.getFullTime() ? 1 : 0);
+            g.drawImage(ArkavQuarium.objectImage[idx + 0], (int)position.x - 64, (int)position.y - 64, null);
+        }
+        for (ElementList<Piranha> e = getPiranhas().getFirst(); e != null; e = e.getNext()) {
+            Piranha piranha = e.getData();
+            Vector2 position = piranha.getPosition();
+            int idx = (piranha.getIsMovingRight() ? 1 : 0) * 2 + (gameTime >= piranha.getLastMealTime() + piranha.getFullTime() ? 1 : 0);
+            g.drawImage(ArkavQuarium.objectImage[idx + 12], (int)position.x - 64, (int)position.y - 64, null);
+        }
+        for (ElementList<Snail> e = getSnails().getFirst(); e != null; e = e.getNext()) {
+            Snail snail = e.getData();
+            Vector2 position = snail.getPosition();
+            int idx = snail.getIsMovingRight() ? 1 : 0;
+            g.drawImage(ArkavQuarium.objectImage[idx + 16], (int)position.x - 64, (int)position.y - 64, null);
+        }
+        for (ElementList<Food> e = getFoods().getFirst(); e != null; e = e.getNext()) {
+            Food food = e.getData();
+            Vector2 position = food.getPosition();
+            int idx = 0;
+            g.drawImage(ArkavQuarium.objectImage[idx + 18], (int)position.x - 16, (int)position.y - 16, null);
+        }
+        for (ElementList<Coin> e = getCoins().getFirst(); e != null; e = e.getNext()) {
+            Coin coin = e.getData();
+            Vector2 position = coin.getPosition();
+            int idx = 0;
+            g.drawImage(ArkavQuarium.objectImage[idx + 19], (int)position.x - 16, (int)position.y - 16, null);
+        }
+
+        repaint();
     }
 }

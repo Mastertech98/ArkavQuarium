@@ -1,4 +1,4 @@
-public abstract class Food extends AquariumObject implements IDestructible {
+public class Food extends AquariumObject implements IDestructible {
     public static final int price = 5;
 
     public Food(Aquarium _aquarium, float x){
@@ -14,5 +14,9 @@ public abstract class Food extends AquariumObject implements IDestructible {
         if(getPosition().y>=getAquarium().getSizeY()){
             destruct();
         }
+    }
+
+    public void destruct() {
+        getAquarium().remove(this);
     }
 }

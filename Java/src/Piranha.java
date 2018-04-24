@@ -1,4 +1,6 @@
 public class Piranha extends Fish {
+    public static final int price = 20;
+
     public Piranha(Aquarium _aquarium) {
         super(_aquarium, 7, 75);
     }

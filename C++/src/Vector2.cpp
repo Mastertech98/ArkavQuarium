@@ -68,9 +68,21 @@ Vector2 Vector2::randomPosition(double x, double y) {
     return Vector2(static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / x), static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / y));
 }
 
+Vector2 Vector2::randomPosition(const Vector2& min, const Vector2& max) {
+    Vector2 d = max - min;
+    std::srand(time(0));
+    return Vector2(static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / d.x) + min.x, static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / d.y) + min.y);
+}
+
 Vector2 Vector2::randomDirection() {
     std::srand(time(0));
     double rad = static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / M_PI / 2);
+    return Vector2(cos(rad), sin(rad));
+}
+
+Vector2 Vector2::randomDirection(double min, double max) {
+    std::srand(time(0));
+    double rad = static_cast <double> (std::rand()) / static_cast <double> (RAND_MAX / (max - min)) + min;
     return Vector2(cos(rad), sin(rad));
 }
 

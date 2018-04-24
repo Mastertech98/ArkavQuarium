@@ -1,4 +1,4 @@
-public abstract class AquariumObject{
+public abstract class AquariumObject {
     private Aquarium aquarium;
     private final float speed;
     private Vector2 position;

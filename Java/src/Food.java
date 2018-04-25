@@ -1,8 +1,8 @@
 public class Food extends AquariumObject implements IDestructible {
   public static final int price = 5;
 
-  public Food(Aquarium _aquarium, float x) {
-    super(_aquarium, 2, new Vector2(x, 0));
+  public Food(Aquarium aquarium, float x) {
+    super(aquarium, 2, new Vector2(x, 0));
   }
 
   public void move() {

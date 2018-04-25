@@ -1,6 +1,10 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class Aquarium extends JPanel {
   private final int sizeX;
@@ -8,25 +12,25 @@ public class Aquarium extends JPanel {
 
   private int gameTime;
 
-  private LinkedList<Guppy> guppies = new LinkedList<>();
-  private LinkedList<Piranha> piranhas = new LinkedList<>();
-  private LinkedList<Snail> snails = new LinkedList<>();
-  private LinkedList<Food> foods = new LinkedList<>();
-  private LinkedList<Coin> coins = new LinkedList<>();
+  private final LinkedList<Guppy> guppies = new LinkedList<>();
+  private final LinkedList<Piranha> piranhas = new LinkedList<>();
+  private final LinkedList<Snail> snails = new LinkedList<>();
+  private final LinkedList<Food> foods = new LinkedList<>();
+  private final LinkedList<Coin> coins = new LinkedList<>();
 
   private int money;
   private int egg;
   private int eggPrice;
 
-  public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice) {
-    sizeX = _sizeX;
-    sizeY = _sizeY;
+  public Aquarium(int sizeX, int sizeY, int money, int eggPrice) {
+    this.sizeX = sizeX;
+    this.sizeY = sizeY;
 
     setGameTime(0);
     add(new Snail(this));
-    setMoney(_money);
+    setMoney(money);
     setEgg(0);
-    setEggPrice(_eggPrice);
+    setEggPrice(eggPrice);
 
     addMouseListener(new MouseListener() {
       @Override
@@ -37,7 +41,8 @@ public class Aquarium extends JPanel {
       @Override
       public void mousePressed(MouseEvent e) {
         boolean coinClick = false;
-        for (ElementList<Coin> o = getCoins().getFirst(); o != null && !coinClick; o = o.getNext()) {
+        for (ElementList<Coin> o = getCoins().getFirst();
+             o != null && !coinClick; o = o.getNext()) {
           if (new Vector2(e.getX(), e.getY()).distance(o.getData().getPosition()) <= 16) {
             o.getData().take();
             coinClick = true;
@@ -147,20 +152,20 @@ public class Aquarium extends JPanel {
     return eggPrice;
   }
 
-  public void setGameTime(int _gameTime) {
-    gameTime = _gameTime;
+  public void setGameTime(int gameTime) {
+    this.gameTime = gameTime;
   }
 
-  public void setMoney(int _money) {
-    money = _money;
+  public void setMoney(int money) {
+    this.money = money;
   }
 
-  public void setEgg(int _egg) {
-    egg = _egg;
+  public void setEgg(int egg) {
+    this.egg = egg;
   }
 
-  public void setEggPrice(int _eggPrice) {
-    eggPrice = _eggPrice;
+  public void setEggPrice(int eggPrice) {
+    this.eggPrice = eggPrice;
   }
 
   public void add(Guppy guppy) {
@@ -228,10 +233,6 @@ public class Aquarium extends JPanel {
     }
   }
 
-  public Dimension getPreferredSize() {
-    return new Dimension(sizeX, sizeY);
-  }
-
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     g.drawImage(ArkavQuarium.objectImage[20], 0, 0, sizeX, sizeY, null);
@@ -240,35 +241,54 @@ public class Aquarium extends JPanel {
 
     for (ElementList<Guppy> e = getGuppies().getFirst(); e != null; e = e.getNext()) {
       Guppy guppy = e.getData();
+
+      int idx = 0;
+      idx += (guppy.getGrowthStage() - 1) * 4;
+      idx += (guppy.getIsMovingRight() ? 1 : 0) * 2;
+      idx += (gameTime >= guppy.getLastMealTime() + guppy.getFullTime() ? 1 : 0);
+
       Vector2 position = guppy.getPosition();
-      int idx = (guppy.getGrowthStage() - 1) * 4 + (guppy.getIsMovingRight() ? 1 : 0) * 2
-          + (gameTime >= guppy.getLastMealTime() + guppy.getFullTime() ? 1 : 0);
-      g.drawImage(ArkavQuarium.objectImage[idx + 0], (int) position.x - 64, (int) position.y - 64, null);
+
+      g.drawImage(
+          ArkavQuarium.objectImage[idx], (int) position.x - 64, (int) position.y - 64, null);
     }
     for (ElementList<Piranha> e = getPiranhas().getFirst(); e != null; e = e.getNext()) {
       Piranha piranha = e.getData();
+
+      int idx = 12;
+      idx += (piranha.getIsMovingRight() ? 1 : 0) * 2;
+      idx += (gameTime >= piranha.getLastMealTime() + piranha.getFullTime() ? 1 : 0);
+
       Vector2 position = piranha.getPosition();
-      int idx = (piranha.getIsMovingRight() ? 1 : 0) * 2
-          + (gameTime >= piranha.getLastMealTime() + piranha.getFullTime() ? 1 : 0);
-      g.drawImage(ArkavQuarium.objectImage[idx + 12], (int) position.x - 64, (int) position.y - 64, null);
+
+      g.drawImage(
+          ArkavQuarium.objectImage[idx ], (int) position.x - 64, (int) position.y - 64, null);
     }
     for (ElementList<Snail> e = getSnails().getFirst(); e != null; e = e.getNext()) {
       Snail snail = e.getData();
       Vector2 position = snail.getPosition();
       int idx = snail.getIsMovingRight() ? 1 : 0;
-      g.drawImage(ArkavQuarium.objectImage[idx + 16], (int) position.x - 64, (int) position.y - 64, null);
+      g.drawImage(
+          ArkavQuarium.objectImage[idx + 16], (int) position.x - 64, (int) position.y - 64, null);
     }
     for (ElementList<Food> e = getFoods().getFirst(); e != null; e = e.getNext()) {
       Food food = e.getData();
-      Vector2 position = food.getPosition();
+
       int idx = 0;
-      g.drawImage(ArkavQuarium.objectImage[idx + 18], (int) position.x - 16, (int) position.y - 16, null);
+
+      Vector2 position = food.getPosition();
+
+      g.drawImage(
+          ArkavQuarium.objectImage[idx + 18], (int) position.x - 16, (int) position.y - 16, null);
     }
     for (ElementList<Coin> e = getCoins().getFirst(); e != null; e = e.getNext()) {
       Coin coin = e.getData();
-      Vector2 position = coin.getPosition();
+
       int idx = 0;
-      g.drawImage(ArkavQuarium.objectImage[idx + 19], (int) position.x - 16, (int) position.y - 16, null);
+
+      Vector2 position = coin.getPosition();
+      g.drawImage(
+          ArkavQuarium.objectImage[idx + 19], (int) position.x - 16, (int) position.y - 16, null);
     }
 
     g.drawString("Money: " + String.valueOf(getMoney()), 8, 16);

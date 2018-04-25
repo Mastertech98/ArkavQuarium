@@ -1,3 +1,3 @@
-public interface IDestructible {
-  public void destruct();
+interface IDestructible {
+  void destruct();
 }

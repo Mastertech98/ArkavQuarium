@@ -1,12 +1,12 @@
 public abstract class AquariumObject {
-  private Aquarium aquarium;
+  private final Aquarium aquarium;
   private final float speed;
   private Vector2 position;
 
-  public AquariumObject(Aquarium _aquarium, float _speed, Vector2 _position) {
-    aquarium = _aquarium;
-    speed = _speed;
-    position = _position;
+  public AquariumObject(Aquarium aquarium, float speed, Vector2 position) {
+    this.aquarium = aquarium;
+    this.speed = speed;
+    this.position = position;
   }
 
   public Aquarium getAquarium() {
@@ -21,8 +21,8 @@ public abstract class AquariumObject {
     return position;
   }
 
-  public void setPosition(Vector2 _position) {
-    position = _position;
+  public void setPosition(Vector2 position) {
+    this.position = position;
   }
 
   public abstract void move();

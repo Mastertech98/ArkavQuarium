@@ -1,8 +1,8 @@
 public class Piranha extends Fish {
   public static final int price = 20;
 
-  public Piranha(Aquarium _aquarium) {
-    super(_aquarium, 7, 75);
+  public Piranha(Aquarium aquarium) {
+    super(aquarium, 7, 75);
   }
 
   public Vector2 eat() {
@@ -39,10 +39,10 @@ public class Piranha extends Fish {
       ElementList<Guppy> guppy = guppies.getFirst();
       double guppyDistance = piranhaPosition.distance(guppy.getData().getPosition());
       for (ElementList<Guppy> e = guppy.getNext(); e != null; e = e.getNext()) {
-        double eDistance = piranhaPosition.distance(e.getData().getPosition());
-        if (eDistance < guppyDistance) {
+        double elementDistance = piranhaPosition.distance(e.getData().getPosition());
+        if (elementDistance < guppyDistance) {
           guppy = e;
-          guppyDistance = eDistance;
+          guppyDistance = elementDistance;
         }
       }
       return guppy.getData();

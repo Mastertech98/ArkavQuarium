@@ -1,14 +1,14 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class ArkavQuarium {
   static Aquarium aquarium;
-  public static BufferedImage[] objectImage = new BufferedImage[21];
+  public final static BufferedImage[] objectImage = new BufferedImage[21];
 
   private static void init() {
     String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";

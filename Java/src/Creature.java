@@ -2,9 +2,9 @@ public abstract class Creature extends AquariumObject {
   private final float eatRadius;
   private boolean isMovingRight;
 
-  public Creature(Aquarium _aquarium, float _speed, Vector2 _position, float _eatRadius) {
-    super(_aquarium, _speed, _position);
-    eatRadius = _eatRadius;
+  public Creature(Aquarium aquarium, float speed, Vector2 position, float eatRadius) {
+    super(aquarium, speed, position);
+    this.eatRadius = eatRadius;
     isMovingRight = true;
   }
 
@@ -16,8 +16,8 @@ public abstract class Creature extends AquariumObject {
     return isMovingRight;
   }
 
-  public void setIsMovingRight(boolean _isMovingRight) {
-    isMovingRight = _isMovingRight;
+  public void setIsMovingRight(boolean isMovingRight) {
+    this.isMovingRight = isMovingRight;
   }
 
   public abstract Vector2 eat();

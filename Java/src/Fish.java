@@ -8,8 +8,9 @@ public abstract class Fish extends Creature implements IDestructible {
 
   private Vector2 direction;
 
-  public Fish(Aquarium _aquarium, float _speed, float _eatRadius) {
-    super(_aquarium, _speed, Vector2.randomPosition(_aquarium.getSizeX(), _aquarium.getSizeY()), _eatRadius);
+  public Fish(Aquarium aquarium, float speed, float eatRadius) {
+    super(
+      aquarium, speed, Vector2.randomPosition(aquarium.getSizeX(), aquarium.getSizeY()), eatRadius);
 
     fullTime = 500;
     hungryTime = 500;
@@ -41,16 +42,12 @@ public abstract class Fish extends Creature implements IDestructible {
     return lastMoveTime;
   }
 
-  public Vector2 getDirection() {
-    return direction;
+  public void setLastMealTime(int lastMealTime) {
+    this.lastMealTime = lastMealTime;
   }
 
-  public void setLastMealTime(int _lastMealTime) {
-    lastMealTime = _lastMealTime;
-  }
-
-  public void setLastMoveTime(int _lastMoveTime) {
-    lastMoveTime = _lastMoveTime;
+  public void setLastMoveTime(int lastMoveTime) {
+    this.lastMoveTime = lastMoveTime;
   }
 
   public void move() {

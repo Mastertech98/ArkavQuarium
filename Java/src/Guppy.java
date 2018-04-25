@@ -5,8 +5,8 @@ public class Guppy extends Fish {
   private int eatenFood;
   private int lastCoinDrop;
 
-  public Guppy(Aquarium _aquarium) {
-    super(_aquarium, 5, 50);
+  public Guppy(Aquarium aquarium) {
+    super(aquarium, 5, 50);
     coinDropPeriod = 100;
     setEatenFood(0);
     setLastCoinDrop(getAquarium().getGameTime());
@@ -36,12 +36,12 @@ public class Guppy extends Fish {
     return 1;
   }
 
-  public void setEatenFood(int _eatenFood) {
-    eatenFood = _eatenFood;
+  public void setEatenFood(int eatenFood) {
+    this.eatenFood = eatenFood;
   }
 
-  public void setLastCoinDrop(int _lastCoinDrop) {
-    lastCoinDrop = _lastCoinDrop;
+  public void setLastCoinDrop(int lastCoinDrop) {
+    this.lastCoinDrop = lastCoinDrop;
   }
 
   public Vector2 eat() {
@@ -89,10 +89,10 @@ public class Guppy extends Fish {
       ElementList<Food> food = foods.getFirst();
       double foodDistance = guppyPosition.distance(food.getData().getPosition());
       for (ElementList<Food> e = food.getNext(); e != null; e = e.getNext()) {
-        double eDistance = guppyPosition.distance(e.getData().getPosition());
-        if (eDistance < foodDistance) {
+        double elementDistance = guppyPosition.distance(e.getData().getPosition());
+        if (elementDistance < foodDistance) {
           food = e;
-          foodDistance = eDistance;
+          foodDistance = elementDistance;
         }
       }
       return food.getData();

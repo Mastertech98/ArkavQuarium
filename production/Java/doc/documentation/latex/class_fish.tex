@@ -1,0 +1,163 @@
+\hypertarget{class_fish}{}\section{Fish Class Reference}
+\label{class_fish}\index{Fish@{Fish}}
+
+
+Inheritance diagram for Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_fish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_fish__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fish_adc54cd97ba29e2bce4f102f2d8cd3b99}{Fish}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} aquarium, float speed, float eat\+Radius)
+\item 
+int \mbox{\hyperlink{class_fish_ad8e2387d09b2a4b10f3581797551f82c}{get\+Full\+Time}} ()
+\item 
+int \mbox{\hyperlink{class_fish_af9203b3a4949cac453fc8d18355af9b5}{get\+Hungry\+Time}} ()
+\item 
+int \mbox{\hyperlink{class_fish_af967adfd2d8b4486175131509fcf541b}{get\+Move\+Time}} ()
+\item 
+int \mbox{\hyperlink{class_fish_a84aaee65d812cd3f8357c9173ec13b75}{get\+Last\+Meal\+Time}} ()
+\item 
+int \mbox{\hyperlink{class_fish_a57dcae78fad400c6b8e09f1443acf491}{get\+Last\+Move\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_fish_aedb34efda974a200bd6b929e26955080}{set\+Last\+Meal\+Time}} (int last\+Meal\+Time)
+\item 
+void \mbox{\hyperlink{class_fish_a5c8ba21e13233735384d25a521a6b022}{set\+Last\+Move\+Time}} (int last\+Move\+Time)
+\item 
+void \mbox{\hyperlink{class_fish_ad624caf044894e5c4350cd69ef846833}{move}} ()
+\item 
+void \mbox{\hyperlink{class_fish_a7ce58f40d4cfeb6472788af5627252c1}{drop\+Coin}} (int value)
+\item 
+void \mbox{\hyperlink{class_fish_aefe1a78dd5e5bf6a4f152c948d701a09}{tick}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fish_adc54cd97ba29e2bce4f102f2d8cd3b99}\label{class_fish_adc54cd97ba29e2bce4f102f2d8cd3b99}} 
+\index{Fish@{Fish}!Fish@{Fish}}
+\index{Fish@{Fish}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{Fish()}{Fish()}}
+{\footnotesize\ttfamily Fish.\+Fish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}}}]{aquarium,  }\item[{float}]{speed,  }\item[{float}]{eat\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor\+: instantiate fish at random position 
+\begin{DoxyParams}{Parameters}
+{\em aquarium} & object aquarium which will be added by fish and will be initialized \\
+\hline
+{\em speed} & fish speed which will be initialized \\
+\hline
+{\em eat\+Radius} & fish eat radius which will be initialized \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fish_a7ce58f40d4cfeb6472788af5627252c1}\label{class_fish_a7ce58f40d4cfeb6472788af5627252c1}} 
+\index{Fish@{Fish}!drop\+Coin@{drop\+Coin}}
+\index{drop\+Coin@{drop\+Coin}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{drop\+Coin()}{dropCoin()}}
+{\footnotesize\ttfamily void Fish.\+drop\+Coin (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Drop coin from this fish 
+\begin{DoxyParams}{Parameters}
+{\em value} & the coin\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fish_ad8e2387d09b2a4b10f3581797551f82c}\label{class_fish_ad8e2387d09b2a4b10f3581797551f82c}} 
+\index{Fish@{Fish}!get\+Full\+Time@{get\+Full\+Time}}
+\index{get\+Full\+Time@{get\+Full\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Full\+Time()}{getFullTime()}}
+{\footnotesize\ttfamily int Fish.\+get\+Full\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the duration of this fish full before hungry again \begin{DoxyReturn}{Returns}
+the duration of this fish full before hungry again 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fish_af9203b3a4949cac453fc8d18355af9b5}\label{class_fish_af9203b3a4949cac453fc8d18355af9b5}} 
+\index{Fish@{Fish}!get\+Hungry\+Time@{get\+Hungry\+Time}}
+\index{get\+Hungry\+Time@{get\+Hungry\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Hungry\+Time()}{getHungryTime()}}
+{\footnotesize\ttfamily int Fish.\+get\+Hungry\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the duration of this fish hungry before it dies \begin{DoxyReturn}{Returns}
+the duration of this fish hungry before it dies 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fish_a84aaee65d812cd3f8357c9173ec13b75}\label{class_fish_a84aaee65d812cd3f8357c9173ec13b75}} 
+\index{Fish@{Fish}!get\+Last\+Meal\+Time@{get\+Last\+Meal\+Time}}
+\index{get\+Last\+Meal\+Time@{get\+Last\+Meal\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Last\+Meal\+Time()}{getLastMealTime()}}
+{\footnotesize\ttfamily int Fish.\+get\+Last\+Meal\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the last time this fish eats \begin{DoxyReturn}{Returns}
+the last time this fish eats 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fish_a57dcae78fad400c6b8e09f1443acf491}\label{class_fish_a57dcae78fad400c6b8e09f1443acf491}} 
+\index{Fish@{Fish}!get\+Last\+Move\+Time@{get\+Last\+Move\+Time}}
+\index{get\+Last\+Move\+Time@{get\+Last\+Move\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Last\+Move\+Time()}{getLastMoveTime()}}
+{\footnotesize\ttfamily int Fish.\+get\+Last\+Move\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the last time this fish moves \begin{DoxyReturn}{Returns}
+the last time this fish moves 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fish_af967adfd2d8b4486175131509fcf541b}\label{class_fish_af967adfd2d8b4486175131509fcf541b}} 
+\index{Fish@{Fish}!get\+Move\+Time@{get\+Move\+Time}}
+\index{get\+Move\+Time@{get\+Move\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Move\+Time()}{getMoveTime()}}
+{\footnotesize\ttfamily int Fish.\+get\+Move\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the duration of this fish moving before changing direction \begin{DoxyReturn}{Returns}
+the duration of this fish moving before changing direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fish_ad624caf044894e5c4350cd69ef846833}\label{class_fish_ad624caf044894e5c4350cd69ef846833}} 
+\index{Fish@{Fish}!move@{move}}
+\index{move@{move}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Fish.\+move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move towards food if this fish is hungry and food exist, move randomly otherwise \mbox{\Hypertarget{class_fish_aedb34efda974a200bd6b929e26955080}\label{class_fish_aedb34efda974a200bd6b929e26955080}} 
+\index{Fish@{Fish}!set\+Last\+Meal\+Time@{set\+Last\+Meal\+Time}}
+\index{set\+Last\+Meal\+Time@{set\+Last\+Meal\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{set\+Last\+Meal\+Time()}{setLastMealTime()}}
+{\footnotesize\ttfamily void Fish.\+set\+Last\+Meal\+Time (\begin{DoxyParamCaption}\item[{int}]{last\+Meal\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the last time this fish eats 
+\begin{DoxyParams}{Parameters}
+{\em last\+Meal\+Time} & the last time this fish eats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fish_a5c8ba21e13233735384d25a521a6b022}\label{class_fish_a5c8ba21e13233735384d25a521a6b022}} 
+\index{Fish@{Fish}!set\+Last\+Move\+Time@{set\+Last\+Move\+Time}}
+\index{set\+Last\+Move\+Time@{set\+Last\+Move\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{set\+Last\+Move\+Time()}{setLastMoveTime()}}
+{\footnotesize\ttfamily void Fish.\+set\+Last\+Move\+Time (\begin{DoxyParamCaption}\item[{int}]{last\+Move\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the last time this fish moves 
+\begin{DoxyParams}{Parameters}
+{\em last\+Move\+Time} & the last time this fish moves \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fish_aefe1a78dd5e5bf6a4f152c948d701a09}\label{class_fish_aefe1a78dd5e5bf6a4f152c948d701a09}} 
+\index{Fish@{Fish}!tick@{tick}}
+\index{tick@{tick}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Fish.\+tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do one game time unit Dies if game\+Time is greater than or equals the last time this fish eats plus the duration of this fish full before hungry again plus the duration of this fish hungry before it dies 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_fish_8java}{Fish.\+java}}\end{DoxyCompactItemize}

@@ -14,7 +14,7 @@ import javax.swing.WindowConstants;
 public class ArkavQuarium {
   static Aquarium aquarium;
   static int win = 0;
-  static final String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
+  static final String path = "";
 
   public static final BufferedImage[] objectImage = new BufferedImage[21];
 

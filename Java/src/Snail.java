@@ -11,11 +11,11 @@ public class Snail extends Creature {
   public void move() {
     Vector2 coinPosition = eat();
     if (coinPosition != null) {
-      double foodX = coinPosition.x;
-      double snailX = getPosition().x;
+      double foodX = coinPosition.abscissa;
+      double snailX = getPosition().abscissa;
       Vector2 direction = new Vector2(Double.compare(foodX, snailX), 0);
       setPosition(getPosition().add(direction.multiply(getSpeed())));
-      setIsMovingRight(direction.x >= 0);
+      setIsMovingRight(direction.abscissa >= 0);
     }
   }
 
@@ -49,32 +49,32 @@ public class Snail extends Creature {
       Vector2 coinPosition = coin.getData().getPosition();
 
       Priority coinPriority = new Priority();
-      if (coinPosition.y == aquariumSizeY) {
+      if (coinPosition.ordinate == aquariumSizeY) {
         coinPriority.onFloor = true;
-        coinPriority.distance = Math.abs(coinPosition.x - getPosition().x);
+        coinPriority.distance = Math.abs(coinPosition.abscissa - getPosition().abscissa);
       } else {
         coinPriority.onFloor = false;
-        coinPriority.distance = aquariumSizeY - coinPosition.y;
+        coinPriority.distance = aquariumSizeY - coinPosition.ordinate;
       }
 
       for (ElementList<Coin> e = coin.getNext(); e != null; e = e.getNext()) {
         Vector2 elementPosition = e.getData().getPosition();
 
         if (coinPriority.onFloor) {
-          if (elementPosition.y == aquariumSizeY) {
-            double elementDistance = Math.abs(elementPosition.x - getPosition().x);
+          if (elementPosition.ordinate == aquariumSizeY) {
+            double elementDistance = Math.abs(elementPosition.abscissa - getPosition().abscissa);
             if (elementDistance < coinPriority.distance) {
               coin = e;
               coinPriority.distance = elementDistance;
             }
           }
         } else {
-          if (elementPosition.y == aquariumSizeY) {
+          if (elementPosition.ordinate == aquariumSizeY) {
             coin = e;
             coinPriority.onFloor = true;
-            coinPriority.distance = Math.abs(elementPosition.x - getPosition().x);
+            coinPriority.distance = Math.abs(elementPosition.abscissa - getPosition().abscissa);
           } else {
-            double elementDistance = aquariumSizeY - elementPosition.y;
+            double elementDistance = aquariumSizeY - elementPosition.ordinate;
             if (elementDistance < coinPriority.distance) {
               coin = e;
               coinPriority.distance = elementDistance;

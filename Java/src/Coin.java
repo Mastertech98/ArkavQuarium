@@ -19,11 +19,11 @@ public class Coin extends AquariumObject implements IDestructible {
 
   /// Move this coin to the bottom
   public void move() {
-    if (getPosition().y < getAquarium().getSizeY()) {
-      if (getPosition().y + getSpeed() < getAquarium().getSizeY()) {
+    if (getPosition().ordinate < getAquarium().getSizeY()) {
+      if (getPosition().ordinate + getSpeed() < getAquarium().getSizeY()) {
         setPosition(getPosition().add(Vector2.down.multiply(getSpeed())));
       } else {
-        setPosition(new Vector2(getPosition().x, getAquarium().getSizeY()));
+        setPosition(new Vector2(getPosition().abscissa, getAquarium().getSizeY()));
       }
     }
   }

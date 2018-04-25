@@ -64,7 +64,7 @@ public abstract class Fish extends Creature implements IDestructible {
     }
 
     setPosition(getPosition().add(direction.multiply(getSpeed())));
-    setIsMovingRight(direction.x >= 0);
+    setIsMovingRight(direction.abscissa >= 0);
   }
 
   public void dropCoin(int value) {
@@ -87,17 +87,17 @@ public abstract class Fish extends Creature implements IDestructible {
 
     int sizeX = getAquarium().getSizeX();
     int sizeY = getAquarium().getSizeY();
-    double positionX = getPosition().x;
-    double positionY = getPosition().y;
+    double positionX = getPosition().abscissa;
+    double positionY = getPosition().ordinate;
 
     int gameTime = getAquarium().getGameTime();
 
     if (positionX < 0 || positionX > sizeX) {
-      direction = new Vector2(direction.x * -1, direction.y);
+      direction = new Vector2(direction.abscissa * -1, direction.ordinate);
       setLastMoveTime(gameTime);
     }
     if (positionY < 0 || positionY > sizeY) {
-      direction = new Vector2(direction.x, direction.y * -1);
+      direction = new Vector2(direction.abscissa, direction.ordinate * -1);
       setLastMoveTime(gameTime);
     }
   }

@@ -250,7 +250,8 @@ public class Aquarium extends JPanel {
       Vector2 position = guppy.getPosition();
 
       g.drawImage(
-          ArkavQuarium.objectImage[idx], (int) position.x - 64, (int) position.y - 64, null);
+          ArkavQuarium.objectImage[idx],
+          (int) position.abscissa - 64, (int) position.ordinate - 64, null);
     }
     for (ElementList<Piranha> e = getPiranhas().getFirst(); e != null; e = e.getNext()) {
       Piranha piranha = e.getData();
@@ -262,14 +263,16 @@ public class Aquarium extends JPanel {
       Vector2 position = piranha.getPosition();
 
       g.drawImage(
-          ArkavQuarium.objectImage[idx ], (int) position.x - 64, (int) position.y - 64, null);
+          ArkavQuarium.objectImage[idx ],
+          (int) position.abscissa - 64, (int) position.ordinate - 64, null);
     }
     for (ElementList<Snail> e = getSnails().getFirst(); e != null; e = e.getNext()) {
       Snail snail = e.getData();
       Vector2 position = snail.getPosition();
       int idx = snail.getIsMovingRight() ? 1 : 0;
       g.drawImage(
-          ArkavQuarium.objectImage[idx + 16], (int) position.x - 64, (int) position.y - 64, null);
+          ArkavQuarium.objectImage[idx + 16],
+          (int) position.abscissa - 64, (int) position.ordinate - 64, null);
     }
     for (ElementList<Food> e = getFoods().getFirst(); e != null; e = e.getNext()) {
       Food food = e.getData();
@@ -279,7 +282,8 @@ public class Aquarium extends JPanel {
       Vector2 position = food.getPosition();
 
       g.drawImage(
-          ArkavQuarium.objectImage[idx + 18], (int) position.x - 16, (int) position.y - 16, null);
+          ArkavQuarium.objectImage[idx + 18],
+          (int) position.abscissa - 16, (int) position.ordinate - 16, null);
     }
     for (ElementList<Coin> e = getCoins().getFirst(); e != null; e = e.getNext()) {
       Coin coin = e.getData();
@@ -288,7 +292,8 @@ public class Aquarium extends JPanel {
 
       Vector2 position = coin.getPosition();
       g.drawImage(
-          ArkavQuarium.objectImage[idx + 19], (int) position.x - 16, (int) position.y - 16, null);
+          ArkavQuarium.objectImage[idx + 19],
+          (int) position.abscissa - 16, (int) position.ordinate - 16, null);
     }
 
     g.drawString("Money: " + String.valueOf(getMoney()), 8, 16);

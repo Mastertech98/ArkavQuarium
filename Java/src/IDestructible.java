@@ -1,6 +1,6 @@
 interface IDestructible {
   /**
-     * Abstract function of destruct
-     */
+   * Abstract function of destruct.
+   */
   void destruct();
 }

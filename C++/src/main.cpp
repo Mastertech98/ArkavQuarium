@@ -101,17 +101,17 @@ int main( int argc, char* args[] )
                 }
             } else {
                 if (x < 128) {
-                    if (money > Guppy::price) {
+                    if (money >= Guppy::price) {
                         aquarium.add(Guppy(aquarium));
                         aquarium.setMoney(money - Guppy::price);
                     }
                 } else if (x < 256) {
-                    if (money > Piranha::price) {
+                    if (money >= Piranha::price) {
                         aquarium.add(Piranha(aquarium));
                         aquarium.setMoney(money - Piranha::price);
                     }
                 } else if (x < 384) {
-                    if (money > aquarium.getEggPrice()) {
+                    if (money >= aquarium.getEggPrice()) {
                         aquarium.setEgg(aquarium.getEgg() + 1);
                         aquarium.setMoney(money - aquarium.getEggPrice());
                     }

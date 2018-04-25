@@ -28,7 +28,7 @@ public class LinkedList<T> {
       first = new ElementList<>(element);
     } else {
       ElementList<T> e;
-      for (e = first; e.getNext() != null; e = e.getNext());
+      for (e = first; e.getNext() != null; e = e.getNext()) {}
       e.setNext(new ElementList<>(element));
     }
   }
@@ -48,7 +48,7 @@ public class LinkedList<T> {
 
   public T get(int index) {
     ElementList<T> e = first;
-    for (int i = 0; i < index && e != null; i++, e = e.getNext());
+    for (int i = 0; i < index && e != null; i++, e = e.getNext()) {}
     return e != null ? e.getData() : null;
   }
 }

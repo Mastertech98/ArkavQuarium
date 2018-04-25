@@ -294,6 +294,12 @@ public class Aquarium extends JPanel {
     g.drawString("Money: " + String.valueOf(getMoney()), 8, 16);
     g.drawString("Egg: " + String.valueOf(getEgg()), 8, 32);
 
+    if (ArkavQuarium.win == 1) {
+      g.drawString("Win", 8, 48);
+    } else if (ArkavQuarium.win == -1) {
+      g.drawString("Lose", 8, 48);
+    }
+
     repaint();
   }
 }

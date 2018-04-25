@@ -13,8 +13,7 @@ public class Snail extends Creature {
     if (coinPosition != null) {
       double foodX = coinPosition.x;
       double snailX = getPosition().x;
-      Vector2 direction =
-        new Vector2(Math.abs(foodX - snailX) < 0.05 * getSpeed() ? 0 : foodX > snailX ? 1 : -1, 0);
+      Vector2 direction = new Vector2(Double.compare(foodX, snailX), 0);
       setPosition(getPosition().add(direction.multiply(getSpeed())));
       setIsMovingRight(direction.x >= 0);
     }

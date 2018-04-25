@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 public class ArkavQuarium {
   static Aquarium aquarium;
-  public final static BufferedImage[] objectImage = new BufferedImage[21];
+  static int win = 0;
+
+  public static final BufferedImage[] objectImage = new BufferedImage[21];
 
   private static void init() {
     String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
@@ -57,19 +60,23 @@ public class ArkavQuarium {
     timer.schedule(new TimerTask() {
       @Override
       public void run() {
-        aquarium.tick();
-
         // Win/Lose Condition
         if (aquarium.getEgg() >= 3) {
-
+          timer.cancel();
+          timer.purge();
+          win = 1;
         } else {
           if (aquarium.getGuppies().isEmpty() && aquarium.getPiranhas().isEmpty()) {
             int money = aquarium.getMoney();
             if (money < Guppy.price && money < Piranha.price) {
-
+              timer.cancel();
+              timer.purge();
+              win = -1;
             }
           }
         }
+
+        aquarium.tick();
       }
     }, 0, 50);
   }

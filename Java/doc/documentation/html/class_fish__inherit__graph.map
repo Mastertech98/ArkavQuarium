@@ -1,0 +1,6 @@
+<map id="Fish" name="Fish">
+<area shape="rect" id="node5" href="$class_guppy.html" title="{Guppy\n|+ price\l|+ Guppy()\l+ getCoinDropPeriod()\l+ getEatenFood()\l+ getLastCoinDrop()\l+ getGrowthStage()\l+ setEatenFood()\l+ setLastCoinDrop()\l+ eat()\l+ destruct()\l+ tick()\l}" alt="" coords="5,675,156,884"/>
+<area shape="rect" id="node6" href="$class_piranha.html" title="{Piranha\n|+ price\l|+ Piranha()\l+ eat()\l+ destruct()\l}" alt="" coords="180,726,269,833"/>
+<area shape="rect" id="node2" href="$class_creature.html" title="{Creature\n||+ Creature()\l+ getEatRadius()\l+ getIsMovingRight()\l+ setIsMovingRight()\l+ eat()\l}" alt="" coords="12,219,152,355"/>
+<area shape="rect" id="node3" href="$class_aquarium_object.html" title="{AquariumObject\n||+ AquariumObject()\l+ getAquarium()\l+ getSpeed()\l+ getPosition()\l+ setPosition()\l+ move()\l+ tick()\l}" alt="" coords="15,5,149,171"/>
+</map>

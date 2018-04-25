@@ -1,0 +1,124 @@
+\hypertarget{class_linked_list}{}\section{Linked\+List$<$ T $>$ Class Template Reference}
+\label{class_linked_list}\index{Linked\+List$<$ T $>$@{Linked\+List$<$ T $>$}}
+
+
+Inheritance diagram for Linked\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_linked_list__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Linked\+List$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_linked_list__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_linked_list_ae04bfb6ff80214a33132ba72ceb117aa}{Linked\+List}} ()
+\item 
+Element\+List$<$ T $>$ \mbox{\hyperlink{class_linked_list_a312a0b29e235fdd9e0ceb42048e26600}{get\+First}} ()
+\item 
+int \mbox{\hyperlink{class_linked_list_abb5fc485a297b815daf6034f1c455979}{find}} (T element)
+\item 
+boolean \mbox{\hyperlink{class_linked_list_aecae3d82587c52087a4f65d6c56900e2}{is\+Empty}} ()
+\item 
+void \mbox{\hyperlink{class_linked_list_af7ec408e2f1040643d77f614af535988}{add}} (T element)
+\item 
+void \mbox{\hyperlink{class_linked_list_a85388ca2d7e4c8bc06fbea2c6fcfea33}{remove}} (T element)
+\item 
+T \mbox{\hyperlink{class_linked_list_a032ef46fc54f12525746d9f7c3a80663}{get}} (int index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_linked_list_ae04bfb6ff80214a33132ba72ceb117aa}\label{class_linked_list_ae04bfb6ff80214a33132ba72ceb117aa}} 
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\index{Linked\+List@{Linked\+List}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{Linked\+List()}{LinkedList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.\mbox{\hyperlink{class_linked_list}{Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \+: Initialize first with null 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_linked_list_af7ec408e2f1040643d77f614af535988}\label{class_linked_list_af7ec408e2f1040643d77f614af535988}} 
+\index{Linked\+List@{Linked\+List}!add@{add}}
+\index{add@{add}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.add (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add element to the list 
+\begin{DoxyParams}{Parameters}
+{\em element} & element which will be added to list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_linked_list_abb5fc485a297b815daf6034f1c455979}\label{class_linked_list_abb5fc485a297b815daf6034f1c455979}} 
+\index{Linked\+List@{Linked\+List}!find@{find}}
+\index{find@{find}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.find (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get index with value equals to argument. If not value found in list, then return -\/1 
+\begin{DoxyParams}{Parameters}
+{\em element} & data will be compared with this object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of element if found and -\/1 if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a032ef46fc54f12525746d9f7c3a80663}\label{class_linked_list_a032ef46fc54f12525746d9f7c3a80663}} 
+\index{Linked\+List@{Linked\+List}!get@{get}}
+\index{get@{get}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If found, return data of element list 
+\begin{DoxyParams}{Parameters}
+{\em index} & index of data which will be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if found, return data of element list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a312a0b29e235fdd9e0ceb42048e26600}\label{class_linked_list_a312a0b29e235fdd9e0ceb42048e26600}} 
+\index{Linked\+List@{Linked\+List}!get\+First@{get\+First}}
+\index{get\+First@{get\+First}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{get\+First()}{getFirst()}}
+{\footnotesize\ttfamily Element\+List$<$T$>$ \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get variable first\textquotesingle{}s data \begin{DoxyReturn}{Returns}
+variable first 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_aecae3d82587c52087a4f65d6c56900e2}\label{class_linked_list_aecae3d82587c52087a4f65d6c56900e2}} 
+\index{Linked\+List@{Linked\+List}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily boolean \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if list is empty \begin{DoxyReturn}{Returns}
+true if list is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a85388ca2d7e4c8bc06fbea2c6fcfea33}\label{class_linked_list_a85388ca2d7e4c8bc06fbea2c6fcfea33}} 
+\index{Linked\+List@{Linked\+List}!remove@{remove}}
+\index{remove@{remove}!Linked\+List@{Linked\+List}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$.remove (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove first element in the list with same value as element 
+\begin{DoxyParams}{Parameters}
+{\em element} & value of element which will be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_linked_list_8java}{Linked\+List.\+java}}\end{DoxyCompactItemize}

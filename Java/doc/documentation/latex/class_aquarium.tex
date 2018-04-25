@@ -1,0 +1,379 @@
+\hypertarget{class_aquarium}{}\section{Aquarium Class Reference}
+\label{class_aquarium}\index{Aquarium@{Aquarium}}
+
+
+Inheritance diagram for Aquarium\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_aquarium__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aquarium\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_aquarium__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aquarium_ab99a26856347e9a9732f60cfb6a78296}{Aquarium}} (int sizeX, int sizeY, int money, int egg\+Price)
+\item 
+int \mbox{\hyperlink{class_aquarium_ac2e5c1499608a5d7c2f47a7ba4dee132}{get\+SizeX}} ()
+\item 
+int \mbox{\hyperlink{class_aquarium_ae7c79ab9763151e19723de5f29e64028}{get\+SizeY}} ()
+\item 
+int \mbox{\hyperlink{class_aquarium_a275fe429b5baa09995d06e02e82d068e}{get\+Game\+Time}} ()
+\item 
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_guppy}{Guppy}} $>$ \mbox{\hyperlink{class_aquarium_a066f295616bf7dc88c0612c663c7ec2a}{get\+Guppies}} ()
+\item 
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_piranha}{Piranha}} $>$ \mbox{\hyperlink{class_aquarium_ab45bfd1f7ccbbb8cbe497a0c30c026d3}{get\+Piranhas}} ()
+\item 
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_snail}{Snail}} $>$ \mbox{\hyperlink{class_aquarium_ad892096807da645e15351c8df29d75de}{get\+Snails}} ()
+\item 
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_food}{Food}} $>$ \mbox{\hyperlink{class_aquarium_ac47310f32364a37c85349445034ea802}{get\+Foods}} ()
+\item 
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_coin}{Coin}} $>$ \mbox{\hyperlink{class_aquarium_a93d60eb37e0306107617dc4d97adcacc}{get\+Coins}} ()
+\item 
+int \mbox{\hyperlink{class_aquarium_ae7d57c7679df14fed4c89b7e5a132316}{get\+Money}} ()
+\item 
+int \mbox{\hyperlink{class_aquarium_a27dcfed721c8fa4deee9c168e9478b2c}{get\+Egg}} ()
+\item 
+int \mbox{\hyperlink{class_aquarium_ad5e2f2db9e09447fcb89ca3a558a69ce}{get\+Egg\+Price}} ()
+\item 
+void \mbox{\hyperlink{class_aquarium_a8717586304a44390ef1d8363ebf2d42e}{set\+Game\+Time}} (int game\+Time)
+\item 
+void \mbox{\hyperlink{class_aquarium_af845b924b868a8897f3d8f2a104e22f7}{set\+Money}} (int money)
+\item 
+void \mbox{\hyperlink{class_aquarium_a328d46bba95f6c4db241e8a4ac54e1fc}{set\+Egg}} (int egg)
+\item 
+void \mbox{\hyperlink{class_aquarium_aaf8f1dcec2a7a54a2e77931946224181}{set\+Egg\+Price}} (int egg\+Price)
+\item 
+void \mbox{\hyperlink{class_aquarium_a4548d70b3d7c88aa970388ef107ec818}{add}} (\mbox{\hyperlink{class_guppy}{Guppy}} guppy)
+\item 
+void \mbox{\hyperlink{class_aquarium_a96f7ccac5fe3b5a97afd0c29840f868a}{add}} (\mbox{\hyperlink{class_piranha}{Piranha}} piranha)
+\item 
+void \mbox{\hyperlink{class_aquarium_a884820c46118fdbc25936f01d3d06a2f}{add}} (\mbox{\hyperlink{class_snail}{Snail}} snail)
+\item 
+void \mbox{\hyperlink{class_aquarium_a92553ce7aa392910522f243f10965570}{add}} (\mbox{\hyperlink{class_food}{Food}} food)
+\item 
+void \mbox{\hyperlink{class_aquarium_a99b7bb8813dc2e0251e675b9e75906d7}{add}} (\mbox{\hyperlink{class_coin}{Coin}} coin)
+\item 
+void \mbox{\hyperlink{class_aquarium_a60bd4bc395dd03c5ab313ef49129c295}{remove}} (\mbox{\hyperlink{class_guppy}{Guppy}} guppy)
+\item 
+void \mbox{\hyperlink{class_aquarium_a7ae9e9230490e7179d90b896ea226071}{remove}} (\mbox{\hyperlink{class_piranha}{Piranha}} piranha)
+\item 
+void \mbox{\hyperlink{class_aquarium_a2c283c3325865e62469a426498443cd0}{remove}} (\mbox{\hyperlink{class_snail}{Snail}} snail)
+\item 
+void \mbox{\hyperlink{class_aquarium_a63e4f95aafbfc1cc2e081254dac69fd8}{remove}} (\mbox{\hyperlink{class_food}{Food}} food)
+\item 
+void \mbox{\hyperlink{class_aquarium_a39119dfb953c89eac41fda5c3b6834f0}{remove}} (\mbox{\hyperlink{class_coin}{Coin}} coin)
+\item 
+void \mbox{\hyperlink{class_aquarium_a62647cfa861f70d29c19fc5e27b4b77b}{tick}} ()
+\item 
+void \mbox{\hyperlink{class_aquarium_a1dddaa60d7c8ab3ef8addf1a1b1dfe4d}{paint\+Component}} (Graphics g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_aquarium_ab99a26856347e9a9732f60cfb6a78296}\label{class_aquarium_ab99a26856347e9a9732f60cfb6a78296}} 
+\index{Aquarium@{Aquarium}!Aquarium@{Aquarium}}
+\index{Aquarium@{Aquarium}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{Aquarium()}{Aquarium()}}
+{\footnotesize\ttfamily Aquarium.\+Aquarium (\begin{DoxyParamCaption}\item[{int}]{sizeX,  }\item[{int}]{sizeY,  }\item[{int}]{money,  }\item[{int}]{egg\+Price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constuctor\+: set game\+Time to 0, set egg to 0, add snail to game 
+\begin{DoxyParams}{Parameters}
+{\em sizeX} & horizontal length for aquarium \\
+\hline
+{\em sizeY} & vertical length for aquarium \\
+\hline
+{\em money} & start money in game \\
+\hline
+{\em egg\+Price} & egg price in game \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aquarium_a4548d70b3d7c88aa970388ef107ec818}\label{class_aquarium_a4548d70b3d7c88aa970388ef107ec818}} 
+\index{Aquarium@{Aquarium}!add@{add}}
+\index{add@{add}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Aquarium.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guppy}{Guppy}}}]{guppy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add guppy to aquarium 
+\begin{DoxyParams}{Parameters}
+{\em guppy} & a new guppy to add to aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a96f7ccac5fe3b5a97afd0c29840f868a}\label{class_aquarium_a96f7ccac5fe3b5a97afd0c29840f868a}} 
+\index{Aquarium@{Aquarium}!add@{add}}
+\index{add@{add}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Aquarium.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piranha}{Piranha}}}]{piranha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add piranha to aquarium 
+\begin{DoxyParams}{Parameters}
+{\em piranha} & a new piranha to add to aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a884820c46118fdbc25936f01d3d06a2f}\label{class_aquarium_a884820c46118fdbc25936f01d3d06a2f}} 
+\index{Aquarium@{Aquarium}!add@{add}}
+\index{add@{add}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Aquarium.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_snail}{Snail}}}]{snail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add snail to aquarium 
+\begin{DoxyParams}{Parameters}
+{\em snail} & a new snail to add to aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a92553ce7aa392910522f243f10965570}\label{class_aquarium_a92553ce7aa392910522f243f10965570}} 
+\index{Aquarium@{Aquarium}!add@{add}}
+\index{add@{add}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Aquarium.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_food}{Food}}}]{food }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add food to aquarium 
+\begin{DoxyParams}{Parameters}
+{\em food} & a new food to add to aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a99b7bb8813dc2e0251e675b9e75906d7}\label{class_aquarium_a99b7bb8813dc2e0251e675b9e75906d7}} 
+\index{Aquarium@{Aquarium}!add@{add}}
+\index{add@{add}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Aquarium.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin}{Coin}}}]{coin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add coin to aquarium 
+\begin{DoxyParams}{Parameters}
+{\em coin} & a new coin to add to aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a93d60eb37e0306107617dc4d97adcacc}\label{class_aquarium_a93d60eb37e0306107617dc4d97adcacc}} 
+\index{Aquarium@{Aquarium}!get\+Coins@{get\+Coins}}
+\index{get\+Coins@{get\+Coins}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Coins()}{getCoins()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$\mbox{\hyperlink{class_coin}{Coin}}$>$ Aquarium.\+get\+Coins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference of list of coins \begin{DoxyReturn}{Returns}
+reference of list of coins 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_a27dcfed721c8fa4deee9c168e9478b2c}\label{class_aquarium_a27dcfed721c8fa4deee9c168e9478b2c}} 
+\index{Aquarium@{Aquarium}!get\+Egg@{get\+Egg}}
+\index{get\+Egg@{get\+Egg}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Egg()}{getEgg()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+Egg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get number of egg bought \begin{DoxyReturn}{Returns}
+number of egg bought 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ad5e2f2db9e09447fcb89ca3a558a69ce}\label{class_aquarium_ad5e2f2db9e09447fcb89ca3a558a69ce}} 
+\index{Aquarium@{Aquarium}!get\+Egg\+Price@{get\+Egg\+Price}}
+\index{get\+Egg\+Price@{get\+Egg\+Price}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Egg\+Price()}{getEggPrice()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+Egg\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get price of egg \begin{DoxyReturn}{Returns}
+egg price 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ac47310f32364a37c85349445034ea802}\label{class_aquarium_ac47310f32364a37c85349445034ea802}} 
+\index{Aquarium@{Aquarium}!get\+Foods@{get\+Foods}}
+\index{get\+Foods@{get\+Foods}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Foods()}{getFoods()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$\mbox{\hyperlink{class_food}{Food}}$>$ Aquarium.\+get\+Foods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference of list of foods \begin{DoxyReturn}{Returns}
+reference of list of foods 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_a275fe429b5baa09995d06e02e82d068e}\label{class_aquarium_a275fe429b5baa09995d06e02e82d068e}} 
+\index{Aquarium@{Aquarium}!get\+Game\+Time@{get\+Game\+Time}}
+\index{get\+Game\+Time@{get\+Game\+Time}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Game\+Time()}{getGameTime()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+Game\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get current game time \begin{DoxyReturn}{Returns}
+game time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_a066f295616bf7dc88c0612c663c7ec2a}\label{class_aquarium_a066f295616bf7dc88c0612c663c7ec2a}} 
+\index{Aquarium@{Aquarium}!get\+Guppies@{get\+Guppies}}
+\index{get\+Guppies@{get\+Guppies}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Guppies()}{getGuppies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$\mbox{\hyperlink{class_guppy}{Guppy}}$>$ Aquarium.\+get\+Guppies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference of list of guppies \begin{DoxyReturn}{Returns}
+reference of list of guppies 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ae7d57c7679df14fed4c89b7e5a132316}\label{class_aquarium_ae7d57c7679df14fed4c89b7e5a132316}} 
+\index{Aquarium@{Aquarium}!get\+Money@{get\+Money}}
+\index{get\+Money@{get\+Money}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Money()}{getMoney()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get current money \begin{DoxyReturn}{Returns}
+current money 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ab45bfd1f7ccbbb8cbe497a0c30c026d3}\label{class_aquarium_ab45bfd1f7ccbbb8cbe497a0c30c026d3}} 
+\index{Aquarium@{Aquarium}!get\+Piranhas@{get\+Piranhas}}
+\index{get\+Piranhas@{get\+Piranhas}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Piranhas()}{getPiranhas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$\mbox{\hyperlink{class_piranha}{Piranha}}$>$ Aquarium.\+get\+Piranhas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference of list of piranhas \begin{DoxyReturn}{Returns}
+reference of list of piranhas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ac2e5c1499608a5d7c2f47a7ba4dee132}\label{class_aquarium_ac2e5c1499608a5d7c2f47a7ba4dee132}} 
+\index{Aquarium@{Aquarium}!get\+SizeX@{get\+SizeX}}
+\index{get\+SizeX@{get\+SizeX}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Size\+X()}{getSizeX()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+SizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get aquarium horizontal size \begin{DoxyReturn}{Returns}
+aquarium x size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ae7c79ab9763151e19723de5f29e64028}\label{class_aquarium_ae7c79ab9763151e19723de5f29e64028}} 
+\index{Aquarium@{Aquarium}!get\+SizeY@{get\+SizeY}}
+\index{get\+SizeY@{get\+SizeY}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Size\+Y()}{getSizeY()}}
+{\footnotesize\ttfamily int Aquarium.\+get\+SizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get aquarium vertical size \begin{DoxyReturn}{Returns}
+aquarium y size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_ad892096807da645e15351c8df29d75de}\label{class_aquarium_ad892096807da645e15351c8df29d75de}} 
+\index{Aquarium@{Aquarium}!get\+Snails@{get\+Snails}}
+\index{get\+Snails@{get\+Snails}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{get\+Snails()}{getSnails()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$\mbox{\hyperlink{class_snail}{Snail}}$>$ Aquarium.\+get\+Snails (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference of list of snails \begin{DoxyReturn}{Returns}
+reference of list of snails 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_a1dddaa60d7c8ab3ef8addf1a1b1dfe4d}\label{class_aquarium_a1dddaa60d7c8ab3ef8addf1a1b1dfe4d}} 
+\index{Aquarium@{Aquarium}!paint\+Component@{paint\+Component}}
+\index{paint\+Component@{paint\+Component}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{paint\+Component()}{paintComponent()}}
+{\footnotesize\ttfamily void Aquarium.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Draw \mbox{\hyperlink{class_aquarium}{Aquarium}} 
+\begin{DoxyParams}{Parameters}
+{\em g} & Place to be drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a60bd4bc395dd03c5ab313ef49129c295}\label{class_aquarium_a60bd4bc395dd03c5ab313ef49129c295}} 
+\index{Aquarium@{Aquarium}!remove@{remove}}
+\index{remove@{remove}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Aquarium.\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guppy}{Guppy}}}]{guppy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove guppy from aquarium 
+\begin{DoxyParams}{Parameters}
+{\em guppy} & a guppy which will be deleted from aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a7ae9e9230490e7179d90b896ea226071}\label{class_aquarium_a7ae9e9230490e7179d90b896ea226071}} 
+\index{Aquarium@{Aquarium}!remove@{remove}}
+\index{remove@{remove}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Aquarium.\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piranha}{Piranha}}}]{piranha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove piranha from aquarium 
+\begin{DoxyParams}{Parameters}
+{\em piranha} & a piranha which will be deleted from aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a2c283c3325865e62469a426498443cd0}\label{class_aquarium_a2c283c3325865e62469a426498443cd0}} 
+\index{Aquarium@{Aquarium}!remove@{remove}}
+\index{remove@{remove}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Aquarium.\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_snail}{Snail}}}]{snail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove snail from aquarium 
+\begin{DoxyParams}{Parameters}
+{\em snail} & a snail which will be deleted from aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a63e4f95aafbfc1cc2e081254dac69fd8}\label{class_aquarium_a63e4f95aafbfc1cc2e081254dac69fd8}} 
+\index{Aquarium@{Aquarium}!remove@{remove}}
+\index{remove@{remove}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Aquarium.\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_food}{Food}}}]{food }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove food from aquarium 
+\begin{DoxyParams}{Parameters}
+{\em food} & a food which will be deleted from aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a39119dfb953c89eac41fda5c3b6834f0}\label{class_aquarium_a39119dfb953c89eac41fda5c3b6834f0}} 
+\index{Aquarium@{Aquarium}!remove@{remove}}
+\index{remove@{remove}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Aquarium.\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coin}{Coin}}}]{coin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove coin from aquarium 
+\begin{DoxyParams}{Parameters}
+{\em coin} & a coin which will be deleted from aquarium \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a328d46bba95f6c4db241e8a4ac54e1fc}\label{class_aquarium_a328d46bba95f6c4db241e8a4ac54e1fc}} 
+\index{Aquarium@{Aquarium}!set\+Egg@{set\+Egg}}
+\index{set\+Egg@{set\+Egg}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{set\+Egg()}{setEgg()}}
+{\footnotesize\ttfamily void Aquarium.\+set\+Egg (\begin{DoxyParamCaption}\item[{int}]{egg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set number of egg bought 
+\begin{DoxyParams}{Parameters}
+{\em egg} & a new number of egg bought \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_aaf8f1dcec2a7a54a2e77931946224181}\label{class_aquarium_aaf8f1dcec2a7a54a2e77931946224181}} 
+\index{Aquarium@{Aquarium}!set\+Egg\+Price@{set\+Egg\+Price}}
+\index{set\+Egg\+Price@{set\+Egg\+Price}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{set\+Egg\+Price()}{setEggPrice()}}
+{\footnotesize\ttfamily void Aquarium.\+set\+Egg\+Price (\begin{DoxyParamCaption}\item[{int}]{egg\+Price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set price 
+\begin{DoxyParams}{Parameters}
+{\em egg\+Price} & a new price of egg \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a8717586304a44390ef1d8363ebf2d42e}\label{class_aquarium_a8717586304a44390ef1d8363ebf2d42e}} 
+\index{Aquarium@{Aquarium}!set\+Game\+Time@{set\+Game\+Time}}
+\index{set\+Game\+Time@{set\+Game\+Time}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{set\+Game\+Time()}{setGameTime()}}
+{\footnotesize\ttfamily void Aquarium.\+set\+Game\+Time (\begin{DoxyParamCaption}\item[{int}]{game\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set game time 
+\begin{DoxyParams}{Parameters}
+{\em game\+Time} & a new game time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_af845b924b868a8897f3d8f2a104e22f7}\label{class_aquarium_af845b924b868a8897f3d8f2a104e22f7}} 
+\index{Aquarium@{Aquarium}!set\+Money@{set\+Money}}
+\index{set\+Money@{set\+Money}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{set\+Money()}{setMoney()}}
+{\footnotesize\ttfamily void Aquarium.\+set\+Money (\begin{DoxyParamCaption}\item[{int}]{money }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set money 
+\begin{DoxyParams}{Parameters}
+{\em money} & a new value of money \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_a62647cfa861f70d29c19fc5e27b4b77b}\label{class_aquarium_a62647cfa861f70d29c19fc5e27b4b77b}} 
+\index{Aquarium@{Aquarium}!tick@{tick}}
+\index{tick@{tick}!Aquarium@{Aquarium}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Aquarium.\+tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do one game time unit Increment game\+Time, call tick on all \mbox{\hyperlink{class_aquarium_object}{Aquarium\+Object}} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_aquarium_8java}{Aquarium.\+java}}\end{DoxyCompactItemize}

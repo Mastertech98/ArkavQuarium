@@ -2,17 +2,17 @@ public class Piranha extends Fish {
   public static final int price = 20;
 
   /**
-     * Constructor: instantiate piranha at speed of 7 and eatRadius of 75
-     * @param aquarium object aquarium which will be added by piranha and will be initialized
-     */
+   * Constructor: instantiate piranha at speed of 7 and eatRadius of 75.
+   * @param aquarium object aquarium which will be added by piranha and will be initialized
+   */
   public Piranha(Aquarium aquarium) {
     super(aquarium, 7, 75);
   }
 
   /**
-     * Find guppies in the aquarium
-     * @return guppy position
-     */
+   * Find guppies in the aquarium.
+   * @return guppy position
+   */
   public Vector2 eat() {
     Guppy guppy = findGuppy();
     if (guppy != null) {
@@ -35,16 +35,16 @@ public class Piranha extends Fish {
   }
 
   /**
-     * Remove this piranha from aquarium
-     */
+   * Remove this piranha from aquarium.
+   */
   public void destruct() {
     getAquarium().remove(this);
   }
 
   /**
-     * Get guppy which will be eaten by piranha
-     * @return guppy's data
-     */
+   * Get guppy which will be eaten by piranha.
+   * @return guppy's data
+   */
   private Guppy findGuppy() {
     LinkedList<Guppy> guppies = getAquarium().getGuppies();
     if (guppies.isEmpty()) {

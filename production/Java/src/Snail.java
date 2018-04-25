@@ -1,13 +1,25 @@
 public class Snail extends Creature {
 
+  /**
+	 * Constructor: instantiate snail on the bottom middle of the aquarium, speed of 3, and eatRadius of 50
+	 * @param aquarium object aquarium which will be added by piranha and will be initialized
+	 */
   public Snail(Aquarium aquarium) {
     super(aquarium, 3, new Vector2((double) aquarium.getSizeX() / 2, aquarium.getSizeY()), 50);
   }
 
+  /**
+     * Reference comparison
+     * @param other other snail to compare
+     * @return true if and only if argument represent this snail
+     */
   public boolean equals(final Snail other) {
     return this == other;
   }
 
+  /**
+     * Move horizontally
+     */
   public void move() {
     Vector2 coinPosition = eat();
     if (coinPosition != null) {
@@ -19,6 +31,10 @@ public class Snail extends Creature {
     }
   }
 
+  /**
+     * Find coin in the aquarium
+     * @return coin's position
+     */
   public Vector2 eat() {
     Coin coin = findCoin();
     if (coin != null) {
@@ -34,6 +50,10 @@ public class Snail extends Creature {
     }
   }
 
+  /**
+     * Get coin which will be get by snail
+     * @return coin's data
+     */
   private Coin findCoin() {
     LinkedList<Coin> coins = getAquarium().getCoins();
     if (coins.isEmpty()) {

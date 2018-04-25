@@ -1,0 +1,101 @@
+\hypertarget{class_creature}{}\section{Creature Class Reference}
+\label{class_creature}\index{Creature@{Creature}}
+
+
+Inheritance diagram for Creature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_creature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Creature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_creature__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_creature_af3d99d9dee3ec509f4cfe57793659ac4}{Creature}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} aquarium, float speed, \mbox{\hyperlink{class_vector2}{Vector2}} position, float eat\+Radius)
+\item 
+float \mbox{\hyperlink{class_creature_a081915b29b8deffca77eddbd4dc264ae}{get\+Eat\+Radius}} ()
+\item 
+boolean \mbox{\hyperlink{class_creature_aabe86755952b9468133db908895d2031}{get\+Is\+Moving\+Right}} ()
+\item 
+void \mbox{\hyperlink{class_creature_a36e69cbb4e68318fc9ef7ff08ff59ac1}{set\+Is\+Moving\+Right}} (boolean is\+Moving\+Right)
+\item 
+abstract \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_creature_a1917610814e5b4021622275175e58bf1}{eat}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_creature_af3d99d9dee3ec509f4cfe57793659ac4}\label{class_creature_af3d99d9dee3ec509f4cfe57793659ac4}} 
+\index{Creature@{Creature}!Creature@{Creature}}
+\index{Creature@{Creature}!Creature@{Creature}}
+\subsubsection{\texorpdfstring{Creature()}{Creature()}}
+{\footnotesize\ttfamily Creature.\+Creature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}}}]{aquarium,  }\item[{float}]{speed,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{position,  }\item[{float}]{eat\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em aquarium} & aquarium which will be added by creature \\
+\hline
+{\em speed} & speed of creature \\
+\hline
+{\em position} & position of creature \\
+\hline
+{\em eat\+Radius} & eat radius of creature \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_creature_a1917610814e5b4021622275175e58bf1}\label{class_creature_a1917610814e5b4021622275175e58bf1}} 
+\index{Creature@{Creature}!eat@{eat}}
+\index{eat@{eat}!Creature@{Creature}}
+\subsubsection{\texorpdfstring{eat()}{eat()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{class_vector2}{Vector2}} Creature.\+eat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Abstract function of eat \begin{DoxyReturn}{Returns}
+target position which will be eaten 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_creature_a081915b29b8deffca77eddbd4dc264ae}\label{class_creature_a081915b29b8deffca77eddbd4dc264ae}} 
+\index{Creature@{Creature}!get\+Eat\+Radius@{get\+Eat\+Radius}}
+\index{get\+Eat\+Radius@{get\+Eat\+Radius}!Creature@{Creature}}
+\subsubsection{\texorpdfstring{get\+Eat\+Radius()}{getEatRadius()}}
+{\footnotesize\ttfamily float Creature.\+get\+Eat\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get eat radius \begin{DoxyReturn}{Returns}
+eat radius 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_creature_aabe86755952b9468133db908895d2031}\label{class_creature_aabe86755952b9468133db908895d2031}} 
+\index{Creature@{Creature}!get\+Is\+Moving\+Right@{get\+Is\+Moving\+Right}}
+\index{get\+Is\+Moving\+Right@{get\+Is\+Moving\+Right}!Creature@{Creature}}
+\subsubsection{\texorpdfstring{get\+Is\+Moving\+Right()}{getIsMovingRight()}}
+{\footnotesize\ttfamily boolean Creature.\+get\+Is\+Moving\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get horizontal movement direction \begin{DoxyReturn}{Returns}
+x movement direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_creature_a36e69cbb4e68318fc9ef7ff08ff59ac1}\label{class_creature_a36e69cbb4e68318fc9ef7ff08ff59ac1}} 
+\index{Creature@{Creature}!set\+Is\+Moving\+Right@{set\+Is\+Moving\+Right}}
+\index{set\+Is\+Moving\+Right@{set\+Is\+Moving\+Right}!Creature@{Creature}}
+\subsubsection{\texorpdfstring{set\+Is\+Moving\+Right()}{setIsMovingRight()}}
+{\footnotesize\ttfamily void Creature.\+set\+Is\+Moving\+Right (\begin{DoxyParamCaption}\item[{boolean}]{is\+Moving\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set horizontal movement direction 
+\begin{DoxyParams}{Parameters}
+{\em is\+Moving\+Right} & a new x movement direction \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_creature_8java}{Creature.\+java}}\end{DoxyCompactItemize}

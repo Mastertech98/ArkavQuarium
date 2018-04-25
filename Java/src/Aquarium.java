@@ -23,7 +23,7 @@ public class Aquarium extends JPanel {
   private int eggPrice;
 
   /**
-     * Constuctor: set gameTime to 0, set egg to 0, add snail to game
+     * Constuctor: set gameTime to 0, set egg to 0, add snail to game.
      * @param sizeX horizontal length for aquarium
      * @param sizeY vertical length for aquarium
      * @param money start money in game
@@ -116,209 +116,209 @@ public class Aquarium extends JPanel {
   }
 
   /**
-     * Get aquarium horizontal size
-     * @return aquarium x size
-     */
+   * Get aquarium horizontal size.
+   * @return aquarium x size
+   */
   public int getSizeX() {
     return sizeX;
   }
 
   /**
-     * Get aquarium vertical size
-     * @return aquarium y size
-     */
+   * Get aquarium vertical size.
+   * @return aquarium y size
+   */
   public int getSizeY() {
     return sizeY;
   }
 
   /**
-     * Get current game time
-     * @return game time
-     */
+   * Get current game time.
+   * @return game time
+   */
   public int getGameTime() {
     return gameTime;
   }
 
   /**
-     * Get reference of list of guppies
-     * @return reference of list of guppies
-     */
+   * Get reference of list of guppies.
+   * @return reference of list of guppies
+   */
   public LinkedList<Guppy> getGuppies() {
     return guppies;
   }
 
   /**
-     * Get reference of list of piranhas
-     * @return reference of list of piranhas
-     */
+   * Get reference of list of piranhas.
+   * @return reference of list of piranhas
+   */
   public LinkedList<Piranha> getPiranhas() {
     return piranhas;
   }
 
   /**
-     * Get reference of list of snails
-     * @return reference of list of snails
-     */
+   * Get reference of list of snails.
+   * @return reference of list of snails
+   */
   public LinkedList<Snail> getSnails() {
     return snails;
   }
 
   /**
-     * Get reference of list of foods
-     * @return reference of list of foods
-     */
+   * Get reference of list of foods.
+   * @return reference of list of foods
+   */
   public LinkedList<Food> getFoods() {
     return foods;
   }
 
   /**
-     * Get reference of list of coins
-     * @return reference of list of coins
-     */
+   * Get reference of list of coins.
+   * @return reference of list of coins
+   */
   public LinkedList<Coin> getCoins() {
     return coins;
   }
 
   /**
-     * Get current money
-     * @return current money
-     */
+   * Get current money.
+   * @return current money
+   */
   public int getMoney() {
     return money;
   }
 
   /**
-     * Get number of egg bought
-     * @return number of egg bought
-     */
+   * Get number of egg bought.
+   * @return number of egg bought
+   */
   public int getEgg() {
     return egg;
   }
 
   /**
-     * Get price of egg
-     * @return egg price
-     */
+   * Get price of egg.
+   * @return egg price
+   */
   public int getEggPrice() {
     return eggPrice;
   }
 
   /**
-     * Set game time
-     * @param gameTime a new game time
-     */
+   * Set game time.
+   * @param gameTime a new game time
+   */
   public void setGameTime(int gameTime) {
     this.gameTime = gameTime;
   }
 
   /**
-     * Set money
-     * @param money a new value of money
-     */
+   * Set money.
+   * @param money a new value of money
+   */
   public void setMoney(int money) {
     this.money = money;
   }
 
   /**
-     * Set number of egg bought
-     * @param egg a new number of egg bought
-     */
+   * Set number of egg bought.
+   * @param egg a new number of egg bought
+   */
   public void setEgg(int egg) {
     this.egg = egg;
   }
 
   /**
-     * Set price
-     * @param eggPrice a new price of egg
-     */
+   * Set price.
+   * @param eggPrice a new price of egg
+   */
   public void setEggPrice(int eggPrice) {
     this.eggPrice = eggPrice;
   }
 
   /**
-     * Add guppy to aquarium
-     * @param guppy a new guppy to add to aquarium
-     */
+   * Add guppy to aquarium.
+   * @param guppy a new guppy to add to aquarium
+   */
   public void add(Guppy guppy) {
     guppies.add(guppy);
   }
 
   /**
-     * Add piranha to aquarium
-     * @param piranha a new piranha to add to aquarium
-     */
+   * Add piranha to aquarium.
+   * @param piranha a new piranha to add to aquarium
+   */
   public void add(Piranha piranha) {
     piranhas.add(piranha);
   }
 
   /**
-     * Add snail to aquarium
-     * @param snail a new snail to add to aquarium
-     */
+   * Add snail to aquarium.
+   * @param snail a new snail to add to aquarium
+   */
   public void add(Snail snail) {
     snails.add(snail);
   }
 
   /**
-     * Add food to aquarium
-     * @param food a new food to add to aquarium
-     */
+   * Add food to aquarium.
+   * @param food a new food to add to aquarium
+   */
   public void add(Food food) {
     foods.add(food);
   }
 
   /**
-     * Add coin to aquarium
-     * @param coin a new coin to add to aquarium
-     */
+   * Add coin to aquarium.
+   * @param coin a new coin to add to aquarium
+   */
   public void add(Coin coin) {
     coins.add(coin);
   }
 
   /**
-     * Remove guppy from aquarium
-     * @param guppy a guppy which will be deleted from aquarium
-     */
+   * Remove guppy from aquarium.
+   * @param guppy a guppy which will be deleted from aquarium
+   */
   public void remove(Guppy guppy) {
     guppies.remove(guppy);
   }
 
   /**
-     * Remove piranha from aquarium
-     * @param piranha a piranha which will be deleted from aquarium
-     */
+   * Remove piranha from aquarium.
+   * @param piranha a piranha which will be deleted from aquarium
+   */
   public void remove(Piranha piranha) {
     piranhas.remove(piranha);
   }
 
   /**
-     * Remove snail from aquarium
-     * @param snail a snail which will be deleted from aquarium
-     */
+   * Remove snail from aquarium.
+   * @param snail a snail which will be deleted from aquarium
+   */
   public void remove(Snail snail) {
     snails.remove(snail);
   }
 
   /**
-     * Remove food from aquarium
-     * @param food a food which will be deleted from aquarium
-     */
+   * Remove food from aquarium.
+   * @param food a food which will be deleted from aquarium
+   */
   public void remove(Food food) {
     foods.remove(food);
   }
 
   /**
-     * Remove coin from aquarium
-     * @param coin a coin which will be deleted from aquarium
-     */
+   * Remove coin from aquarium.
+   * @param coin a coin which will be deleted from aquarium
+   */
   public void remove(Coin coin) {
     coins.remove(coin);
   }
 
-   /**
-     * Do one game time unit
-     * Increment gameTime, call tick on all AquariumObject
-     */
+  /**
+   * Do one game time unit.
+   * Increment gameTime, call tick on all AquariumObject
+   */
   public void tick() {
     setGameTime(getGameTime() + 1);
 
@@ -345,9 +345,9 @@ public class Aquarium extends JPanel {
   }
 
   /**
-     * Draw Aquarium
-     * @param g Place to be drawn
-     */
+   * Draw Aquarium.
+   * @param g Place to be drawn
+   */
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     g.drawImage(ArkavQuarium.objectImage[20], 0, 0, sizeX, sizeY, null);

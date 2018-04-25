@@ -1,23 +1,37 @@
 public class Coin extends AquariumObject implements IDestructible {
   private final int value;
 
-  /// Constructor
+  /**
+	 * Constructor
+	 * @param aquarium aquarium which will be added by coin
+	 * @param position position of coin
+	 * @param value value of this coin
+	 */
   public Coin(Aquarium aquarium, Vector2 position, int value) {
     super(aquarium, 1, position);
     this.value = value;
   }
 
-  /// Reference comparison
+  /**
+	 * Reference comparison
+	 * @param other other coin to compare
+	 * @return true if and only if argument represent this object
+	 */
   public boolean isEqual(final Coin other) {
     return this == other;
   }
 
-  /// Return coin's value
+  /**
+	 * Get value of coin
+	 * @return coin's value
+	 */
   public int getValue() {
     return value;
   }
 
-  /// Move this coin to the bottom
+  /**
+	 * Move this coin to the bottom
+	 */
   public void move() {
     if (getPosition().ordinate < getAquarium().getSizeY()) {
       if (getPosition().ordinate + getSpeed() < getAquarium().getSizeY()) {
@@ -28,12 +42,16 @@ public class Coin extends AquariumObject implements IDestructible {
     }
   }
 
-  /// Remove this coin from aquarium
+  /**
+	 * Remove this coin from aquarium
+	 */
   public void destruct() {
     getAquarium().remove(this);
   }
 
-  /// Increase money by value
+  /**
+	 * Increase money by value
+	 */
   public void take() {
     getAquarium().setMoney(getAquarium().getMoney() + getValue());
     destruct();

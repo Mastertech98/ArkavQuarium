@@ -1,0 +1,115 @@
+\hypertarget{class_aquarium_object}{}\section{Aquarium\+Object Class Reference}
+\label{class_aquarium_object}\index{Aquarium\+Object@{Aquarium\+Object}}
+
+
+Inheritance diagram for Aquarium\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_aquarium_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aquarium\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_aquarium_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aquarium_object_a67f4bfdbab6fb8083e406a89ed3befb4}{Aquarium\+Object}} (\mbox{\hyperlink{class_aquarium}{Aquarium}} aquarium, float speed, \mbox{\hyperlink{class_vector2}{Vector2}} position)
+\item 
+\mbox{\hyperlink{class_aquarium}{Aquarium}} \mbox{\hyperlink{class_aquarium_object_a16e297f43ec3cf4d7778bffdb4dc13a8}{get\+Aquarium}} ()
+\item 
+float \mbox{\hyperlink{class_aquarium_object_afa94a029183090fbbae21e81f06f181b}{get\+Speed}} ()
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_aquarium_object_af309f1ea5f4ce452d94068ed6e40db3b}{get\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_aquarium_object_a5627326c979d8a0edbfea4701ce10bf0}{set\+Position}} (\mbox{\hyperlink{class_vector2}{Vector2}} position)
+\item 
+abstract void \mbox{\hyperlink{class_aquarium_object_a3847ea02c5aa433f9164682250a46182}{move}} ()
+\item 
+void \mbox{\hyperlink{class_aquarium_object_a0ca7dc571fc2fb4d34d44e2cb37292e0}{tick}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_aquarium_object_a67f4bfdbab6fb8083e406a89ed3befb4}\label{class_aquarium_object_a67f4bfdbab6fb8083e406a89ed3befb4}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!Aquarium\+Object@{Aquarium\+Object}}
+\index{Aquarium\+Object@{Aquarium\+Object}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{Aquarium\+Object()}{AquariumObject()}}
+{\footnotesize\ttfamily Aquarium\+Object.\+Aquarium\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aquarium}{Aquarium}}}]{aquarium,  }\item[{float}]{speed,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em aquarium} & aquarium which will be added by object \\
+\hline
+{\em speed} & speed of object \\
+\hline
+{\em position} & start position of object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aquarium_object_a16e297f43ec3cf4d7778bffdb4dc13a8}\label{class_aquarium_object_a16e297f43ec3cf4d7778bffdb4dc13a8}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!get\+Aquarium@{get\+Aquarium}}
+\index{get\+Aquarium@{get\+Aquarium}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{get\+Aquarium()}{getAquarium()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aquarium}{Aquarium}} Aquarium\+Object.\+get\+Aquarium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get reference to aquarium of this \mbox{\hyperlink{class_aquarium_object}{Aquarium\+Object}} \begin{DoxyReturn}{Returns}
+reference to aquarium of this \mbox{\hyperlink{class_aquarium_object}{Aquarium\+Object}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_object_af309f1ea5f4ce452d94068ed6e40db3b}\label{class_aquarium_object_af309f1ea5f4ce452d94068ed6e40db3b}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Aquarium\+Object.\+get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get object position \begin{DoxyReturn}{Returns}
+position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_object_afa94a029183090fbbae21e81f06f181b}\label{class_aquarium_object_afa94a029183090fbbae21e81f06f181b}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{get\+Speed()}{getSpeed()}}
+{\footnotesize\ttfamily float Aquarium\+Object.\+get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get object speed \begin{DoxyReturn}{Returns}
+speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aquarium_object_a3847ea02c5aa433f9164682250a46182}\label{class_aquarium_object_a3847ea02c5aa433f9164682250a46182}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!move@{move}}
+\index{move@{move}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily abstract void Aquarium\+Object.\+move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Abstract function to move \mbox{\Hypertarget{class_aquarium_object_a5627326c979d8a0edbfea4701ce10bf0}\label{class_aquarium_object_a5627326c979d8a0edbfea4701ce10bf0}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Aquarium\+Object.\+set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set position of object 
+\begin{DoxyParams}{Parameters}
+{\em position} & a new position of object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aquarium_object_a0ca7dc571fc2fb4d34d44e2cb37292e0}\label{class_aquarium_object_a0ca7dc571fc2fb4d34d44e2cb37292e0}} 
+\index{Aquarium\+Object@{Aquarium\+Object}!tick@{tick}}
+\index{tick@{tick}!Aquarium\+Object@{Aquarium\+Object}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Aquarium\+Object.\+tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do one game time unit Moves 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_aquarium_object_8java}{Aquarium\+Object.\+java}}\end{DoxyCompactItemize}

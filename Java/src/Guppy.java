@@ -5,6 +5,10 @@ public class Guppy extends Fish {
   private int eatenFood;
   private int lastCoinDrop;
 
+  /**
+     * Constructor: instantiate guppy at speed of 5 and eatRadius of 50
+     * @param aquarium object aquarium which will be added by guppy and will be initialized
+     */
   public Guppy(Aquarium aquarium) {
     super(aquarium, 5, 50);
     coinDropPeriod = 100;
@@ -12,18 +16,34 @@ public class Guppy extends Fish {
     setLastCoinDrop(getAquarium().getGameTime());
   }
 
+  /**
+     * Get coin drop period
+     * @return coin drop period
+     */
   public int getCoinDropPeriod() {
     return coinDropPeriod;
   }
 
+  /**
+     * Get the number of this guppy's eaten food
+     * @return the number of this guppy's eaten food
+     */
   public int getEatenFood() {
     return eatenFood;
   }
 
+  /**
+     * Get the last time this guppy drops coin
+     * @return the last time this guppy drops coin
+     */
   public int getLastCoinDrop() {
     return lastCoinDrop;
   }
 
+  /**
+     * Get the growth stage of this guppy based on this guppy's eaten food
+     * @return the growth stage of this guppy based on this guppy's eaten food
+     */
   public int getGrowthStage() {
     if (getEatenFood() > 4) {
       return 3;
@@ -36,14 +56,26 @@ public class Guppy extends Fish {
     return 1;
   }
 
+  /**
+     * The number of this guppy's eaten food
+     * @param eatenFood the number of this guppy's eaten food
+     */
   public void setEatenFood(int eatenFood) {
     this.eatenFood = eatenFood;
   }
 
+  /**
+     * the last time this guppy drops coin
+     * @param lastCoinDrop the last time this guppy drops coin
+     */
   public void setLastCoinDrop(int lastCoinDrop) {
     this.lastCoinDrop = lastCoinDrop;
   }
 
+  /**
+     * Find food in the aquarium
+     * @return food position
+     */
   public Vector2 eat() {
     Food food = findFood();
     if (food != null) {
@@ -65,10 +97,17 @@ public class Guppy extends Fish {
     }
   }
 
+  /**
+     * Remove this guppy from aquarium
+     */
   public void destruct() {
     getAquarium().remove(this);
   }
 
+  /**
+     * Do one game time unit
+     * Drops coin on coin drop period
+     */
   public void tick() {
     int gameTime = getAquarium().getGameTime();
 
@@ -80,6 +119,10 @@ public class Guppy extends Fish {
     super.tick();
   }
 
+  /**
+     * Get food which will be eaten by guppy
+     * @return food's data
+     */
   private Food findFood() {
     LinkedList<Food> foods = getAquarium().getFoods();
     if (foods.isEmpty()) {

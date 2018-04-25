@@ -8,6 +8,12 @@ public abstract class Fish extends Creature implements IDestructible {
 
   private Vector2 direction;
 
+  /**
+     * Constructor: instantiate fish at random position
+     * @param aquarium object aquarium which will be added by fish and will be initialized
+     * @param speed fish speed which will be initialized
+     * @param eatRadius fish eat radius which will be initialized
+     */
   public Fish(Aquarium aquarium, float speed, float eatRadius) {
     super(
       aquarium, speed, Vector2.randomPosition(aquarium.getSizeX(), aquarium.getSizeY()), eatRadius);
@@ -22,34 +28,65 @@ public abstract class Fish extends Creature implements IDestructible {
     direction = Vector2.randomDirection();
   }
 
+  /**
+     * Get the duration of this fish full before hungry again
+     * @return the duration of this fish full before hungry again
+     */
   public int getFullTime() {
     return fullTime;
   }
 
+  /**
+     * Get the duration of this fish hungry before it dies
+     * @return the duration of this fish hungry before it dies
+     */
   public int getHungryTime() {
     return hungryTime;
   }
 
+  /**
+     * Get the duration of this fish moving before changing direction
+     * @return the duration of this fish moving before changing direction
+     */
   public int getMoveTime() {
     return moveTime;
   }
 
+  /**
+     * Get the last time this fish eats
+     * @return the last time this fish eats
+     */
   public int getLastMealTime() {
     return lastMealTime;
   }
 
+  /**
+     * Get the last time this fish moves
+     * @return the last time this fish moves
+     */
   public int getLastMoveTime() {
     return lastMoveTime;
   }
 
+  /**
+     * Set the last time this fish eats
+     * @param lastMealTime the last time this fish eats
+     */
   public void setLastMealTime(int lastMealTime) {
     this.lastMealTime = lastMealTime;
   }
 
+   /**
+     * Set the last time this fish moves
+     * @param lastMoveTime the last time this fish moves
+     */
   public void setLastMoveTime(int lastMoveTime) {
     this.lastMoveTime = lastMoveTime;
   }
 
+  /**
+     * Move towards food if this fish is hungry and food exist, move randomly otherwise
+     */
   public void move() {
     int gameTime = getAquarium().getGameTime();
     if (gameTime >= getLastMealTime() + getFullTime()) {
@@ -67,10 +104,18 @@ public abstract class Fish extends Creature implements IDestructible {
     setIsMovingRight(direction.abscissa >= 0);
   }
 
+  /**
+     * Drop coin from this fish
+     * @param value the coin's value
+     */
   public void dropCoin(int value) {
     getAquarium().add(new Coin(getAquarium(), getPosition(), value));
   }
 
+  /**
+     * Do one game time unit
+     * Dies if gameTime is greater than or equals the last time this fish eats plus the duration of this fish full before hungry again plus the duration of this fish hungry before it dies
+     */
   public void tick() {
     super.tick();
 
@@ -79,6 +124,9 @@ public abstract class Fish extends Creature implements IDestructible {
     }
   }
 
+  /**
+     * Move fish to new direction
+     */
   private void moveRandomly() {
     if (getAquarium().getGameTime() >= getLastMoveTime() + getMoveTime()) {
       direction = Vector2.randomDirection();

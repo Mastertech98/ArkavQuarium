@@ -13,6 +13,9 @@ public class ArkavQuarium {
 
   public static final BufferedImage[] objectImage = new BufferedImage[21];
 
+  /**
+     * Initialize object image location
+     */
   private static void init() {
     String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
     try {
@@ -42,6 +45,10 @@ public class ArkavQuarium {
     }
   }
 
+  /**
+     * Main program
+     * @param args argument used in main
+     */
   public static void main(String[] args) {
     init();
 

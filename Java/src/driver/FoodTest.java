@@ -29,7 +29,7 @@ public class FoodTest {
 
     @Test
     public void isTick() throws Exception {
-        
+
     }
 
     @Test

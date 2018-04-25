@@ -16,8 +16,7 @@ public class LinkedList<T> {
     return first;
   }
 
-  /**
-     * Get index with value equals to argument.
+  /**     * Get index with value equals to argument.
      * If not value found in list, then return -1
      * @param element data will be compared with this object
      * @return index of element if found and -1 if not found

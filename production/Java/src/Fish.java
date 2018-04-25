@@ -1,0 +1,104 @@
+public abstract class Fish extends Creature implements IDestructible {
+  private final int fullTime;
+  private final int hungryTime;
+  private final int moveTime;
+
+  private int lastMealTime;
+  private int lastMoveTime;
+
+  private Vector2 direction;
+
+  public Fish(Aquarium aquarium, float speed, float eatRadius) {
+    super(
+      aquarium, speed, Vector2.randomPosition(aquarium.getSizeX(), aquarium.getSizeY()), eatRadius);
+
+    fullTime = 500;
+    hungryTime = 500;
+    moveTime = 50;
+
+    int gameTime = getAquarium().getGameTime();
+    setLastMealTime(gameTime);
+    setLastMoveTime(gameTime);
+    direction = Vector2.randomDirection();
+  }
+
+  public int getFullTime() {
+    return fullTime;
+  }
+
+  public int getHungryTime() {
+    return hungryTime;
+  }
+
+  public int getMoveTime() {
+    return moveTime;
+  }
+
+  public int getLastMealTime() {
+    return lastMealTime;
+  }
+
+  public int getLastMoveTime() {
+    return lastMoveTime;
+  }
+
+  public void setLastMealTime(int lastMealTime) {
+    this.lastMealTime = lastMealTime;
+  }
+
+  public void setLastMoveTime(int lastMoveTime) {
+    this.lastMoveTime = lastMoveTime;
+  }
+
+  public void move() {
+    int gameTime = getAquarium().getGameTime();
+    if (gameTime >= getLastMealTime() + getFullTime()) {
+      Vector2 foodPosition = eat();
+      if (foodPosition != null) {
+        direction = foodPosition.subtract(getPosition()).normalized();
+      } else {
+        moveRandomly();
+      }
+    } else {
+      moveRandomly();
+    }
+
+    setPosition(getPosition().add(direction.multiply(getSpeed())));
+    setIsMovingRight(direction.abscissa >= 0);
+  }
+
+  public void dropCoin(int value) {
+    getAquarium().add(new Coin(getAquarium(), getPosition(), value));
+  }
+
+  public void tick() {
+    super.tick();
+
+    if (getAquarium().getGameTime() >= getLastMealTime() + getFullTime() + getHungryTime()) {
+      destruct();
+    }
+  }
+
+  private void moveRandomly() {
+    if (getAquarium().getGameTime() >= getLastMoveTime() + getMoveTime()) {
+      direction = Vector2.randomDirection();
+      setLastMoveTime(getAquarium().getGameTime());
+    }
+
+    int sizeX = getAquarium().getSizeX();
+    int sizeY = getAquarium().getSizeY();
+    double positionX = getPosition().abscissa;
+    double positionY = getPosition().ordinate;
+
+    int gameTime = getAquarium().getGameTime();
+
+    if (positionX < 0 || positionX > sizeX) {
+      direction = new Vector2(direction.abscissa * -1, direction.ordinate);
+      setLastMoveTime(gameTime);
+    }
+    if (positionY < 0 || positionY > sizeY) {
+      direction = new Vector2(direction.abscissa, direction.ordinate * -1);
+      setLastMoveTime(gameTime);
+    }
+  }
+}

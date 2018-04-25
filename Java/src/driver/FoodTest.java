@@ -1,55 +1,41 @@
-/*import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;*/
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
-//import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
-
-//@RunWith(Arquillian.class)
 public class FoodTest {
-    private Aquarium aqtest1 = new Aquarium(50,50,100,10);
-    private Aquarium aqtest2 = new Aquarium(60, 60, 100, 10);
+  private Aquarium aqtest1 = new Aquarium(50, 50, 100, 10);
+  private Aquarium aqtest2 = new Aquarium(60, 60, 100, 10);
 
-    private Food food = new Food(aqtest1,2.5);
-    private Vector2 pos = new Vector2(20,20);
+  private Food food = new Food(aqtest1, 2.5);
+  private Vector2 pos = new Vector2(20, 20);
 
-    @Test
-    public void isMove() throws Exception {
-        food.setPosition(pos);
-        Vector2 a = food.getPosition();
+  @Test
+  public void isMove() throws Exception {
+    food.setPosition(pos);
+    Vector2 a = food.getPosition();
 
-        food.move();
+    food.move();
 
-        Vector2 b = food.getPosition();
-        assertNotEquals("Food is not moving", b, a);
-    }
+    Vector2 b = food.getPosition();
+    assertNotEquals("Food is not moving", b, a);
+  }
 
-    @Test
-    public void isTick() throws Exception {
-        Vector2 pos2 = new Vector2(20, 60);
-        food.setPosition(pos2);
+  @Test
+  public void isTick() throws Exception {
+    Vector2 pos2 = new Vector2(20, 60);
+    food.setPosition(pos2);
 
-        food.tick();
-        assertEquals(-1, aqtest1.getFoods().find(food));
+    food.tick();
+    assertEquals(-1, aqtest1.getFoods().find(food));
 
-    }
+  }
 
-    @Test
-    public void isDestruct() throws Exception {
-        aqtest1.add(food);
+  @Test
+  public void isDestruct() throws Exception {
+    aqtest1.add(food);
 
-        food.destruct();
-        assertEquals(-1, aqtest1.getFoods().find(food));
-    }
-
-    /*@Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Food.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-    }*/
-
+    food.destruct();
+    assertEquals(-1, aqtest1.getFoods().find(food));
+  }
 }

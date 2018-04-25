@@ -1,13 +1,8 @@
-import javafx.scene.input.KeyCode;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
-public class Aquarium extends JPanel implements MouseListener {
+public class Aquarium extends JPanel {
     private final int sizeX;
     private final int sizeY;
 
@@ -23,34 +18,6 @@ public class Aquarium extends JPanel implements MouseListener {
     private int egg;
     private int eggPrice;
 
-    private BufferedImage background;
-
-    public void mouseClicked(MouseEvent e) {
-        boolean coinClick = false;
-        for (ElementList<Coin> o = getCoins().getFirst(); o != null && !coinClick; o = o.getNext()) {
-            if (new Vector2(e.getX(), e.getY()).distance(o.getData().getPosition()) <= 16) {
-                o.getData().take();
-                coinClick = true;
-            }
-        }
-        if (getMoney() > Food.price && !coinClick) {
-            add(new Food(this, e.getX()));
-            setMoney(getMoney() - Food.price);
-        }
-    }
-    public void mouseEntered(MouseEvent e) {
-
-    }
-    public void mouseExited(MouseEvent e) {
-
-    }
-    public void mousePressed(MouseEvent e) {
-
-    }
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
     public Aquarium(int _sizeX, int _sizeY, int _money, int _eggPrice) {
         sizeX = _sizeX;
         sizeY = _sizeY;
@@ -61,13 +28,79 @@ public class Aquarium extends JPanel implements MouseListener {
         setEgg(0);
         setEggPrice(_eggPrice);
 
-        try {
-            background = ImageIO.read(new File("C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\background.png"));
-        } catch (IOException e) {
-            System.out.print("Background image file not found!");
-        }
+        addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-        addMouseListener(this);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                boolean coinClick = false;
+                for (ElementList<Coin> o = getCoins().getFirst(); o != null && !coinClick; o = o.getNext()) {
+                    if (new Vector2(e.getX(), e.getY()).distance(o.getData().getPosition()) <= 16) {
+                        o.getData().take();
+                        coinClick = true;
+                    }
+                }
+                if (getMoney() > Food.price && !coinClick) {
+                    add(new Food(Aquarium.this, e.getX()));
+                    setMoney(getMoney() - Food.price);
+                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
+        JButton buyGuppy = new JButton("Buy Guppy");
+        buyGuppy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getMoney() >= Guppy.price) {
+                    add(new Guppy(Aquarium.this));
+                    setMoney(getMoney() - Guppy.price);
+                }
+            }
+        });
+
+        JButton buyPiranha = new JButton("Buy Piranha");
+        buyPiranha.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getMoney() >= Piranha.price) {
+                    add(new Piranha(Aquarium.this));
+                    setMoney(getMoney() - Piranha.price);
+                }
+            }
+        });
+
+        JButton buyEgg = new JButton("Buy Egg");
+        buyEgg.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getMoney() >= getEggPrice()) {
+                    setEgg(getEgg() + 1);
+                    setMoney(getMoney() - getEggPrice());
+                }
+            }
+        });
+
+        add(buyGuppy);
+        add(buyPiranha);
+        add(buyEgg);
     }
 
     public int getSizeX(){
@@ -193,7 +226,7 @@ public class Aquarium extends JPanel implements MouseListener {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(background, 0, 0, sizeX, sizeY, null);
+        g.drawImage(ArkavQuarium.objectImage[20], 0, 0, sizeX, sizeY, null);
 
         int gameTime = getGameTime();
 
@@ -227,6 +260,9 @@ public class Aquarium extends JPanel implements MouseListener {
             int idx = 0;
             g.drawImage(ArkavQuarium.objectImage[idx + 19], (int)position.x - 16, (int)position.y - 16, null);
         }
+
+        g.drawString("Money: " + String.valueOf(getMoney()), 8, 16);
+        g.drawString("Egg: " + String.valueOf(getEgg()), 8, 32);
 
         repaint();
     }

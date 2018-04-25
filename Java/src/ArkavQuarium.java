@@ -1,7 +1,5 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +26,7 @@ class Tick extends TimerTask {
 
 public class ArkavQuarium {
     static Aquarium aquarium;
-    public static BufferedImage[] objectImage = new BufferedImage[20];
+    public static BufferedImage[] objectImage = new BufferedImage[21];
 
     private static void init() {
         String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
@@ -53,6 +51,7 @@ public class ArkavQuarium {
             objectImage[17] = ImageIO.read(new File(path + "snail1.png"));
             objectImage[18] = ImageIO.read(new File(path + "food.png"));
             objectImage[19] = ImageIO.read(new File(path + "coin.png"));
+            objectImage[20] = ImageIO.read(new File(path + "background.png"));
         } catch (IOException e) {
             System.out.println("File not found!");
         }
@@ -64,25 +63,6 @@ public class ArkavQuarium {
         JFrame frame = new JFrame("Aquarium");
 
         aquarium = new Aquarium(800, 600 - 128, 25, 20);
-
-        JButton buyGuppy = new JButton("Buy Guppy");
-        buyGuppy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                aquarium.add(new Guppy(aquarium));
-            }
-        });
-
-        JButton buyPiranha = new JButton("Buy Piranha");
-        buyPiranha.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                aquarium.add(new Piranha(aquarium));
-            }
-        });
-
-        aquarium.add(buyGuppy);
-        aquarium.add(buyPiranha);
 
         frame.setSize(800, 600);
         frame.setVisible(true);

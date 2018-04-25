@@ -5,7 +5,7 @@ public class Food extends AquariumObject implements IDestructible {
      * @param aquarium object aquarium which will be added by food and will be initialized
      * @param abscissa food's horizontal position
      */
-  public Food(Aquarium aquarium, float abscissa) {
+  public Food(Aquarium aquarium, double abscissa) {
     super(aquarium, 2, new Vector2(abscissa, 0));
   }
 

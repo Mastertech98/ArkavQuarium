@@ -1,0 +1,300 @@
+\hypertarget{class_vector2}{}\section{Vector2 Class Reference}
+\label{class_vector2}\index{Vector2@{Vector2}}
+
+
+Collaboration diagram for Vector2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_vector2__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_ad254b1c618b84ebd5bdc05eefb831647}{Vector2}} ()
+\item 
+\mbox{\hyperlink{class_vector2_a206a86898973ddf9391e04b4b3287508}{Vector2}} (double \mbox{\hyperlink{class_vector2_aadec5169cf1887537f1c7d60f87e137f}{abscissa}}, double \mbox{\hyperlink{class_vector2_a11433891ace979aadcb1c8c8612c29a3}{ordinate}})
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_ad26f00c8e5cfc76198b1115ce29b51ad}{normalized}} ()
+\item 
+double \mbox{\hyperlink{class_vector2_a7eb73e809bf6fb6b32c0de8352b707c3}{distance}} (\mbox{\hyperlink{class_vector2}{Vector2}} other)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a68ca937db25cb8a4211583a8b9dfdc1a}{add}} (\mbox{\hyperlink{class_vector2}{Vector2}} other)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a315ad636760344cbf563e7d71c910c4b}{subtract}} (\mbox{\hyperlink{class_vector2}{Vector2}} other)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_ac9db5aab07eb87c6b6fcfd22b0257be6}{multiply}} (double k)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a57eebd54b29694bb748760f658f129fd}{divide}} (double k)
+\item 
+String \mbox{\hyperlink{class_vector2_a8c4f6580158ce1d9a70c991de2afca86}{to\+String}} ()
+\item 
+boolean \mbox{\hyperlink{class_vector2_a2e4b2ed50297b7d7734370395d5f63a5}{equals}} (\mbox{\hyperlink{class_vector2}{Vector2}} other)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_ac428f5ec5017a6c4a2ec850bcd95fea3}{random\+Position}} (double \mbox{\hyperlink{class_vector2_aadec5169cf1887537f1c7d60f87e137f}{abscissa}}, double \mbox{\hyperlink{class_vector2_a11433891ace979aadcb1c8c8612c29a3}{ordinate}})
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_af7e6ce10063a75db5bba6eac52dfe790}{random\+Position}} (\mbox{\hyperlink{class_vector2}{Vector2}} min, \mbox{\hyperlink{class_vector2}{Vector2}} max)
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a139f45c8088a42e3971e6614aa62a8aa}{random\+Direction}} ()
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_abf982a5300ee21200b1021e27de420ab}{random\+Direction}} (double min, double max)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final double \mbox{\hyperlink{class_vector2_aadec5169cf1887537f1c7d60f87e137f}{abscissa}}
+\item 
+final double \mbox{\hyperlink{class_vector2_a11433891ace979aadcb1c8c8612c29a3}{ordinate}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a0eb5cdb3286a9ed344e9f193a67662c1}{zero}} = new \mbox{\hyperlink{class_vector2}{Vector2}}()
+\item 
+static final \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a46039dbadb78f36a65d9097d79f17e0f}{up}} = new \mbox{\hyperlink{class_vector2}{Vector2}}(0, -\/1)
+\item 
+static final \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a46688c121909b9272b28515914262cae}{down}} = new \mbox{\hyperlink{class_vector2}{Vector2}}(0, 1)
+\item 
+static final \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a3e64ea2bc84a81a281a9d938a459bfc8}{right}} = new \mbox{\hyperlink{class_vector2}{Vector2}}(1, 0)
+\item 
+static final \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a11bfafbd9c5cdba775129514ea177e85}{left}} = new \mbox{\hyperlink{class_vector2}{Vector2}}(-\/1, 0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vector2_ad254b1c618b84ebd5bdc05eefb831647}\label{class_vector2_ad254b1c618b84ebd5bdc05eefb831647}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector2.\+Vector2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor \mbox{\Hypertarget{class_vector2_a206a86898973ddf9391e04b4b3287508}\label{class_vector2_a206a86898973ddf9391e04b4b3287508}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector2.\+Vector2 (\begin{DoxyParamCaption}\item[{double}]{abscissa,  }\item[{double}]{ordinate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor\+: x = \+\_\+x, y = \+\_\+y 
+\begin{DoxyParams}{Parameters}
+{\em abscissa} & position in horizontal \\
+\hline
+{\em ordinate} & position in vertical \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vector2_a68ca937db25cb8a4211583a8b9dfdc1a}\label{class_vector2_a68ca937db25cb8a4211583a8b9dfdc1a}} 
+\index{Vector2@{Vector2}!add@{add}}
+\index{add@{add}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add this vector2 with argument 
+\begin{DoxyParams}{Parameters}
+{\em other} & the other vector2 which will be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of 2 vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a7eb73e809bf6fb6b32c0de8352b707c3}\label{class_vector2_a7eb73e809bf6fb6b32c0de8352b707c3}} 
+\index{Vector2@{Vector2}!distance@{distance}}
+\index{distance@{distance}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double Vector2.\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get Distance between 2 vector2 
+\begin{DoxyParams}{Parameters}
+{\em other} & the other vector2 comparison besides this vector2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this vector2 distance to other vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a57eebd54b29694bb748760f658f129fd}\label{class_vector2_a57eebd54b29694bb748760f658f129fd}} 
+\index{Vector2@{Vector2}!divide@{divide}}
+\index{divide@{divide}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+divide (\begin{DoxyParamCaption}\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Divide this vector 2 with argument 
+\begin{DoxyParams}{Parameters}
+{\em k} & constant which will be divided \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+divided vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a2e4b2ed50297b7d7734370395d5f63a5}\label{class_vector2_a2e4b2ed50297b7d7734370395d5f63a5}} 
+\index{Vector2@{Vector2}!equals@{equals}}
+\index{equals@{equals}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean Vector2.\+equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get value comparison between 2 vector2 
+\begin{DoxyParams}{Parameters}
+{\em other} & other vector2 beside this vector2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if and only if this x equals to other x and this y equals to other y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_ac9db5aab07eb87c6b6fcfd22b0257be6}\label{class_vector2_ac9db5aab07eb87c6b6fcfd22b0257be6}} 
+\index{Vector2@{Vector2}!multiply@{multiply}}
+\index{multiply@{multiply}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+multiply (\begin{DoxyParamCaption}\item[{double}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Multiply this vector2 with argument 
+\begin{DoxyParams}{Parameters}
+{\em k} & constant which will be multiplied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+multiplied vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_ad26f00c8e5cfc76198b1115ce29b51ad}\label{class_vector2_ad26f00c8e5cfc76198b1115ce29b51ad}} 
+\index{Vector2@{Vector2}!normalized@{normalized}}
+\index{normalized@{normalized}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{normalized()}{normalized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get value of vector2 converted into unit vector \begin{DoxyReturn}{Returns}
+this vector2 with magnitude of 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a139f45c8088a42e3971e6614aa62a8aa}\label{class_vector2_a139f45c8088a42e3971e6614aa62a8aa}} 
+\index{Vector2@{Vector2}!random\+Direction@{random\+Direction}}
+\index{random\+Direction@{random\+Direction}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Direction()}{randomDirection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+random\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get random direction \begin{DoxyReturn}{Returns}
+random direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_abf982a5300ee21200b1021e27de420ab}\label{class_vector2_abf982a5300ee21200b1021e27de420ab}} 
+\index{Vector2@{Vector2}!random\+Direction@{random\+Direction}}
+\index{random\+Direction@{random\+Direction}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Direction()}{randomDirection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+random\+Direction (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get random position of min to max in radiant 
+\begin{DoxyParams}{Parameters}
+{\em min} & minimum angle \\
+\hline
+{\em max} & maximum angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_ac428f5ec5017a6c4a2ec850bcd95fea3}\label{class_vector2_ac428f5ec5017a6c4a2ec850bcd95fea3}} 
+\index{Vector2@{Vector2}!random\+Position@{random\+Position}}
+\index{random\+Position@{random\+Position}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Position()}{randomPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+random\+Position (\begin{DoxyParamCaption}\item[{double}]{abscissa,  }\item[{double}]{ordinate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get random position with range x and y 
+\begin{DoxyParams}{Parameters}
+{\em abscissa} & horizontal range \\
+\hline
+{\em ordinate} & vertical range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_af7e6ce10063a75db5bba6eac52dfe790}\label{class_vector2_af7e6ce10063a75db5bba6eac52dfe790}} 
+\index{Vector2@{Vector2}!random\+Position@{random\+Position}}
+\index{random\+Position@{random\+Position}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{random\+Position()}{randomPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+random\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{min,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get random position between 2 vector2 
+\begin{DoxyParams}{Parameters}
+{\em min} & minimum range of x and y \\
+\hline
+{\em max} & maximum range of x and y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a315ad636760344cbf563e7d71c910c4b}\label{class_vector2_a315ad636760344cbf563e7d71c910c4b}} 
+\index{Vector2@{Vector2}!subtract@{subtract}}
+\index{subtract@{subtract}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+subtract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Subtract this vector2 with argument 
+\begin{DoxyParams}{Parameters}
+{\em other} & the other vector2 which will be subtracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+subtract of 2 vector2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector2_a8c4f6580158ce1d9a70c991de2afca86}\label{class_vector2_a8c4f6580158ce1d9a70c991de2afca86}} 
+\index{Vector2@{Vector2}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String Vector2.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get vector2 in well-\/formatted string \begin{DoxyReturn}{Returns}
+string formatted vector2 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_vector2_aadec5169cf1887537f1c7d60f87e137f}\label{class_vector2_aadec5169cf1887537f1c7d60f87e137f}} 
+\index{Vector2@{Vector2}!abscissa@{abscissa}}
+\index{abscissa@{abscissa}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{abscissa}{abscissa}}
+{\footnotesize\ttfamily final double Vector2.\+abscissa}
+
+\mbox{\Hypertarget{class_vector2_a46688c121909b9272b28515914262cae}\label{class_vector2_a46688c121909b9272b28515914262cae}} 
+\index{Vector2@{Vector2}!down@{down}}
+\index{down@{down}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{down}{down}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+down = new \mbox{\hyperlink{class_vector2}{Vector2}}(0, 1)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a11bfafbd9c5cdba775129514ea177e85}\label{class_vector2_a11bfafbd9c5cdba775129514ea177e85}} 
+\index{Vector2@{Vector2}!left@{left}}
+\index{left@{left}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+left = new \mbox{\hyperlink{class_vector2}{Vector2}}(-\/1, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a11433891ace979aadcb1c8c8612c29a3}\label{class_vector2_a11433891ace979aadcb1c8c8612c29a3}} 
+\index{Vector2@{Vector2}!ordinate@{ordinate}}
+\index{ordinate@{ordinate}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{ordinate}{ordinate}}
+{\footnotesize\ttfamily final double Vector2.\+ordinate}
+
+\mbox{\Hypertarget{class_vector2_a3e64ea2bc84a81a281a9d938a459bfc8}\label{class_vector2_a3e64ea2bc84a81a281a9d938a459bfc8}} 
+\index{Vector2@{Vector2}!right@{right}}
+\index{right@{right}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+right = new \mbox{\hyperlink{class_vector2}{Vector2}}(1, 0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a46039dbadb78f36a65d9097d79f17e0f}\label{class_vector2_a46039dbadb78f36a65d9097d79f17e0f}} 
+\index{Vector2@{Vector2}!up@{up}}
+\index{up@{up}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+up = new \mbox{\hyperlink{class_vector2}{Vector2}}(0, -\/1)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a0eb5cdb3286a9ed344e9f193a67662c1}\label{class_vector2_a0eb5cdb3286a9ed344e9f193a67662c1}} 
+\index{Vector2@{Vector2}!zero@{zero}}
+\index{zero@{zero}!Vector2@{Vector2}}
+\subsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{class_vector2}{Vector2}} Vector2.\+zero = new \mbox{\hyperlink{class_vector2}{Vector2}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector2_8java}{Vector2.\+java}}\end{DoxyCompactItemize}

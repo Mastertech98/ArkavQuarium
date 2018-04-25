@@ -6,7 +6,10 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 public class ArkavQuarium {
   static Aquarium aquarium;

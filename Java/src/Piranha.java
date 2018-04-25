@@ -1,4 +1,7 @@
 public class Piranha extends Fish {
+  /**
+   * Piranha's price
+   */
   public static final int price = 20;
 
   /**

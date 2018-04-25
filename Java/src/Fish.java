@@ -1,11 +1,27 @@
 public abstract class Fish extends Creature implements IDestructible {
+  /**
+   * Save fish's full time
+   */
   private final int fullTime;
+  /**
+   * Save fish's hungry time
+   */
   private final int hungryTime;
+  /**
+   * Save fish's move time
+   */
   private final int moveTime;
-
+  /**
+   * Save fish's last meal time
+   */
   private int lastMealTime;
+  /**
+   * Save fish's last move time
+   */
   private int lastMoveTime;
-
+  /**
+   * Save fish's direction
+   */
   private Vector2 direction;
 
   /**

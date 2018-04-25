@@ -1,7 +1,13 @@
 import java.lang.Math;
 
 public class Vector2 {
+  /**
+   * Horizontal position.
+   */
   public final double abscissa;
+  /**
+   * Vertical position.
+   */
   public final double ordinate;
 
   /**

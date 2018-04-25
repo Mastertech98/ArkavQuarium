@@ -1,5 +1,11 @@
 public abstract class Creature extends AquariumObject {
+  /**
+   * Eat radius of creature.
+   */
   private final float eatRadius;
+  /**
+   * Facing direction of creature.
+   */
   private boolean isMovingRight;
 
   /**

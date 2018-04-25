@@ -1,15 +1,17 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
+import javax.swing.*;
 
 public class ArkavQuarium {
   static Aquarium aquarium;
   static int win = 0;
+  static final String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
 
   public static final BufferedImage[] objectImage = new BufferedImage[21];
 
@@ -17,7 +19,6 @@ public class ArkavQuarium {
    * Initialize object image location.
    */
   private static void init() {
-    String path = "C:\\Users\\User\\Documents\\GitHub\\ArkavQuarium\\Java\\src\\";
     try {
       objectImage[0] = ImageIO.read(new File(path + "guppy100.png"));
       objectImage[1] = ImageIO.read(new File(path + "guppy101.png"));
@@ -54,37 +55,47 @@ public class ArkavQuarium {
 
     JFrame frame = new JFrame("Aquarium");
 
-    aquarium = new Aquarium(800, 600 - 128, 25, 20);
+    JButton startGame = new JButton(new ImageIcon(path + "play.png"));
+    startGame.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        frame.remove(startGame);
+
+        aquarium = new Aquarium(800, 600 - 128, 25, 20);
+        frame.setContentPane(aquarium);
+        frame.setVisible(true);
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+          @Override
+          public void run() {
+            // Win/Lose Condition
+            if (aquarium.getEgg() >= 3) {
+              timer.cancel();
+              timer.purge();
+              win = 1;
+            } else {
+              if (aquarium.getGuppies().isEmpty() && aquarium.getPiranhas().isEmpty()) {
+                int money = aquarium.getMoney();
+                if (money < Guppy.price && money < Piranha.price) {
+                  timer.cancel();
+                  timer.purge();
+                  win = -1;
+                }
+              }
+            }
+
+            aquarium.tick();
+          }
+        }, 0, 50);
+      }
+    });
+
+    frame.add(startGame);
 
     frame.setSize(800, 600);
     frame.setVisible(true);
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     frame.setLayout(null);
-
-    frame.setContentPane(aquarium);
-
-    Timer timer = new Timer();
-    timer.schedule(new TimerTask() {
-      @Override
-      public void run() {
-        // Win/Lose Condition
-        if (aquarium.getEgg() >= 3) {
-          timer.cancel();
-          timer.purge();
-          win = 1;
-        } else {
-          if (aquarium.getGuppies().isEmpty() && aquarium.getPiranhas().isEmpty()) {
-            int money = aquarium.getMoney();
-            if (money < Guppy.price && money < Piranha.price) {
-              timer.cancel();
-              timer.purge();
-              win = -1;
-            }
-          }
-        }
-
-        aquarium.tick();
-      }
-    }, 0, 50);
   }
 }

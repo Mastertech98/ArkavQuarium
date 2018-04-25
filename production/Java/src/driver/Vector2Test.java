@@ -65,7 +65,7 @@ public class Vector2Test {
 
   @org.junit.Test
   public void toStringTest() {
-    assertEquals(new Vector2(3, 4).toString(), "(3, 4)");
+    assertEquals(new Vector2(3, 4).toString(), "(3.0, 4.0)");
   }
 
   @org.junit.Test

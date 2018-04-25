@@ -1,8 +1,20 @@
 public class Guppy extends Fish {
+  /**
+   * Guppy's price.
+   */
   public static final int price = 10;
 
+  /**
+   * Coin's drop period.
+   */
   private final int coinDropPeriod;
+  /**
+   * Amount of food that has been eaten.
+   */
   private int eatenFood;
+  /**
+   * Times when last coin dropped.
+   */
   private int lastCoinDrop;
 
   /**

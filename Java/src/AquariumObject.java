@@ -1,6 +1,15 @@
 public abstract class AquariumObject {
+  /**
+   * Reference to aquarium.
+   */
   private final Aquarium aquarium;
+  /**
+   * This object's speed.
+   */
   private final float speed;
+  /**
+   * This object's position.
+   */
   private Vector2 position;
 
   /**

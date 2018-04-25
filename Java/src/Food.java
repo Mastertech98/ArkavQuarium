@@ -1,4 +1,7 @@
 public class Food extends AquariumObject implements IDestructible {
+  /**
+   * Food's price.
+   */
   public static final int price = 5;
 
   /**

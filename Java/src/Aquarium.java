@@ -7,19 +7,51 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class Aquarium extends JPanel {
+  /**
+   * Horizontal size of aquarium.
+   */
   private final int sizeX;
+  /**
+   * Vertical size of aquarium.
+   */
   private final int sizeY;
 
+  /**
+   * Aquarium's game time.
+   */
   private int gameTime;
-
+  /**
+   * List that collect all lived guppy.
+   */
   private final LinkedList<Guppy> guppies = new LinkedList<>();
+  /**
+   * List that collect all lived piranha.
+   */
   private final LinkedList<Piranha> piranhas = new LinkedList<>();
+  /**
+   * List that collect all lived snail.
+   */
   private final LinkedList<Snail> snails = new LinkedList<>();
+  /**
+   * List that collect all lived food.
+   */
   private final LinkedList<Food> foods = new LinkedList<>();
+  /**
+   * List that collect all lived coins.
+   */
   private final LinkedList<Coin> coins = new LinkedList<>();
 
+  /**
+   * Save game money.
+   */
   private int money;
+  /**
+   * Save number of egg bought.
+   */
   private int egg;
+  /**
+   * Save egg's price.
+   */
   private int eggPrice;
 
   /**

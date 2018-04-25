@@ -1,4 +1,7 @@
 public class Coin extends AquariumObject implements IDestructible {
+  /**
+   * Coin's value.
+   */
   private final int value;
 
   /**

@@ -1,5 +1,11 @@
 class ElementList<T> {
+  /**
+   * Save data of object
+   */
   private final T data;
+  /**
+   * Save reference next elementList from this elementList
+   */
   private ElementList<T> next;
 
   /**

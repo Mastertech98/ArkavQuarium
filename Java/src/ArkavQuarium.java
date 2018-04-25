@@ -12,9 +12,24 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
 public class ArkavQuarium {
+  /**
+   * Reference to aquarium.
+   */
   static Aquarium aquarium;
+  /**
+   * State of win.
+   */
   static int win = 0;
+
+  /**
+   * Path of this program.
+   */
+
   static final String path = "";
+    
+  /**
+   * Image object to array.
+   */
 
   public static final BufferedImage[] objectImage = new BufferedImage[21];
 

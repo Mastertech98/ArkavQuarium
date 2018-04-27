@@ -45,7 +45,7 @@ int main( int argc, char* args[] )
     Aquarium aquarium = Aquarium(get_screen_width(), get_screen_height() - 192, 25, 20);
     running = true;
     bool paused = false;
-    bool win;
+    bool win = false;
 
     double prevtime = time_since_start();
 

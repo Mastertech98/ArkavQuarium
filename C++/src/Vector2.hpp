@@ -42,7 +42,9 @@ struct Vector2 {
     static const Vector2 left;
     static const Vector2 down;
     static Vector2 randomPosition(double x, double y);
+    static Vector2 randomPosition(const Vector2& min, const Vector2& max);
     static Vector2 randomDirection();
+    static Vector2 randomDirection(double min, double max);
 
     std::string toString();
 };
